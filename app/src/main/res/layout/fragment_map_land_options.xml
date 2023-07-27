@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_curved_pale_background"
+    android:orientation="vertical"
+    android:paddingTop="25dp">
+
+    <LinearLayout
+        android:id="@+id/mapLandOptions_linear_landCropSoil"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/normal_spacing"
+        android:weightSum="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/mapLandOptions_linear_addLand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/white_background_curved_border"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_spacing">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_land" />
+
+            <TextView
+                android:id="@+id/mapLandOptions_text_addLand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:drawablePadding="@dimen/small_spacing"
+                android:gravity="center_vertical"
+                android:text="@string/land_info"
+                android:textSize="@dimen/font_size_normal"
+                app:drawableEndCompat="@drawable/ic_next" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/mapLandOptions_linear_addCrop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_background_curved_border"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_spacing">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_crop" />
+
+            <TextView
+                android:id="@+id/mapLandOptions_text_addCrop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:drawablePadding="@dimen/small_spacing"
+                android:gravity="center_vertical"
+                android:text="@string/my_crop"
+                android:textSize="@dimen/font_size_normal"
+                app:drawableEndCompat="@drawable/ic_next" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/mapLandOptions_linear_addSoil"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/white_background_curved_border"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_spacing">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_soil" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:drawablePadding="@dimen/small_spacing"
+                android:gravity="center_vertical"
+                android:text="@string/soil_health"
+                android:textSize="@dimen/font_size_normal"
+                app:drawableEndCompat="@drawable/ic_next" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mapLandOptions_linear_scouting"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/normal_spacing"
+        android:visibility="visible"
+        android:weightSum="3"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mapLandOptions_linear_landCropSoil">
+
+        <LinearLayout
+            android:id="@+id/mapLandOptions_linear_addScouting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/white_background_curved_border"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/normal_spacing">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:srcCompat="@drawable/ic_camera_green" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:drawablePadding="@dimen/small_spacing"
+                android:gravity="center_vertical"
+                android:text="@string/scout"
+                android:textSize="@dimen/font_size_normal"
+                app:drawableEndCompat="@drawable/ic_next" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <!--added notification icon to remind-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/mapLandOptions_text_readCountBadge"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignEnd="@+id/mapLandOptions_linear_gallery"
+                android:layout_gravity="end|top"
+                android:background="@drawable/badge_background"
+                android:elevation="8dp"
+                android:gravity="center"
+                android:padding="@dimen/small_spacing"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/mapLandOptions_linear_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/white_background_curved_border"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="vertical"
+                android:padding="@dimen/normal_spacing">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:srcCompat="@drawable/ic_scouting_gallery" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:drawablePadding="@dimen/small_spacing"
+                    android:gravity="center_vertical"
+                    android:text="@string/gallery"
+                    android:textSize="@dimen/font_size_normal"
+                    app:drawableEndCompat="@drawable/ic_next" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mapLandOptions_expand_collapse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:paddingHorizontal="@dimen/activity_vertical_margin"
+        android:paddingTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mapLandOptions_linear_scouting">
+
+        <View
+            android:layout_width="64dp"
+            android:layout_height="8dp"
+            android:background="@drawable/grey_curved_border" />
+    </LinearLayout>
+
+</LinearLayout>

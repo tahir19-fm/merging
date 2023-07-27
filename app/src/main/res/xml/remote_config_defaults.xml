@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- START xml_defaults -->
+<defaultsMap>
+    <entry>
+        <key>CHAT_ENDPOINT</key>
+        <value>https://b25f7e159159.ngrok.io/chatbot</value>
+    </entry>
+    <entry>
+        <key>GET_PROFILE</key>
+        <value>https://api.farmsanta.com/user/farmer-profile</value>
+    </entry>
+    <entry>
+        <key>SAVE_PROFILE</key>
+        <value>https://api.farmsanta.com/user/farmer-profile</value>
+    </entry>
+    <entry>
+        <key>gender</key>
+        <value>["Unknown"]</value>
+    </entry>
+</defaultsMap>
+    <!-- END xml_defaults -->

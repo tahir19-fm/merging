@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Crop information"
+        android:textColor="@color/grey_light"
+        android:textSize="@dimen/font_size_very_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/farmScoutInfo_linear_cropContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:text="Crop"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_cropName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soybean"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Growth stage"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_growthStage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Fruiting"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Plant part"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_plantPart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Leaves"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Notes"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="-"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/farmScoutInfo_view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@color/grey_divider"
+        app:layout_constraintTop_toBottomOf="@+id/farmScoutInfo_linear_cropContainer" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:text="Weather information"
+        android:textColor="@color/grey_light"
+        android:textSize="@dimen/font_size_very_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmScoutInfo_view_divider" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21°C"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Humidity"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="58%"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Rainfall"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_rain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="89%"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="Windspeed"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_normal"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farmScoutInfo_text_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_spacing"
+                android:text="2 km/h"
+                android:textColor="@color/grey_text"
+                android:textSize="@dimen/font_size_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

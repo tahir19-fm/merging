@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress AndroidUnknownAttribute -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools">
+
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission
+    android:name="com.google.android.gms.permission.AD_ID"
+    tools:node="remove" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+<uses-feature android:name="android.hardware.location.gps" />
+
+<!--    <uses-permission android:name="android.permission.INTERNET" />-->
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    tools:ignore="ScopedStorage" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<!--<uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />-->
+
+<uses-feature
+    android:name="android.hardware.camera"
+    android:required="false" />
+<uses-feature
+    android:name="android.hardware.telephony"
+    android:required="false" />
+
+<application
+    android:name=".baseclass.FarmsantaBaseApplication"
+    android:allowBackup="false"
+    android:fullBackupOnly="true"
+    android:icon="@drawable/app_new_logo_white"
+    android:label="@string/app_name"
+    android:localeConfig="@xml/locale_config"
+    android:roundIcon="@drawable/app_new_logo_white"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    android:usesCleartextTraffic="true"
+    tools:ignore="AllowBackup,LockedOrientationActivity"
+    tools:targetApi="33"
+    android:dataExtractionRules="@xml/data_extraction_rules">
+
+
+    <meta-data
+        android:name="firebase_performance_logcat_enabled"
+        android:value="true" />
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDpkRfUVOpxZMqqWC_JtwWNdtG-mBLwIV4" />
+    <!--        @string/maps_api_key-->
+
+    <!--        <meta-data-->
+    <!--            android:name="com.google.android.maps.v2.API_KEY"-->
+    <!--            android:value="${MAP_API_KEY}" />-->
+
+    <activity
+        android:name=".activities.SplashScreenActivity"
+        android:configChanges="locale|layoutDirection"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/SplashTheme"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        tools:ignore="RedundantLabel">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".activities.MainActivity"
+        android:configChanges="locale|layoutDirection"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:launchMode="singleTop"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+        tools:ignore="RedundantLabel">
+
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:host="farmsanta.com"
+                android:scheme="http" />
+        </intent-filter>
+        <nav-graph android:value="@navigation/mobile_navigation" />
+    </activity>
+    <activity
+        android:name=".activities.MainActivity2"
+        android:label="@string/title_activity_main2"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysVisible" />
+    <activity
+        android:name=".activities.FarmerMapSelectActivity"
+        android:label="@string/title_activity_map"
+        android:parentActivityName=".activities.MainActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".activities.FetchLocationActivity"
+        android:exported="false" />
+
+
+    <service
+        android:name=".background.service.FarmsantaMessagingService"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
+
+    <receiver
+        android:name=".broadcast.MySMSBroadCastReceiver"
+        android:exported="true"
+        android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+        <intent-filter>
+            <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+        </intent-filter>
+    </receiver>
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_crop_notif" />
+    <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorPrimaryDark" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_channel_id"
+        android:value="@string/default_notification_channel_id" />
+
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts" />
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths" />
+    </provider>
+
+    <service
+        android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+        android:enabled="false"
+        android:exported="false">
+        <meta-data
+            android:name="autoStoreLocales"
+            android:value="true" />
+    </service>
+
+</application>
+
+</manifest>

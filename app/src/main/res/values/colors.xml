@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#00601B</color>
+    <color name="colorPrimaryDark">#00601B</color>
+    <color name="colorOnPrimary">#1D7C66</color>
+    <color name="colorSecondary">#16574F</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorAccent">#F26522</color>
+    <color name="statusBarColor">@color/colorPrimary</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="malibu">#5FD9FF</color>
+
+    <color name="ic_launcher_background">#FFFFFF</color>
+
+    <color name="light_black">#202020</color>
+    <color name="black_font">#001900</color>
+
+    <color name="bluish_white">#E6F0FA</color>
+
+    <color name="grey_light">#A5A3A3</color>
+    <color name="grey_dark">#80707070</color>
+    <color name="grey_bg">#EDF0F2</color>
+    <color name="grey_divider">#CDCDCD</color>
+    <color name="grey_translucent">#80FDFDFD</color>
+    <color name="grey_1">#585151</color>
+    <color name="grey_text">#676A67</color>
+
+    <color name="green_bg">#05854D</color>
+    <color name="green_bg_dark">#04673B</color>
+    <color name="green_dark_menu">#001900</color>
+
+    <color name="yellow">#EB9F45</color>
+    <color name="yellow_dark">#FFC400</color>
+    <color name="yellow_light">#FFD7A7</color>
+    <color name="yellowish_gold">#A35900</color>
+
+    <color name="orange_yellow">#EBBE4A</color>
+    <color name="sky_blue_light">#78D1E2</color>
+    <color name="sky_blue_light1">#A3E1FC</color>
+    <color name="dark_blue_green">#006679</color>
+
+    <color name="pink_dark">#EF8A9A</color>
+    <color name="pink_light">#FFB9C4</color>
+    <color name="dark_red">#98414F</color>
+
+    <color name="fertilizer_card">#AD90FA</color>
+    <color name="fertilizer_card_light">#C7B2FF</color>
+
+    <color name="violet_dark">#4B2F93</color>
+
+    <color name="white_green">#E8EDF1</color>
+    <color name="orange_theme">#F26522</color>
+
+    <color name="table_view_border">#B5B7B5</color>
+    <color name="hectares_color">#767B76</color>
+
+</resources>
