@@ -1,0 +1,301 @@
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-android'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
+    id 'com.google.firebase.firebase-perf'
+}
+
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('keystore.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion "30.0.3"
+
+    def formatter = DateTimeFormatter.ofPattern("ddMMyyyy_HH.mm")
+    def versionDateTime = LocalDateTime.now().format(formatter)
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 20
+        versionName "1.0.58.$versionDateTime"
+        println("versionName : $versionName")
+        multiDexEnabled true
+
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def secureProps = new Properties()
+        if (file("../secure.properties").exists()) {
+            file("../secure.properties")?.withInputStream { secureProps.load(it) }
+        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../keystore/farm_santa_app_keystore.jks')
+            storePassword 'farmsanta@123'
+            keyAlias 'nutrisource'
+            keyPassword 'farmsanta@123'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            ext.enableCrashlytics = true
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    defaultConfig {
+        resourceConfigurations += ["en", "en-rCM", "en-rKE", "fr", "fr-rCM", "fr-rTG"]
+    }
+
+    flavorDimensions "default"
+    productFlavors {
+        dev {
+//            applicationId "com.farmsanta.farmer"
+//            versionNameSuffix "-DEV"
+//            buildConfigField "String", "S3_BUCKET_NAME", "\"farmsantaassestsdev\""
+//            buildConfigField "String", "S3_PROFILE_BUCKET_NAME", "\"farmsantadevfarmerprofile\""
+//            buildConfigField "String", "BASE_URL", "\"https://appapi.farmsanta.com/\""
+////            buildConfigField "String", "BASE_URL", "\"http://10.0.2.2\""
+//            buildConfigField "String", "MAPS_API_KEY", "\"AIzaSyDpkRfUVOpxZMqqWC_JtwWNdtG-mBLwIV4\""
+            applicationId "com.farmsanta.farmer"
+            versionNameSuffix ""
+            buildConfigField "String", "S3_BUCKET_NAME", "\"farmsantaassestspreprod\""
+            buildConfigField "String", "S3_PROFILE_BUCKET_NAME", "\"farmsantapreprodfarmerprofile\""
+            buildConfigField "String", "BASE_URL", "\"https://uatappapi.farmsanta.com/\""
+            buildConfigField "String", "MAPS_API_KEY", "\"AIzaSyDpkRfUVOpxZMqqWC_JtwWNdtG-mBLwIV4\""
+        }
+        uat {
+            applicationId "com.farmsanta.farmer"
+            versionNameSuffix ""
+            buildConfigField "String", "S3_BUCKET_NAME", "\"farmsantaassestspreprod\""
+            buildConfigField "String", "S3_PROFILE_BUCKET_NAME", "\"farmsantapreprodfarmerprofile\""
+            buildConfigField "String", "BASE_URL", "\"https://uatappapi.farmsanta.com/\""
+            buildConfigField "String", "MAPS_API_KEY", "\"AIzaSyDpkRfUVOpxZMqqWC_JtwWNdtG-mBLwIV4\""
+        }
+        prod {
+            applicationId "com.farmsanta.farmer"
+            versionNameSuffix ""
+            buildConfigField "String", "S3_BUCKET_NAME", "\"farmsantaassests\""
+            buildConfigField "String", "S3_PROFILE_BUCKET_NAME", "\"farmsantafarmerprofile\""
+            buildConfigField "String", "BASE_URL", "\"https://appapi.farmsanta.com/\""
+            buildConfigField "String", "MAPS_API_KEY", "\"AIzaSyDpkRfUVOpxZMqqWC_JtwWNdtG-mBLwIV4\""
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+    }
+
+    buildFeatures {
+        viewBinding true
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    lint {
+        checkReleaseBuilds false
+    }
+
+//    resources {
+//        excludes += '/META-INF/{AL2.0,LGPL2.1}'
+//    }
+}
+
+//noinspection DifferentStdlibGradleVersion
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.7.0-alpha02'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+    implementation 'androidx.fragment:fragment-ktx:1.5.7'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.hbb20:ccp:2.5.4'
+    implementation 'com.google.firebase:firebase-analytics:21.3.0'
+    implementation 'io.noties.markwon:core:4.6.2'
+    implementation 'io.noties.markwon:html:4.6.2'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.android.libraries.places:places:3.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.google.maps.android:maps-compose:1.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
+    implementation 'com.google.android:flexbox:2.0.1'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.hendraanggrian.appcompat:socialview:0.3-rc1'
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation "androidx.core:core-ktx:1.10.1"
+
+    //noinspection GradleDependency
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.8.0"
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'androidx.work:work-runtime:2.8.1'
+    implementation "androidx.room:room-runtime:2.5.1"
+
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+    kapt "androidx.room:room-compiler:2.5.1"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+
+    annotationProcessor "androidx.room:room-compiler:2.5.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.3.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+//    implementation 'com.google.firebase:firebase-dynamic-links-ktx'
+//    implementation 'com.google.firebase:firebase-dynamic-links'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-perf'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation "androidx.compose.runtime:runtime-livedata:1.3.3"
+    implementation "androidx.compose.ui:ui:$compose_version"
+    implementation "androidx.compose.material:material:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "androidx.compose.ui:ui-tooling-preview:$compose_version"
+    implementation "androidx.compose.material:material-icons-extended:$compose_version"
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.activity:activity-compose:1.7.1'
+    implementation("io.coil-kt:coil-compose:2.1.0")
+    implementation "com.google.accompanist:accompanist-swiperefresh:0.25.0"
+    implementation "com.google.accompanist:accompanist-pager:0.25.0"
+    implementation "com.google.accompanist:accompanist-pager-indicators:0.25.0"
+
+    implementation 'com.caverock:androidsvg-aar:1.4'
+    implementation 'com.github.Shouheng88:compressor:1.6.0'
+    implementation "com.google.accompanist:accompanist-drawablepainter:0.23.1"
+    implementation("com.himanshoe:charty:1.1.2-alpha02")
+
+    // Google play in app update library
+    implementation 'com.google.android.play:app-update:2.1.0'
+    // For Kotlin users also add the Kotlin extensions library for Play In-App Update:
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
+    implementation 'com.razorpay:checkout:1.5.12'
+    //Hilt Depedencies
+//    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+//    implementation "com.google.dagger:hilt-android:2.38.1"
+//    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+//    kapt "com.google.dagger:hilt-compiler:2.38.1"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+
+    //don't change version of this dependency
+    //noinspection GradleDependency
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.8'
+
+
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.1'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
+    debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:1.7.21"
+
+
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'androidx.browser:browser:1.5.0'
+    implementation 'com.basgeekball:awesome-validation:4.2'
+    implementation 'com.github.mohammadatif:Animatoo:master'
+    implementation 'com.github.Shashank02051997:FancyAlertDialog-Android:0.1'
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.arimorty:floatingsearchview:2.1.1'
+    implementation 'com.github.maxwellobi:android-speech-recognition:v1.0.0-beta.1'
+    implementation 'com.github.w9jds:FloatingActionMenu:v0.1.0-alpha'
+    implementation 'com.github.MindorksOpenSource:EditDrawableText:1.1.0'
+    implementation 'com.mikepenz:actionitembadge:4.0.0'
+    implementation 'com.mikepenz:fontawesome-typeface:5.9.0.0-kotlin@aar'
+    implementation 'com.github.xiaohaibin:XMarqueeView:2.0.6'
+    implementation 'com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava'
+    implementation 'cn.wzbos.android.widget:filterview:1.0.0'
+    implementation 'com.github.travijuu:numberpicker:1.0.7'
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
+    implementation "com.github.bumptech.glide:glide:4.11.0"
+    implementation 'com.github.felixsoares:ImageZoom:1.0'
+    implementation 'com.github.devendroid:ReadMoreOption:1.0.2'
+    implementation 'io.github.tutorialsandroid:kalertdialog:20.3.6'
+    implementation 'com.github.TutorialsAndroid:progressx:v6.0.19' //required for kalertdialog lib
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+    implementation 'nl.dionsegijn:konfetti-compose:2.0.2'
+    implementation 'nl.dionsegijn:konfetti-xml:2.0.2'
+    implementation 'com.github.Ferfalk:SimpleSearchView:0.2.0'
+
+}
+
+repositories {
+    mavenCentral()
+}

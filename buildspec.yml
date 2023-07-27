@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      android: 29
+      java: corretto8
+  pre_build:
+    commands:
+      - aws s3 cp s3://farmsanta-devops-essentials/k8/config ~/.aws/
+      - aws s3 cp s3://farmsanta-devops-essentials/android/keystore_farmer.jks /tmp/keystore_farmer.jks
+      - export "RELEASE_STORE_FILE"="/tmp/keystore_farmer.jks"
+  build:
+    commands:
+      - ./gradlew assembleDebug
+artifacts:
+  files:
+    - app/build/outputs/apk/prod/debug/app-prod-debug.apk
+

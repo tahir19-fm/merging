@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    <androidx.appcompat.widget.SearchView-->
+<!--        android:id="@+id/fs_pop_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="@dimen/pop_margin_start"-->
+<!--        android:layout_marginLeft="@dimen/pop_margin_start"-->
+<!--        android:layout_marginTop="@dimen/pop_margin_top"-->
+<!--        android:layout_marginEnd="@dimen/pop_margin_right"-->
+<!--        android:layout_marginRight="@dimen/pop_margin_right"-->
+<!--        android:background="@drawable/search_button_background"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/fs_pop_filter"-->
+<!--        android:layout_width="@dimen/pop_filter_width"-->
+<!--        android:layout_height="@dimen/pop_filter_height"-->
+<!--        android:layout_marginTop="@dimen/pop_margin_top"-->
+<!--        android:layout_marginEnd="@dimen/pop_margin_start"-->
+<!--        android:layout_marginRight="@dimen/pop_margin_start"-->
+<!--        android:contentDescription="@string/pop_filter"-->
+<!--        android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintLeft_toRightOf="@+id/fs_pop_search"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_sort_icon" />-->
+
+<!--    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+<!--        android:id="@+id/swipe_pop_refreshContent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="@dimen/pop_padding"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/fs_pop_search"-->
+<!--        app:layout_constraintVertical_weight="1">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recycler_pop_list"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+    <androidx.compose.ui.platform.ComposeView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

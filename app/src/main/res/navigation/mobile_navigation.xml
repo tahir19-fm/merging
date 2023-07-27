@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_land_crop_details"
+            app:destination="@id/navigation_land_crop_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_social_wall"
+            app:destination="@id/navigation_social_wall"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_all_news"
+            app:destination="@id/navigation_all_news"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_crop_advisory"
+            app:destination="@id/navigation_crop_advisory"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_scouting_image_list"
+            app:destination="@id/navigation_list_farm_scouting_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_weather_details"
+            app:destination="@id/navigation_weather_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_home_to_view_post"
+            app:destination="@id/navigation_social_post_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_home_to_advisory_details"
+            app:destination="@id/languages_bottom_sheet"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_home_to_scout_details"
+            app:destination="@id/navigation_farm_scout_details_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_home_to_viewAdvisoryFragment"
+            app:destination="@id/viewAdvisoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+
+        <action
+            android:id="@+id/action_navigation_home_to_viewPopFragment"
+            app:destination="@id/viewPopFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_crop_calendar"
+            app:destination="@id/cropCalendarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_diseases"
+            app:destination="@id/diseasesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_disease_details"
+            app:destination="@id/diseaseDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_market_analysis"
+            app:destination="@id/marketAnalysisFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_fertilizer_calculator"
+            app:destination="@id/fertilizerCalcFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_nutri_source"
+            app:destination="@id/nutriSourceFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+        <action
+            android:id="@+id/action_home_to_my_crops"
+            app:destination="@id/myCropsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+        <action
+            android:id="@+id/action_home_to_create_new_post"
+            app:destination="@id/navigation_create_post"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/navigation_home" />
+
+
+        <action
+            android:id="@+id/action_scout_list_to_add_scout_new"
+            app:destination="@id/navigation_image_details_farm_scout_in_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_home_to_about_us"
+            app:destination="@id/aboutUsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_navigation_home_self"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_home_to_languages_bottom_sheet"
+            app:destination="@id/languages_bottom_sheet"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_list_farm_scouting_home"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.FarmScoutImageFragment"
+        android:label="Farm scouting"
+        tools:layout="@layout/fragment_farm_scout_image">
+
+        <action
+            android:id="@+id/action_farm_scout_home"
+            app:destination="@id/navigation_image_details_farm_scout_in_home"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/zoom_out"
+            app:popEnterAnim="@anim/zoom_in"
+            app:popExitAnim="@anim/zoom_out" />
+
+        <action
+            android:id="@+id/action_scout_list_to_details_home"
+            app:destination="@id/navigation_farm_scout_details_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_scout_list_to_add_scout_new"
+            app:destination="@id/navigation_image_details_farm_scout_in_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <argument
+            android:name="landId"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_farm_scout_details_home"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.FarmScoutImageDetailsFragment"
+        android:label="Image details"
+        tools:layout="@layout/fragment_farm_scout_details">
+        <argument
+            android:name="scoutingIndex"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="scouting_uuid"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_image_details_farm_scout_in_home"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ScoutingImageDetailsFromHome"
+        android:label="Image Details"
+        tools:layout="@layout/fragment_scouting_image_details">
+        <argument
+            android:name="filePath"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_image_details_farm_scout_in_home_to_query_sent"
+            app:destination="@id/querySentFragment"
+            app:enterAnim="@anim/zoom_in"
+            app:exitAnim="@anim/zoom_out"
+            app:popEnterAnim="@anim/zoom_in"
+            app:popExitAnim="@anim/zoom_out"
+            app:popUpTo="@id/navigation_image_details_farm_scout_in_home"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_weather_details"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.WeatherFragment"
+        android:label="Farm weather data"
+        tools:layout="@layout/fragment_weather">
+        <action
+            android:id="@+id/action_navigation_weather_details_to_weatherForecastFragment"
+            app:destination="@id/weatherForecastFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/navigation_weather_details" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_crop_advisory"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.CropAdvisoryInboxFragment"
+        android:label="@string/crop_advisory_inbox"
+        tools:layout="@layout/fragment_crop_advisory_inbox">
+        <action
+            android:id="@+id/action_crop_advisory_list_to_details"
+            app:destination="@id/languages_bottom_sheet"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_navigation_crop_advisory_to_savedAdvisoriesFragment"
+            app:destination="@id/savedAdvisoriesFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_advisory_inbox_to_view_advisory"
+            app:destination="@id/viewAdvisoryFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/languages_bottom_sheet"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.dialog.LanguagesBottomSheet"
+        android:label="Advisory Details"
+        tools:layout="@layout/languages_bottom_sheet" />
+
+    <fragment
+        android:id="@+id/navigation_introduction"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.FragmentIntroduction"
+        android:label="Introduction">
+        <action
+            android:id="@+id/action_landing_to_login"
+            app:destination="@id/selectLanguageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_landing"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.LandingFragment"
+        android:label="Landing"
+        tools:layout="@layout/fragment_landing">
+        <action
+            android:id="@+id/action_landing_to_login"
+            app:destination="@id/navigation_login"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_landing_to_signup"
+            app:destination="@id/navigation_signup"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_landing_to_selectLanguageFragment"
+            app:destination="@id/selectLanguageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mobile_navigation" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_onboard"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.OnBoardingFragment"
+        android:label="OnBoard"
+        tools:layout="@layout/fragment_on_boarding">
+        <action
+            android:id="@+id/action_onboard_to_landing"
+            app:destination="@+id/navigation_landing"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_all_news"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.NewsAllFragment"
+        android:label="All news"
+        tools:layout="@layout/fragment_news_all" />
+
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.LoginWithMobileFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login_with_mobile_reference">
+
+        <argument
+            android:name="phoneCode"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_otp_ok_to_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mobile_navigation" />
+
+        <action
+            android:id="@+id/action_login_to_add_profile"
+            app:destination="@id/navigation_add_profile"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mobile_navigation" />
+
+        <action
+            android:id="@+id/action_navigation_login_to_signUpFragment"
+            app:destination="@id/signUpFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/navigation_login" />
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_login_to_confirmOtpFragment"
+        app:destination="@id/confirmOtpFragment"
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left"
+        app:popUpTo="@id/navigation_login" />
+
+    <fragment
+        android:id="@+id/navigation_add_farmer"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.AddFarmerFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_add_farmer">
+
+        <argument
+            android:name="mobileNumber"
+            android:defaultValue=""
+            app:argType="string" />
+
+
+        <action
+            android:id="@+id/action_add_to_welcome_screen"
+            app:destination="@id/welcomeFarmSantaFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mobile_navigation" />
+
+        <action
+            android:id="@+id/action_navigation_add_farmer_to_addCropsFragment"
+            app:destination="@id/addCropsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/navigation_add_farmer" />
+
+        <action
+            android:id="@+id/action_navigation_add_farmer_to_addFarmLocationFragment"
+            app:destination="@id/addFarmLocationFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/navigation_add_farmer" />
+
+        <action
+            android:id="@+id/action_add_farmer_to_map_view"
+            app:destination="@id/mapViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_otp_to_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mobile_navigation" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.LoginWithMobileFragment"
+        android:label="Signup"
+        tools:layout="@layout/fragment_login_with_mobile_reference">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_add_profile"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.CompleteProfileFragment"
+        android:label="Add Profile"
+        tools:layout="@layout/fragment_farmer_profile_1">
+        <action
+            android:id="@+id/action_profile_to_landing"
+            app:destination="@id/navigation_landing"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mobile_navigation" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ProfileFragment"
+        android:label="@string/my_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_onboard"
+            app:destination="@id/navigation_onboard"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/mobile_navigation"
+            app:popUpToInclusive="true" />
+
+
+        <action
+            android:id="@+id/action_profile_to_plot_map"
+            app:destination="@id/mapViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_navigation_profile_to_profileEditFragment"
+            app:destination="@id/profileEditFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pop"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.PopLibraryFragment"
+        android:label="@string/pop_library"
+        tools:layout="@layout/fragment_pop_library">
+
+        <action
+            android:id="@+id/action_pop_home_to_myBookMarksFragment"
+            app:destination="@id/myBookMarksFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_pop_library_to_viewOtherFarmerPopsFragment"
+            app:destination="@id/viewOtherFarmerPopsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_pop_library_to_viewPopFragment"
+            app:destination="@id/viewPopFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pop_details"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.PopDetailsFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_pop_webview">
+        <argument
+            android:name="index"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <argument
+            android:name="tab"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_pop_details_to_IPMInsectManagementFragment"
+            app:destination="@id/IPMInsectManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_pop_details_to_IPMDiseaseManagementFragment"
+            app:destination="@id/IPMDiseaseManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_pop_details_to_IPMWeedManagementFragment"
+            app:destination="@id/IPMWeedManagementFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_navigation_pop_details_to_zoomImageFragment"
+            app:destination="@id/zoomImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/navigation_pop_details" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_social_wall"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SocialWallFragment"
+        android:label="Social wall"
+        tools:layout="@layout/fragment_social_wall">
+        <action
+            android:id="@+id/action_social_wall_to_create_post"
+            app:destination="@id/navigation_create_post"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_social_wall_to_view_post"
+            app:destination="@id/navigation_social_post_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_navigation_social_wall_to_myActivitiesFragment"
+            app:destination="@id/myActivitiesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_navigation_social_wall_to_otherFarmerProfileFragment"
+            app:destination="@id/otherFarmerProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/action_navigation_social_wall_to_savedPostsFragment"
+            app:destination="@id/savedPostsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create_post"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SocialNewPostFragment"
+        android:label="@string/create_new_post"
+        tools:layout="@layout/fragment_social_new" />
+
+    <fragment
+        android:id="@+id/navigation_land_crop_details"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.LandCropFragment"
+        android:label="@string/land_details"
+        tools:layout="@layout/fragment_social_new" />
+
+    <fragment
+        android:id="@+id/navigation_social_post_details"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SocialMessageFragment"
+        android:label="@string/view_post"
+        tools:layout="@layout/fragment_social_message">
+
+        <argument
+            android:name="uuid"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="language_id"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ProfileEditFragment"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_profile_edit">
+        <action
+            android:id="@+id/action_profile_edit_to_add_farm_location"
+            app:destination="@id/addFarmLocationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/profileEditFragment" />
+
+        <action
+            android:id="@+id/action_profile_edit_to_add_crops"
+            app:destination="@id/addCropsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/profileEditFragment" />
+
+        <action
+            android:id="@+id/action_profile_edit_to_map_view"
+            app:destination="@id/mapViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/myActivitiesFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.MyActivitiesFragment"
+        android:label="My Activities"
+        tools:layout="@layout/fragment_my_activities" />
+    <fragment
+        android:id="@+id/otherFarmerProfileFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.OtherFarmerProfileFragment"
+        android:label="fragment_other_farmer_profile"
+        tools:layout="@layout/fragment_other_farmer_profile">
+
+        <action
+            android:id="@+id/action_other_farmer_to_view_post"
+            app:destination="@id/navigation_social_post_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/savedPostsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SavedPostsFragment"
+        android:label="SavedPostsFragment"
+        tools:layout="@layout/fragment_saved_posts" />
+    <fragment
+        android:id="@+id/savedAdvisoriesFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SavedAdvisoriesFragment"
+        android:label="fragment_saved_advisories"
+        tools:layout="@layout/fragment_saved_advisories" />
+
+    <fragment
+        android:id="@+id/myBookMarksFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.MyBookMarksPopsFragment"
+        android:label="MyBookMarksFragment">
+
+        <action
+            android:id="@+id/action_bookmarked_pops_to_view_pop"
+            app:destination="@id/viewPopFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewOtherFarmerPopsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ViewOtherFarmerPopsFragment"
+        android:label="fragment_view_other_farmer_pops"
+        tools:layout="@layout/fragment_view_other_farmer_pops" />
+    <fragment
+        android:id="@+id/viewPopFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ViewPopFragment"
+        android:label="fragment_view_pop"
+        tools:layout="@layout/fragment_view_pop">
+
+        <action
+            android:id="@+id/action_view_pop_to_pop_details"
+            app:destination="@id/navigation_pop_details"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_view_pop_to_zoom_image"
+            app:destination="@id/zoomImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/viewPopFragment" />
+
+        <argument
+            android:name="uuid"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="popUuid"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <!--<deepLink
+            app:uri="http://farmsanta.com/pop/{popUuid}/" />-->
+
+    </fragment>
+    <fragment
+        android:id="@+id/IPMInsectManagementFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.IPMInsectManagementFragment"
+        android:label="IPM-Insect Management"
+        tools:layout="@layout/fragment_i_p_m_insect_management">
+
+        <argument
+            android:name="name"
+            android:defaultValue="name"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_IPMInsectManagementFragment_to_zoomImageFragment"
+            app:destination="@id/zoomImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/IPMDiseaseManagementFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.IPMDiseaseManagementFragment"
+        android:label="IPM-Disease Management"
+        tools:layout="@layout/fragment_i_p_m_disease_management">
+
+        <argument
+            android:name="name"
+            android:defaultValue="name"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_IPMDiseaseManagementFragment_to_zoomImageFragment"
+            app:destination="@id/zoomImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/IPMWeedManagementFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.IPMWeedManagementFragment"
+        android:label="IPM-Weed Management"
+        tools:layout="@layout/fragment_i_p_m_weed_management">
+
+        <argument
+            android:name="name"
+            android:defaultValue="name"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_IPMWeedManagementFragment_to_zoomImageFragment"
+            app:destination="@id/zoomImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/confirmOtpFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ConfirmOtpFragment"
+        android:label="Confirm OTP"
+        tools:layout="@layout/fragment_confirm_otp">
+
+        <argument
+            android:name="mobileNumber"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="isSigningUp"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <argument
+            android:name="token"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="verificationId"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_confirmOtp_to_welcomeFarmSantaFragment"
+            app:destination="@id/welcomeFarmSantaFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_confirm_otp_fragment_to_select_farmer_location"
+        app:destination="@id/selectFarmerLocationFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/mobile_navigation"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_to_webview_fragment"
+        app:destination="@id/webviewFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+
+    <action
+        android:id="@+id/action_confirmOtp_to_add_farmer"
+        app:destination="@id/navigation_add_farmer"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/webviewFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.WebViewFragment"
+        android:label="webview">
+
+        <argument
+            android:name="title"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="url"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/welcomeFarmSantaFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.WelcomeFarmSantaFragment"
+        android:label="WelcomeFarmSantaFragment"
+        tools:layout="@layout/fragment_welcome_farm_santa">
+
+
+        <action
+            android:id="@+id/action_welcomeFarmSantaFragment_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@+id/welcomeFarmSantaFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SignUpFragment"
+        android:label="Sign Up">
+
+        <argument
+            android:name="phoneCode"
+            android:defaultValue="91"
+            app:argType="integer" />
+
+        <action
+            android:id="@+id/action_signUpFragment_to_confirmOtpFragment"
+            app:destination="@id/confirmOtpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/signUpFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectFarmerLocationFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SelectFarmerLocationFragment"
+        android:label="SelectFarmerLocationFragment"
+        tools:layout="@layout/fragment_select_farmer_location">
+
+        <action
+            android:id="@+id/action_select_location_to_navigation_add_farmer"
+            app:destination="@id/navigation_add_farmer"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <argument
+            android:name="mobileNumber"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addCropsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.AddCropsFragment"
+        android:label="AddCropsFragment">
+
+        <argument
+            android:name="isEditFarmer"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addFarmLocationFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.AddFarmLocationFragment"
+        android:label="AddFarmLocationFragment">
+
+        <argument
+            android:name="isEditFarmer"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_add_farm_location_to_map_view"
+            app:destination="@id/mapViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/addFarmLocationFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/selectLanguageFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SelectLanguageFragment"
+        android:label="SelectLanguageFragment">
+
+        <action
+            android:id="@+id/action_selectLanguage_to_login"
+            app:destination="@id/navigation_login"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/mobile_navigation" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/weatherForecastFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.WeatherForecastFragment"
+        android:label="WeatherForecastFragment" />
+    <fragment
+        android:id="@+id/viewAdvisoryFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ViewAdvisoryFragment"
+        android:label="ViewAdvisoryFragment">
+
+        <argument
+            android:name="uuid"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <argument
+            android:name="language_id"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/cropCalendarFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.CropCalendarFragment"
+        android:label="CropCalendarFragment"
+        tools:layout="@layout/fragment_crop_calendar">
+
+        <action
+            android:id="@+id/action_crop_calendar_to_add_crop_calendar"
+            app:destination="@id/addCropCalendarFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/cropCalendarFragment" />
+
+        <action
+            android:id="@+id/action_crop_calendar_to_cropping_stage_details"
+            app:destination="@id/croppingStageDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/cropCalendarFragment" />
+
+        <action
+            android:id="@+id/action_crop_calendar_to_fertilizer_calculator"
+            app:destination="@id/fertilizerCalcFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/croppingStageDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCropCalendarFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.AddCropCalendarFragment"
+        android:label="Add Crop Calendar"
+        tools:layout="@layout/fragment_add_crop_calendar" />
+
+
+    <fragment
+        android:id="@+id/croppingStageDetailsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.CroppingStageDetailsFragment"
+        android:label="Stage Details"
+        tools:layout="@layout/fragment_cropping_stage_details">
+
+        <action
+            android:id="@+id/action_crop_stage_details_to_fertilizer_calculator"
+            app:destination="@id/fertilizerCalcFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/croppingStageDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/diseasesFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.DiseasesFragment"
+        android:label="DiseasesFragment">
+
+        <argument
+            android:name="selectedCrop"
+            android:defaultValue=""
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_diseases_home_to_disease_details"
+            app:destination="@id/diseaseDetailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/diseasesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/diseaseDetailsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.DiseaseDetailsFragment"
+        android:label="Disease Details">
+
+        <action
+            android:id="@+id/disease_detail_to_ask_query"
+            app:destination="@id/navigation_image_details_farm_scout_in_home"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/diseaseDetailsFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/marketAnalysisFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.MarketAnalysisFragment"
+        android:label="Market Analysis"
+        tools:layout="@layout/fragment_market_analysis" />
+    <fragment
+        android:id="@+id/fertilizerCalcFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.FertilizerCalcFragment"
+        android:label="FertilizerCalcFragment">
+        <action
+            android:id="@+id/action_fertilizer_calc_to_fertilizer_recommendation"
+            app:destination="@id/fertilizerRecommendationFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fertilizerRecommendationFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.FertilizerRecommendationFragment"
+        android:label="Fertilizer Recommendation"
+        app:enterAnim="@anim/slide_in"
+        app:exitAnim="@anim/fade_out"
+        app:popEnterAnim="@anim/fade_in"
+        app:popExitAnim="@anim/slide_out"
+        app:popUpTo="@id/fertilizerCalcFragment" />
+
+    <fragment
+        android:id="@+id/nutriSourceFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.NutriSourceFragment"
+        android:label="Nutri Source">
+
+        <action
+            android:id="@+id/action_nutri_source_to_nutri_source_details"
+            app:destination="@id/nutriSourceDetailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/nutriSourceFragment" />
+
+        <action
+            android:id="@+id/action_nutri_source_to_saved_nutri_source"
+            app:destination="@id/savedNutriSourceFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/nutriSourceFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nutriSourceDetailsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.NutriSourceDetailsFragment"
+        android:label="Nutri Source Details" />
+
+    <fragment
+        android:id="@+id/savedNutriSourceFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.SavedNutriSourceFragment"
+        android:label="Saved Nutri Source">
+        <action
+            android:id="@+id/action_saved_nutri_source_to_nutri_source_details"
+            app:destination="@id/nutriSourceDetailsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/savedNutriSourceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myCropsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.MyCropsFragment"
+        android:label="MyCropsFragment">
+
+        <action
+            android:id="@+id/action_my_crops_to_diseases"
+            app:destination="@id/diseasesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_to_disease_details"
+            app:destination="@id/diseaseDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_to_crop_advisory"
+            app:destination="@id/navigation_crop_advisory"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_to_view_advisory"
+            app:destination="@id/viewAdvisoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_to_view_pop"
+            app:destination="@id/viewPopFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_scouting_image_list"
+            app:destination="@id/navigation_list_farm_scouting_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_to_scout_details"
+            app:destination="@id/navigation_farm_scout_details_home"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/myCropsFragment" />
+
+        <action
+            android:id="@+id/action_my_crops_to_market_analysis"
+            app:destination="@id/marketAnalysisFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/myCropsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/mapViewFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.MapViewFragment"
+        android:label="fragment_map_view"
+        tools:layout="@layout/fragment_map_view">
+
+        <argument
+            android:name="selectedLandIndex"
+            android:defaultValue="-1"
+            app:argType="integer" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/zoomImageFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.ZoomImageFragment"
+        android:label="ZoomImageFragment">
+        <argument
+            android:name="imageUrl"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutUsFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.AboutUsFragment"
+        android:label="AboutUsFragment" />
+    <fragment
+        android:id="@+id/querySentFragment"
+        android:name="com.taomish.app.android.farmsanta.farmer.fragments.QuerySentFragment"
+        android:label="QuerySentFragment" />
+
+</navigation>

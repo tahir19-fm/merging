@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/addCropDetails_linear_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingRight="@dimen/fab_margin"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/back"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_prev" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/crop_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_very_large"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/addCropDetails_image_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/close"
+            android:minWidth="36dp"
+            android:minHeight="36dp"
+            app:srcCompat="@drawable/ic_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addCropDetails_linear_actionBar"
+        android:background="@drawable/actionbar_foreground"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fab_margin"
+        android:paddingTop="96dp"
+        android:paddingRight="@dimen/fab_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/addCropDetails_linear_actionBar"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@drawable/white_background_curved_border"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbarSize="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addCropDetails_textInputLayout_currentCrop"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Current Crop"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_textInputEdit_currentCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawableRight="@drawable/ic_dropdown"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addCropDetails_textInputLayout_date"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Sowing Date"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/baseline_event_black_24"
+                            android:drawableRight="@drawable/baseline_event_black_24"
+                            android:enabled="true"
+                            android:imeOptions="actionNext"
+                            android:inputType="date"
+                            android:maxLength="10"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Cultivar Name"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal"
+                        app:helperText="Optional">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_autoComplete_cultivarName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawableRight="@drawable/ic_dropdown"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Cultivar Type"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal"
+                        app:helperText="Optional">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_autoComplete_cultivar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawableRight="@drawable/ic_dropdown"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Cultivar duration"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal"
+                        app:helperText="Optional">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_autoComplete_cultivarDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawableRight="@drawable/ic_dropdown"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapSentences"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addCropDetails_textInputLayout_area"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        app:suffixText="@string/hectares"
+                        app:suffixTextColor="@color/hectares_color"
+                        android:hint="Crop cultivable area"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        app:suffixText="@string/meters"
+                        android:hint="Plant-to-plant spacing"
+                        app:suffixTextColor="@color/hectares_color"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_plantSpacing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/edit_text_min_height"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        app:suffixTextColor="@color/hectares_color"
+                        app:suffixText="@string/meters"
+                        android:hint="Row-to-row spacing"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_rowSpacing"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:minHeight="@dimen/edit_text_min_height"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        app:suffixText="@string/crop_kg"
+                        app:suffixTextColor="@color/hectares_color"
+                        android:hint="Expected yield"
+                        android:textColorHint="@color/grey_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_expected"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLines="4"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:hint="Last crop"
+                        android:textColorHint="@color/grey_dark">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_textInputEdit_lastCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:drawableRight="@drawable/ic_dropdown"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        app:suffixText="@string/crop_kg"
+                        app:suffixTextColor="@color/hectares_color"
+                        android:hint="Last yield"
+                        android:textColorHint="@color/grey_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_lastYield"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/addCropDetails_text_addInterCrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:background="@drawable/button_white_background_curved_border"
+                        android:padding="@dimen/small_spacing"
+                        android:text="+Add an intercrop"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_size_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/addCropDetails_linear_interCropContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addCropDetails_textInputLayout_interCrop"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Intercrop"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_textInputEdit_interCrop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Intercrop duration"
+                        android:inputType="text"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/addCropDetails_textInputEdit_interCropDuration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_down_grey"
+                            android:drawableRight="@drawable/ic_down_grey"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/addCropDetails_textInputLayout_interCropDate"
+                        style="@style/TextInputLayoutStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:autofillHints="Name"
+                        android:hint="Sowing Date"
+                        android:inputType="textPersonName"
+                        android:textColorHint="@color/grey_dark"
+                        android:textSize="@dimen/font_size_normal">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/addCropDetails_textInputEdit_interCropDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/baseline_event_black_24"
+                            android:drawableRight="@drawable/baseline_event_black_24"
+                            android:enabled="true"
+                            android:imeOptions="actionDone"
+                            android:inputType="date"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:padding="@dimen/activity_vertical_margin"
+                            android:paddingVertical="@dimen/small_spacing"
+                            android:textColorHint="@color/colorPrimary"
+                            android:textSize="@dimen/font_size_normal" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/addCropDetails_button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/normal_spacing"
+            android:background="@drawable/button_orange_background_curved_border"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>

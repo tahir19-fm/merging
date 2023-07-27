@@ -1,0 +1,323 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+package="com.taomish.app.android.farmsanta.farmer">
+
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission
+    android:name="com.google.android.gms.permission.AD_ID"
+    tools:node="remove" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.READ_SMS" />
+<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+
+<uses-feature android:name="android.hardware.location.gps" />
+
+<!--    <uses-permission android:name="android.permission.INTERNET" />-->
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    tools:ignore="ScopedStorage" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<!--<uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />-->
+
+<uses-feature
+    android:name="android.hardware.camera"
+    android:required="false" />
+<uses-feature
+    android:name="android.hardware.telephony"
+    android:required="false" />
+<uses-feature
+    android:glEsVersion="0x00020000"
+    android:required="true" />
+
+<application
+    android:name=".baseclass.FarmsantaBaseApplication"
+    android:allowBackup="true"
+    android:fullBackupOnly="true"
+    android:icon="@drawable/app_new_logo_white"
+    android:label="@string/app_name"
+    android:localeConfig="@xml/locale_config"
+    android:roundIcon="@drawable/app_new_logo_white"
+    android:supportsRtl="true"
+    android:theme="@style/AppTheme"
+    android:usesCleartextTraffic="true"
+    tools:ignore="AllowBackup,LockedOrientationActivity"
+    tools:targetApi="33">
+
+    <meta-data
+        android:name="firebase_performance_logcat_enabled"
+        android:value="true" />
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="@string/google_maps_key" />
+    <!--@string/maps_api_key-->
+
+    <!--<meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="${MAP_API_KEY}" />-->
+
+    <activity
+        android:name=".activities.SplashScreenActivity"
+        android:configChanges="locale|layoutDirection"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/SplashTheme"
+        android:windowSoftInputMode="stateAlwaysHidden"
+        tools:ignore="RedundantLabel">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".activities.MainActivity"
+        android:configChanges="locale|layoutDirection"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:launchMode="singleTop"
+        android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+        tools:ignore="RedundantLabel">
+
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:host="farmsanta.com"
+                android:scheme="http" />
+        </intent-filter>
+        <nav-graph android:value="@navigation/mobile_navigation" />
+    </activity>
+    <activity
+        android:name=".activities.MainActivity2"
+        android:label="@string/title_activity_main2"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="stateAlwaysVisible" />
+    <activity
+        android:name=".activities.FarmerMapSelectActivity"
+        android:label="@string/title_activity_map"
+        android:parentActivityName=".activities.MainActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".activities.FetchLocationActivity"
+        android:exported="false" />
+    <activity
+        android:name=".nutrisource.Checkout"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilSupplierList"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.PaidSuccess"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilLabDetails"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilCartActivity"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilTestingDetails"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilBookingDetails"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.OrderRequestSent"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.ConfirmedOrder"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.OrderDetails"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.MarketPlaceHome"
+        android:parentActivityName=".nutrisource.MarketPlaceHome"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilTestReport"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilPaymentGatway"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        />
+    <activity
+        android:name=".nutrisource.SoilBookingConfirm"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilBookingRequest"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.CartActivity"
+        android:parentActivityName=".nutrisource.CartActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.CartCheckActivity"
+        android:parentActivityName=".nutrisource.CartCheckActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.OrderActivity"
+        android:parentActivityName=".nutrisource.OrderActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.ProductList"
+        android:parentActivityName=".nutrisource.ProductList"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.ProductInfoActivity"
+        android:parentActivityName=".nutrisource.ProductInfoActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.BookSoilTesting"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SupplierList"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.MyCartActivity"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.SoilTesting"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.ProductDetails"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.ProductByStore"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.TestReport"
+        android:exported="false"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".nutrisource.StoreDetails"
+        android:exported="false"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name="com.razorpay.CheckoutActivity"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:exported="true"
+        android:theme="@style/CheckoutTheme">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <data
+                android:host="rzp.io"
+                android:scheme="io.rzp" />
+        </intent-filter>
+    </activity>
+
+    <receiver
+        android:name="com.razorpay.RzpTokenReceiver"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="rzp.device_token.share" />
+        </intent-filter>
+    </receiver>
+    <meta-data
+        android:name="com.razorpay.ApiKey"
+        android:value="rzp_test_roST7WAkJuACM4" />
+    <service
+        android:name=".background.service.FarmsantaMessagingService"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
+
+    <receiver
+        android:name=".broadcast.MySMSBroadCastReceiver"
+        android:exported="true"
+        android:permission="com.google.android.gms.auth.api.phone.permission.SEND">
+        <intent-filter>
+            <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+        </intent-filter>
+    </receiver>
+
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_crop_notif" />
+    <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@color/colorPrimaryDark" />
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_channel_id"
+        android:value="@string/default_notification_channel_id" />
+
+    <meta-data
+        android:name="preloaded_fonts"
+        android:resource="@array/preloaded_fonts" />
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths" />
+    </provider>
+
+    <service
+        android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+        android:enabled="false"
+        android:exported="false">
+        <meta-data
+            android:name="autoStoreLocales"
+            android:value="true" />
+    </service>
+
+</application>
+
+</manifest>

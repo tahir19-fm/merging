@@ -1,0 +1,677 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FarmSanta</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="onboarding_image">Onboarding Image</string>
+
+    <string name="drawer_close">Close</string>
+    <string name="back">Back</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="lorem_ipsum_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <!--drawable_list strings-->
+
+    <string name="farm_calculator">Farm Calculator</string>
+    <string name="seed_rate_image">Seedrate image</string>
+    <string name="seed_rate">Seed Rate</string>
+    <string name="plant_population">Plant Population</string>
+    <string name="pesticide_calculator">Pesticide Calculator</string>
+    <string name="fertilizer_calculator">Fertilizer Calculator</string>
+    <string name="login">Login</string>
+
+    <!--Farmer login-->
+    <string name="mobile_number">Mobile Number</string>
+    <string name="or_str">Or</string>
+    <string name="verify">Verify</string>
+    <string name="personal_profile">Your Profile</string>
+    <string name="profile_image_close">Close</string>
+    <string name="step1">Step 01</string>
+    <string name="step1of3"> of 3</string>
+    <string name="ten_percent">10% </string>
+    <string name="step1_completed">Completed</string>
+    <string name="take_pic_label">Take picture</string>
+    <string name="name">Name</string>
+    <string name="dob_label">Date of birth</string>
+    <string name="education">Education</string>
+    <string name="address">Address</string>
+    <string name="q_h_no">Quarter no./House no./Strt name/SubVillage</string>
+    <string name="country">Country</string>
+    <string name="state">State</string>
+    <string name="pin">P O Box</string>
+    <string name="gender">Gender</string>
+    <string name="save_n_proceed">Save &amp; Proceed</string>
+    <string name="comments">Comments</string>
+    <string name="register">Register</string>
+    <string name="crop">Crop</string>
+    <string name="required_plant_populations" formatted="false">1000 Seed Weight: 50g\nGermination: 90%\nPurity: 95%\nRequired Plant population per area: 12500 Nos\nSeed Per hill : 2 Nos</string>
+    <string name="calculate">Calculate</string>
+    <string name="my_farm">My Farm</string>
+    <string name="edit">Edit</string>
+    <string name="view_all">View All</string>
+    <string name="feature_coming_soon">The feature is in progress. It will be available soon</string>
+    <string name="land_details">Land Details</string>
+    <string name="add_land_details">Add Land Details</string>
+    <string name="language">Language</string>
+    <string name="get_started">Get Started</string>
+    <string name="calculate_pesticide_qty">You can calculate the quantity of pesticide/ herbicide to be used for the area.</string>
+    <string name="cultivable_area">Cultivable Area</string>
+    <string name="seed_variety">Seed Variety</string>
+    <string name="active_ingredients">Active Ingredient (AI)</string>
+    <string name="recommended_qty">Recommended Quantity (g/L or ml/L)</string>
+    <string name="tank_volume">Tank volume (liters)</string>
+    <string name="truth_label_details">Truth Label Details</string>
+    <string name="required_qty">Required Quantity</string>
+    <string name="four_litres">4 litres</string>
+    <string name="litres_per_hectare">3.25 litres per hectare (ha)</string>
+    <string name="complete">Complete</string>
+    <string name="my_crop">My Crop</string>
+    <string name="my_crops">My Crops</string>
+    <string name="pop">PoP</string>
+    <string name="search">Search</string>
+    <string name="filters">Filters</string>
+    <string name="calculate_seeding_per_area">You can calculate the seeding rate per unit area. Sample description or user instruction.</string>
+    <string name="kg">KG</string>
+    <string name="kg_label">13.05</string>
+    <string name="kg_per_hectare">10.2 kg per ha</string>
+    <string name="lbs">Lbs</string>
+    <string name="lbs_text">28.87</string>
+    <string name="seed_rate_lbs">22.56 lbs per ha</string>
+    <string name="share">Share</string>
+    <string name="comment">Comment</string>
+    <string name="farm_talk">Farm Talk</string>
+    <string name="day_news">Day News</string>
+    <string name="read_more">Read more</string>
+    <string name="read_less">Read less</string>
+    <string name="crop_info">Crop Information</string>
+    <string name="get_all_info_crop">You will get all the information about the crop, expected yield and process.</string>
+
+    <string name="text_layout_error_name_required">Required</string>
+    <string name="text_layout_error_age">Age less than 15!</string>
+    <string name="text_layout_error_country">Country missing</string>
+    <string name="text_layout_error_region">Region missing</string>
+    <string name="text_layout_error_state">State missing</string>
+    <string name="text_layout_error_postbox">Post box number is mandatory</string>
+    <string name="saving_profile">Saving profile</string>
+    <string name="camera">Camera</string>
+    <string name="graduate">Graduate</string>
+    <string name="specialized_in_crop">Specialized in crop studies</string>
+    <string name="post_graduate">Post Graduate</string>
+    <string name="higher_secondary">Higher secondary</string>
+    <string name="doctor">Doctor</string>
+    <string name="metric_passed">Metric passed</string>
+    <string name="primary_education">Primary education</string>
+    <string name="nil">Nil</string>
+    <string name="select_country">Select country</string>
+    <string name="select_language">Select language</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="phone_no_invalid">Phone number invalid</string>
+    <string name="crop_advisory">Crop Advisory</string>
+    <string name="view_more">View More</string>
+    <string name="add_caption">Add a caption</string>
+    <string name="my_farms">My Farms</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="water_source">Water Source</string>
+    <string name="saving_farm_scout">Saving Farm Scout</string>
+    <string name="edit_farm">Edit Farm</string>
+
+    <!--splash screen-->
+    <string name="from_str">from</string>
+    <string name="farm_santa_label">FarmSanta</string>
+    <string name="already_member_label">Already a member?</string>
+    <string name="new_to_farm_santa">New to FarmSanta?</string>
+    <string name="complete_profile_btn_label">Complete Your Profile</string>
+    <string name="update_downloaded_successfully">Update is downloaded successfully</string>
+
+    <!--pop home-->
+    <string name="pop_library">POP Library</string>
+    <string name="add_location">Add location</string>
+    <string name="added_crop_to_bookmark">%1$s has been <br />added to your bookmarks!</string>
+    <string name="view_pop">View POP</string>
+    <string name="view_profile">Vew Profile</string>
+    <string name="image_not_available">Image isn\'t available</string>
+
+    <!--Edit profile-->
+    <string name="first_name">First Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="add_image">Add Image</string>
+    <string name="done">Done</string>
+    <string name="secondary_number">Secondary Number</string>
+    <string name="email">Email</string>
+    <string name="add_address">Add Address</string>
+    <string name="district">District</string>
+    <string name="farm_size">Farm Size</string>
+    <string name="add_crops">Add Crops</string>
+    <string name="view_farm">View Farm</string>
+
+    <!--weather strings-->
+
+    <!--Bottom nav-->
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_farm_talk">Farm Talk</string>
+    <string name="bottom_nav_pop">POP</string>
+    <string name="bottom_nav_profile">Profile</string>
+
+    <!--home page-->
+    <string name="add">Add</string>
+    <string name="title_home">Home</string>
+    <string name="my_profile">My Profile</string>
+    <string name="map_farmer_map">Map farmer’s farm</string>
+    <string name="draw_farm_boundary">Draw Farm Boundary</string>
+    <string name="skip_this_process">Skip This Process</string>
+    <string name="soil_health">Soil health</string>
+    <string name="land_info">Land info</string>
+    <string name="scout">Scout</string>
+    <string name="gallery">Gallery</string>
+    <string name="post_image">Post Image</string>
+    <string name="create_new_post">Create new post</string>
+    <string name="view_post">View post</string>
+    <string name="close">Close</string>
+    <string name="log_out">Logout</string>
+    <string name="default_notification_channel_id">fcm_default_channel</string>
+    <string name="msg_token_fmt" translatable="false">FCM registration Token: %s</string>
+    <string name="today">Today</string>
+    <string name="crop_advisory_inbox">Crop advisory inbox</string>
+
+    <!--scouting -->
+    <string name="search_farm_location">Search farm location</string>
+    <string name="advisory">Advisory</string>
+    <string name="location">Location</string>
+    <string name="advisory_location">Advisory location</string>
+    <string name="favourable_text"><ul><li> It occurs in cool, moist weather usually in early spring </li><br /><li> Spore production is favoured by temperatures cooler than 18˚C, periods of fog and by relative humidities approaching 100% </li><br /><li> This disease spores remain in the affected plant debris and in the soil </li><br /><li> Fungal spores can be carried by insects, wind, rain or garden tools</li></ul></string>
+    <string name="preventive_text"><ol><li>Select well drained and aerated site for cultivation.</li><br /><li> Maintain proper distance between plants for aeration and minimise leaf moisture.</li><br /><li> Irrigate crop early in the to reduce leaf moisture. use cleaned and sanitised agri tools and machinery.</li><br /> <li>Weeds should be controlled</li></ol></string>
+    <string name="mechanical_text"><ol><li>Deep ploughing</li><br /><li> Crop rotation with pulses</li><br /><li> Prune or stake plants and remove any weeds to improve air circulation</li><br /> <li>Weeds should be controlled</li></ol></string>
+    <string name="image_error">Please select at least one image</string>
+
+
+    <string name="land_registration_no">Land registration #</string>
+    <string name="land_area">Land Area</string>
+    <string name="upload">Upload</string>
+    <string name="crop_details">Crop details</string>
+    <string name="hectares">hectares</string>
+    <string name="meters">meters</string>
+    <string name="crop_kg">kg</string>
+    <string name="middle_name">Middle name</string>
+    <string name="last_name">Last name</string>
+    <string name="no_advisory">No advisory added</string>
+    <string name="all_posts">All posts</string>
+    <string name="liked">Liked</string>
+    <string name="commented">Commented</string>
+    <string name="no_info">No location information available</string>
+    <string name="edit_farm_boundary">Edit farm boundary</string>
+    <string name="edit_farm_location">Edit farm location</string>
+    <string name="edit_farm_name">Edit farm name</string>
+    <string name="delete">Delete</string>
+    <string name="region">Region/Province</string>
+    <string name="more">See More</string>
+    <string name="take_picture">Take picture</string>
+    <string name="village">Village</string>
+
+    <string name="permission_denied">Permissions denied</string>
+    <string name="gps_off">Gps turned off</string>
+    <string name="location_access_failed">Failed to get location from device GPS</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="perm_img_location_deny_message">Location permission required to retrieve your current City, Please enable it</string>
+    <string name="msg_location_settings"><![CDATA[Location permissions are required to get latitude & longitude of the location, please open settings to enable it]]></string>
+
+    <!--profile-->
+    <string name="has_no_crop">Farmer has no crop</string>
+    <string name="mandatory"><b><font color="#FF0000">&#42;</font></b></string>
+    <string name="optional"><b><font color="#D3D3D3">(Optional)</font></b></string>
+    <string name="all_notification">All Notification</string>
+    <string name="farm_talks_activity">Farm Talks Activity Notification</string>
+    <string name="alert_farm_talks">Alert Farm Talks Notification</string>
+    <string name="alert_advisory">Alert Advisory Notification</string>
+    <string name="alert_pop">Alert POP Notification</string>
+    <string name="news_alert">News Alert</string>
+    <string name="change_password">Change Password</string>
+    <string name="data_source">Data Source</string>
+    <string name="have_smart_phone">Have Smart Phone</string>
+
+    <!--farm talk-->
+    <string name="trending">Trending</string>
+    <string name="right_arrow">&#x2192;</string>
+    <string name="select_method">Select Method</string>
+    <string name="no_trends">No Trends</string>
+    <string name="post_submitted_successfully">Your Post Added Successfully</string>
+
+    <!--pop view screen-->
+    <string name="cropping_process">Cropping Process</string>
+    <string name="cultivars">Cultivars</string>
+    <string name="ipm">IPM</string>
+    <string name="seed_treatment">Seed Treatment</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="harvest">Harvest</string>
+    <string name="climate">Climatic Requirements</string>
+    <string name="ipm_insect_management">Insect Management</string>
+    <string name="ipm_disease_management">Disease Management</string>
+    <string name="ipm_Weed_management">Weed Management</string>
+    <!--    sample strings for IPM Tab in POP Detail View-->
+
+    <!--    crop advisory screen-->
+
+    <!--    home screen-->
+    <string name="my_queries">My Queries</string>
+    <string name="nutri_source">Nutri Source</string>
+    <string name="market">Market</string>
+    <string name="crop_calendar">Crop Calendar</string>
+    <string name="latest_crop_advisories">Latest Crop Advisories</string>
+    <string name="trending_farm_talk">Trending Farm Talk</string>
+    <string name="near_by_related_farmer_queries">Near by Related Farmer Queries</string>
+    <string name="diseases_and_insects_in_crops">Diseases and Insects in Crops</string>
+    <string name="no_crop_error_msg">You have no crop</string>
+    <string name="up_arrow">&#x2191;</string>
+    <string name="down_arrow">&#x2193;</string>
+    <string name="celsius">&#x2103;</string>
+    <string name="view_advisory">View Advisory</string>
+    <string name="explore">Explore</string>
+    <string name="home">Home</string>
+    <string name="my_posts">My Posts</string>
+    <string name="per">per</string>
+
+
+    <!--    login screen-->
+    <string name="new_user">New User ? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="terms_and_conditions">Terms &#x26; Conditions</string>
+    <string name="enter_otp_msg">Enter 6 Digit OTP Here</string>
+    <string name="sent_on">Sent On</string>
+    <string name="change_number">Change Number</string>
+    <string name="otp_invalid_message">Please enter 6 digit OTP</string>
+
+    <!--    sign up screen-->
+    <string name="already_have_account">Already have an account ?</string>
+    <string name="select_location_description_text">Allow us to know your location to get customized  Farming Advisorie &#x26; latest updates to Grow your Crops</string>
+    <string name="track_current_location">Track Current Location</string>
+
+    <!--    add farmer screen-->
+    <string name="tell_us_about_your_crops">Tell us about your crops</string>
+    <string name="select_date">Select Date</string>
+    <string name="save_farmer_loading_msg">Saving profile</string>
+    <string name="permission_granted_msg">Permission Granted, Thank You</string>
+    <string name="notification_permission_denied_msg">You will no longer receive notifications.</string>
+    <string name="email_validation">Please Enter Valid Email Address</string>
+    <string name="age_not_valid_msg">You are under 18</string>
+
+    <!--    add farm location screen-->
+    <string name="add_land_location">Add Land Location</string>
+    <string name="farm_registration_number">Registration Number</string>
+    <string name="name_this_farm_location">Name this farm location</string>
+    <string name="add_farm">Add Farm</string>
+    <string name="regions_loading_msg">Loading Regions</string>
+    <string name="regions_counties_msg">Loading Counties</string>
+    <string name="regions_sub_counties_msg">Loading SubCounties</string>
+    <string name="loading_villages_msg">Loading Villages</string>
+
+    <!--    select language screen-->
+    <string name="let_us_know">Let us know your Location and Language</string>
+    <string name="select_language_validation_error_msg">Please select country or language</string>
+    <string name="fetch_territories_error_msg">Unable to load territories please close and reopen app</string>
+    <string name="language_loading_msg">Loading Languages</string>
+    <string name="territories_loading_msg">Loading Territories</string>
+    <string name="validation_msg">Please fill all fields</string>
+
+    <!--    weather screen-->
+    <string name="tomorrow">Tomorrow</string>
+    <string name="seven_days">7 Days</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+
+
+    <!--    weather forecast screen-->
+    <string name="harvesting">Harvesting</string>
+    <string name="fertilizer_application">Fertilizer Application</string>
+
+
+    <!--    add crops screen-->
+    <string name="loading_crops_msg">Loading Crops</string>
+    <string name="fetch_crops_error_msg">Unable to load Crops Please close and reopen app</string>
+    <string name="already_added_crop">You\'ve already added this crop</string>
+    <string name="maximum_crops_msg">You can add maximum 3 crops</string>
+    <string name="search_crops_msg">Please type minimum 3 alphabets</string>
+
+    <!--    crop calendar screen-->
+    <string name="create">Create</string>
+    <string name="your">Your</string>
+    <string name="select_your_crops">Select Your Crops</string>
+    <string name="your_crops">Your Crops</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="pre_seeding_stage">Pre Seeding Stage</string>
+    <string name="seeding_stage">Seeding Stage</string>
+    <string name="on_four_weeks">1&#8211;4 Weeks</string>
+    <string name="week">Week</string>
+    <string name="before">Before</string>
+    <string name="current_week">Current Week</string>
+    <string name="current_task">Current Task</string>
+    <string name="select_crop">Select Crop</string>
+    <string name="other_crops">Other Crops</string>
+    <string name="view_other_crops">View Other Crops</string>
+    <string name="create_crop_calendar">Create Crop Calendar</string>
+    <string name="select_crop_sowing_date">Select Crop Sowing Date</string>
+    <string name="task_complete">Task Complete</string>
+    <string name="crop_calendar_not_available">Crop Calendar not available for selected crop</string>
+    <string name="operation_name">Operation Name</string>
+
+
+    <!--    disease detail screen-->
+    <string name="are_you_facing_same_issue">Are you facing same issue ?</string>
+    <string name="ask_your_query">Ask Your Query</string>
+    <string name="symptoms_and_life_cycle">Symptoms &amp; Life Cycle</string>
+    <string name="disease_description_sample">Large numbers of spores are formed in the spots; the spores are splashed by rain onto other leaves, flowers and shoots. They germinate, infect and produce more spots and blights. Young leaves are most susceptible to infection (Photo 1). At first, the spots are small, black and irregular, often expanding to form large dead areas that dry and fall out.
+
+On mature fruits, the fungus remains as pinpoint infections until the fruit ripens; then the infections form dark brown to black spots with orange-pink spore masses (Photo 2).</string>
+
+
+    <!--    market analysis screen-->
+    <string name="select_product">Select Product</string>
+    <string name="current_commodity_rate">Current Commodity Rate</string>
+    <string name="increase">Increase</string>
+    <string name="no_market_data">No Market Data</string>
+    <string name="loading_market_data">Loading Market Analytics</string>
+
+    <!--    fertilizer calculator screen-->
+    <string name="fertilizer_screen_title">Calculate the correct quantity of fertilizer your crop needs</string>
+    <string name="calculate_fertilizer">Calculate Fertilizer</string>
+    <string name="saved_fertilizer_recommendations">Saved Fertilizer Recommendations</string>
+    <string name="no_saved_fertilizer_recommendations">No Saved Fertilizer Recommendations</string>
+    <string name="fertilizer">Fertilizer</string>
+    <string name="quantity">Quantity</string>
+    <string name="unit">Unit</string>
+    <string name="view_details">View Details</string>
+    <string name="soil_health_report_question">Do you have a Soil Test Report ?</string>
+    <string name="nitrogen_text">Nitrogen (N)</string>
+    <string name="nitrogen_unit">Kg/ha</string>
+    <string name="phosphorous_text">Phosphorous(P)</string>
+    <string name="phosphorous_unit">Kg/ha</string>
+    <string name="pottasium_text">Potassium (K)</string>
+    <string name="pottasium_unit">Kg/ha</string>
+    <string name="zinc_text">Zinc (Zn)</string>
+    <string name="zinc_unit">ppm</string>
+    <string name="boron_text">Boron (B)</string>
+    <string name="boron_unit">ppm</string>
+    <string name="sulphur_text">Sulphur</string>
+    <string name="sulphur_unit">Kg/ha</string>
+    <string name="ph">pH</string>
+    <string name="not_available">N/A</string>
+    <string name="enter_details_of_soil_test_report">Enter Details of Soil Test Report</string>
+    <string name="add_your_crop_inputs">Add Your Crop Inputs</string>
+    <string name="change">Change</string>
+    <string name="age_of_crop">Age of Crop</string>
+    <string name="crop_area">Crop Area</string>
+    <string name="choose_your_preferred_fertilizer">Choose your preferred fertilizer Combination</string>
+    <string name="npk_complex">NPK Complex</string>
+    <string name="nitrogenous">Nitrogenous</string>
+    <string name="potassic">Potassic</string>
+    <string name="bron">Boron</string>
+    <string name="low">Low</string>
+    <string name="normal">Normal</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
+    <string name="please_select_crop">Please Select Crop</string>
+    <string name="please_enter_crop_area">Please enter crop area</string>
+    <string name="or_age_of_crop">or age of crop</string>
+    <string name="please_select_all_fertilizers">Please select all fertilizers</string>
+    <string name="nitrogen_validation_msg">Please fill nitrogen value</string>
+    <string name="phosphorus_validation_msg">Please fill phosphorus value</string>
+    <string name="potassium_validation_msg">Please fill potassium value</string>
+    <string name="zinc_validation_msg">Please fill zinc value</string>
+    <string name="boron_validation_msg">Please fill boron value</string>
+    <string name="sulphur_validation_msg">Please fill sulphur value</string>
+    <string name="ph_validation_msg">Please fill pH value</string>
+
+
+    <!--    fertilizer recommendation screen-->
+    <string name="fertilizer_recommendation">Fertilizer Recommendation</string>
+    <string name="crop_age">Crop Age</string>
+    <string name="urea_fertilizer_schedule">Urea Fertilizer Schedule</string>
+    <string name="fertilizer_schedule">Fertilizer Schedule</string>
+    <string name="select_from_gallery">Select From Gallery</string>
+
+
+    <!--    nutri source screen-->
+    <string name="mrp">MRP</string>
+    <string name="product_nutrient">Product Nutrient</string>
+    <string name="view_product">View Product</string>
+    <string name="download_image">Download Image</string>
+    <string name="download">Download</string>
+    <string name="select_categories">Select Categories</string>
+    <string name="products">Products</string>
+    <string name="select_categories_msg">Select categories first to see more filter options</string>
+    <string name="apply">Apply</string>
+
+    <!--    my crops screen-->
+    <string name="market_analysis">Market Analysis</string>
+    <string name="nearby_related_crop_queries">Near by Related Crop Queries</string>
+
+    <!--    map view screen-->
+    <string name="select_your_land">Select Your Land\'s Boundary</string>
+    <string name="pin_boundary">Pin Boundary</string>
+    <string name="undo">Undo</string>
+    <string name="map_dialog_description_1">Create boundary of your farm area by clicking 4 Dots (</string>
+    <string name="map_dialog_description_2">)on border of your farm Area</string>
+    <string name="mark_your_farm_area">Mark your farm area</string>
+    <string name="got_it">Got it</string>
+    <string name="big_circle">&#x25CF;</string>
+
+    <string name="no_land_have_been_added_yet">No land have been added yet</string>
+    <string name="no_crop_have_been_added_yet">No crop have been added yet</string>
+    <string name="solved">Solved</string>
+    <string name="pending">Pending</string>
+    <string name="search_farmer_queries">Search Farmer Queries</string>
+    <string name="view_solution">View Solution</string>
+    <string name="view_query">View Query</string>
+    <string name="growth_stage">Growth Stage</string>
+    <string name="plant_part_issue">Plant Part Issue</string>
+    <string name="query_solved">Query Solved</string>
+    <string name="pending_query">Pending Query</string>
+    <string name="query">Query</string>
+    <string name="plant">Plant</string>
+    <string name="query_solution">Query Solution</string>
+    <string name="symptom_of_attack">Symptom of Attack: </string>
+    <string name="favourable_conditions">Favourable Conditions: </string>
+    <string name="preventive_measures">Preventive Measures </string>
+    <string name="cultural_mechanical_control">Cultural Mechanical Control: </string>
+    <string name="description">Description: </string>
+    <string name="cultural_control">Cultural Control: </string>
+    <string name="add_query_title">Add Query Title</string>
+    <string name="type_here">Type Here</string>
+    <string name="select_plant_part">Select Plant Part</string>
+    <string name="write_your_query">Write Your Query</string>
+    <string name="weed_type">Weed Type : </string>
+    <string name="nutrition_deficiency">Nutrition Deficiency</string>
+    <string name="standard_nutrition">Standard Nutrition</string>
+
+    <string name="title_error">Please Fill Title</string>
+    <string name="crop_error">Please Select Crop</string>
+    <string name="plant_error">Please Select Plant Part</string>
+    <string name="growth_stage_error">Please Select Growth Stage</string>
+    <string name="query_details_error">Please Fill Query Details</string>
+    <string name="searching">Searching</string>
+    <string name="added_bookmark">Added Bookmark</string>
+
+    <string name="cultivar_name">Cultivar Name</string>
+    <string name="cultivar_groups">Cultivar Groups</string>
+    <string name="sowing_month">Sowing Month</string>
+    <string name="harvest_month">Harvest Month</string>
+    <string name="cultivar_duration">Cultivar Duration</string>
+    <string name="yield_potential">Yield Potential</string>
+    <string name="properties">Properties</string>
+
+    <string name="formulation">Formulation</string>
+    <string name="product_type">Product Type</string>
+    <string name="product_name">Product Name</string>
+    <string name="dosage_per_kg_of_seed">Dosage/KG of Seed</string>
+    <string name="application_method">Application Method</string>
+    <string name="mode_of_action">Mode of Action</string>
+    <string name="toxicity_level">Toxicity Level</string>
+    <string name="waiting_period">Waiting Period</string>
+    <string name="water_requirement">Water Requirement</string>
+
+    <string name="nothing_to_show">Nothing to Show</string>
+
+    <string name="nitrogen">Nitrogen</string>
+    <string name="phosphorus">Phosphorous</string>
+    <string name="potassium">Potassium</string>
+    <string name="zinc">Zinc</string>
+    <string name="sulphur">Sulphur</string>
+
+    <string name="nutrient">Nutrient</string>
+    <string name="organic_control">Organic Control</string>
+    <string name="chemical_control">Chemical Control</string>
+    <string name="symptoms_of_deficiency">Symptoms Of Deficiency</string>
+    <string name="add_post_details">Add Post Details</string>
+    <string name="post_title">Post Title</string>
+    <string name="add_farm_talk_details">Add your farm talk detail</string>
+    <string name="add_tags">Add Tags</string>
+    <string name="please_enter_text">Please enter text</string>
+    <string name="select_location">Select Location</string>
+    <string name="add_post">Add Post</string>
+    <string name="weather_forecast">Weather Forecast</string>
+    <string name="please_give_post_title">Please give post title</string>
+    <string name="please_add_tag">Please add tag for post</string>
+    <string name="please_add_description">Please add description</string>
+    <string name="filter">Filter</string>
+    <string name="select_crops">Select Crops</string>
+    <string name="select_advisories">Select Advisories</string>
+    <string name="select_growth_stages">Select Growth Stages</string>
+
+    <string name="list_view">List View</string>
+    <string name="saved_advisories">Saved Advisories</string>
+    <string name="acidic">Acidic</string>
+    <string name="alkaline">Alkaline</string>
+
+    <string name="empty_crop_calendar_msg">You\'ve not created any crop calendars</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="removed_from_bookmark">Removed from bookmark</string>
+    <string name="today_s_tip">Today\'s Farming Tip</string>
+    <string name="irrigation">Irrigation</string>
+    <string name="weeding">Weeding</string>
+    <string name="terms_and_conditions_accept"><![CDATA[By clicking on Signin/Signup you are accepting the Term & conditions of FarmSanta Application]]></string>
+    <string name="no_diseases_for_crop">No diseases for selected crop</string>
+    <string name="no_advisory_for_crop">No advisories for selected crop</string>
+    <string name="no_pop_for_crop">No pop for selected crop</string>
+    <string name="query_sent">Query Sent</string>
+    <string name="query_submitted">Your query has been sent successfully, We will reply to your query in 24 working hours.</string>
+    <string name="no_prices_msg">No Prices Available</string>
+    <string name="no_advisories_msg">No Advisories Available</string>
+    <string name="no_pop_msg">No Pop Available</string>
+    <string name="no_farmer_queries">No Farmer Queries Available</string>
+    <string name="bookmarked_pops">Bookmarked Pops</string>
+    <string name="caption">Caption</string>
+    <string name="filtering_advisories">Filtering Advisories</string>
+    <string name="filter_options_msg">No Filter Option Selected</string>
+    <string name="agronomist">Agronomist</string>
+    <string name="sub_district">Sub District/Block</string>
+    <string name="nutri_source_catalogue">Nutri Source Catalogue</string>
+    <string name="about">About</string>
+    <string name="reply">Reply</string>
+    <string name="create_post">Create Post</string>
+    <string name="alert">Alert</string>
+    <string name="language_change_msg">to reflect the language change, app will restart</string>
+    <string name="searching_location_msg">Searching for location please wait</string>
+    <string name="loading">Loading</string>
+    <string name="valid_mobile_no_required">Please enter valid mobile number</string>
+    <string name="valid_name_required">Please enter at least 3 characters</string>
+    <string name="valid_last_name_required">Please enter last name</string>
+    <string name="valid_gender_required">Please select gender</string>
+    <string name="valid_territory_required">Please select territory</string>
+    <string name="valid_region_required">Please select region</string>
+    <string name="valid_farm_name_required">Please enter farm name</string>
+    <string name="valid_land_area_required">Please enter land area</string>
+    <string name="valid_water_source_required">Please select water source</string>
+    <string name="valid_land_boundries_required">Please select farm location in map</string>
+
+
+    //has to be translated
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="from_previous_day">From previous day</string>
+    <string name="view">View</string>
+    <string name="introduction_title">Find perfect solution and best advice for your crop issues we are here to help you in farming</string>
+    <string name="farm_talk_sub_title">Connect with Nearby Farmers and Agronomists and get latest updates of activities nearby you.</string>
+    <string name="farm_queries_title">Farm Queries (Scouting)</string>
+    <string name="farm_queries_sub_title">Get answers of all your farm/crops related queries and treatment advices.</string>
+    <string name="crop_advisory_sub_title">Agri expert to guide and help you with tips through the crop seasons.</string>
+    <string name="pop_title">Package Of Practice (POP)</string>
+    <string name="pop_sub_title">Empower you with Agri-tech platform for Package of Practices (PoP’s) for crops in your hands</string>
+    <string name="fertilizer_calculator_sub_title">STR and Non STR based fertilizer calculator for your crop and farm size</string>
+    <string name="comments_on_your_post">Comments on your post</string>
+    <string name="description_not_available">Description isn\'t available</string>
+    <string name="uploaded_on">Uploaded on</string>
+    <string name="planting">Planting</string>
+    <string name="year">Year</string>
+    <string name="decimal">Decimal</string>
+    <string name="in_hectare">In Hectare</string>
+    <string name="disease">Disease</string>
+    <string name="most_liked_posts">Most Liked Posts</string>
+    <string name="most_commented_posts">Most Commented Posts</string>
+    <string name="harvesting_methods">Harvesting methods</string>
+    <string name="post_harvesting_technologies">Post Harvesting Technologies</string>
+    <string name="threshing">Threshing</string>
+    <string name="you_and_other">You and other</string>
+    <string name="people">People</string>
+    <string name="liked_your_post">Liked your post</string>
+    <string name="view_farm_location">View farm location</string>
+    <string name="farm_least_points_msg">Please Select at least 3 Points</string>
+    <string name="price">Price</string>
+    <string name="no_pops">No Pops</string>
+    <string name="latest">Latest</string>
+    <string name="advisories">Advisories</string>
+    <string name="settings">Settings</string>
+    <string name="reply_question">Reply Question</string>
+    <string name="block_view">Block View</string>
+    <string name="loading_farm_scouting_msg">Saving farm scouting image</string>
+    <string name="you_have_already">You\'ve already added</string>
+    <string name="all_crops">All Crops</string>
+    <string name="send">Send</string>
+    <string name="please_write_msg">Please write message</string>
+    <string name="please_add_comment">Please add comment</string>
+    <string name="experts">Experts</string>
+    <string name="view_talk">View Talk</string>
+    <string name="before_transplanting">Before Transplanting</string>
+    <string name="at_time_of_sowing">At Time of Sowing</string>
+    <string name="twenty_five_to_thirty_days_after_sowing">25–30 Days after Sowing</string>
+    <string name="forty_to_fifty_days_after_sowing">40–50 Days after Sowing</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="temperature">Temperature</string>
+    <string name="rainfall">Rainfall</string>
+    <string name="sowing">Sowing</string>
+    <string name="unable_to">Unable to</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="otp_error_msg">OTP entered is wrong</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="reason">reason</string>
+    <string name="message">message</string>
+    <string name="invite">Invite</string>
+    <string name="about_us">About Us</string>
+    <string name="about_us_description">Empowering and Connecting Marginal Farmers Digitally to Provide Advisory Services and Market Access for Improving Farming Livelihood and Promote Sustainable Agriculture. FarmSanta is a unique end to end Agritech platform developed by Singapore based Organization specialized in agriculture value chain with the philosophy to enable and empower farmers through technology, information, advisory and data science.</string>
+    <string name="create_new_query">Create new query</string>
+    <string name="raise_a_query">Raise a query</string>
+
+    <string name="invite_msg">Hey there, Please download the Farm Santa! it\'s a unique end to end Agritech platform, App for Farmers.</string>
+    <string name="personalized_notes">Personalized Notes</string>
+    <string name="production_recommendation">Product Recommendation</string>
+    <string name="start_icon">&#x27A4;</string>
+    <string name="err_msg">This field is required</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="marketplace_order">Order</string>
+    <string name="marketplace_wishlist">Wishlist</string>
+    <string name="marketplace_offers">Offers</string>
+    <string name="marketplace_cart">Cart</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

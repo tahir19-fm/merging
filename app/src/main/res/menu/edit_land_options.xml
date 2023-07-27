@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/editLand_menu_name"
+        android:title="@string/edit_farm_name" />
+    <item
+        android:id="@+id/editLand_menu_location"
+        android:title="@string/edit_farm_location" />
+    <item
+        android:id="@+id/editLand_menu_boundary"
+        android:title="@string/edit_farm_boundary"
+        android:visible="false" />
+</menu>

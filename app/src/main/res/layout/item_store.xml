@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="110dp"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="8dp"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/item_card_img"
+        android:layout_width="110dp"
+        android:layout_height="120dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:elevation="10dp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="bottom"
+            android:padding="5dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <ImageView
+                    android:layout_width="14sp"
+                    android:layout_height="14sp"
+                    android:background="@drawable/store_front"
+                    android:layout_marginRight="5dp"
+
+                    />
+            <TextView
+                android:id="@+id/item_card_txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farmer Store"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                >
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/staryellow"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="5dp"
+                   />
+                <TextView
+                    android:id="@+id/ratingno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.5"
+                    android:textSize="10dp"
+                    />
+                <TextView
+                    android:id="@+id/ratinguser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(12K)"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="5dp"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

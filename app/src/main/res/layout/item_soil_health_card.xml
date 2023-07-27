@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/soilHealthCard_text_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_vertical_margin"
+    android:text="Basic tests"
+    android:textColor="@color/black_font"
+    android:textSize="@dimen/font_size_medium"
+    app:drawableRightCompat="@drawable/ic_next"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+

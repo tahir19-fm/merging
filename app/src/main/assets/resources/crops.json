@@ -1,0 +1,483 @@
+[
+  {
+    "name": "Barley",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Barley Winter",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Maize",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Shoot development",
+      "Inflorescence Emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Maize- Second Season",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Shoot development",
+      "Inflorescence Emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Millets",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Rice",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Rice 2nd Season",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Wheat",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Wheat Winter",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Sorghum second season",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Rye Winter",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Oat ",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Oat Winter",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Beans",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Legumes",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Soybean",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Groundnut",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Rape Seed",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Sunflower",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Cotton",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Stem Elongation or rosette growth, shoot development",
+      "Inflorescence Emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy",
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Sugar beet",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Stem Elongation or rosette growth, shoot development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence Emergence/heading",
+      "Flowering",
+      "Development of Fruit",
+      "Ripening or maturity of fruit and seed",
+      "Senescence, beginning of dormancy",
+      ""
+    ]
+  },
+  {
+    "name": "Cocoa",
+    "stage": [
+      "Vegetative",
+      "Flowering",
+      "Fruit Set",
+      "Pod Development",
+      "Pod Maturation",
+      "Pod ripening",
+      "Harvest"
+    ]
+  },
+  {
+    "name": "Coffee Arabica",
+    "stage": [
+      "Vegetative",
+      "Flowering",
+      "Fruit Set",
+      "Cherry development",
+      "Cherry Maturation",
+      "Cherry ripening",
+      "Harvest"
+    ]
+  },
+  {
+    "name": "Oil Palm",
+    "stage": [
+      "Vegetative",
+      "Flowering",
+      "Fruit Set",
+      "Fruit development",
+      "Fruit maturation",
+      "Fruit ripening",
+      "Harvest"
+    ]
+  },
+  {
+    "name": "Cajou/Cashew",
+    "stage": [
+      "Vegetative",
+      "Flowering",
+      "Fruit Set",
+      "Nut development",
+      "Fruit maturation",
+      "Fruit ripening",
+      "Harvest"
+    ]
+  },
+  {
+    "name": "Potato",
+    "stage": [
+      "Sprout development",
+      "Vegetative development",
+      "Tuber initiation",
+      "Tuber bulking",
+      "Maturation"
+    ]
+  },
+  {
+    "name": "Sweet Potato",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, tuber development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Tuber",
+      "Ripening or maturity of tuber",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Cassava",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, tuber development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Tuber",
+      "Ripening or maturity of tuber",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Yams",
+    "stage": [
+      "Germination",
+      "Leaf Development",
+      "Formation of Side shoots/Tillering",
+      "Stem Elongation or rosette growth, tuber development",
+      "Development of harvestable vegetative plant parts/booting",
+      "Inflorescence emergence/heading",
+      "Flowering",
+      "Development of Tuber",
+      "Ripening or maturity of tuber",
+      "Senescence, beginning of dormancy"
+    ]
+  },
+  {
+    "name": "Green Gram",
+    "stage": []
+  },
+  {
+    "name": "Black Gram",
+    "stage": []
+  },
+  {
+    "name": "Chick Pea",
+    "stage": []
+  },
+  {
+    "name": "GroundNut",
+    "stage": []
+  },
+  {
+    "name": "Castor ",
+    "stage": []
+  },
+  {
+    "name": "Sugarbeet",
+    "stage": []
+  },
+  {
+    "name": "Cashew",
+    "stage": []
+  },
+  {
+    "name": "Coffee Robusta",
+    "stage": [
+      "Vegetative",
+      "Flowering",
+      "Fruit Set",
+      "Cherry development",
+      "Cherry Maturation",
+      "Cherry ripening"
+    ]
+  },
+  {
+    "name": "Rubber",
+    "stage": []
+  },
+  {
+    "name": "Onion",
+    "stage": []
+  },
+  {
+    "name": "Tomato",
+    "stage": []
+  },
+  {
+    "name": "Orange",
+    "stage": []
+  },
+  {
+    "name": "Avocado",
+    "stage": []
+  },
+  {
+    "name": "Dragon ",
+    "stage": []
+  }
+]
