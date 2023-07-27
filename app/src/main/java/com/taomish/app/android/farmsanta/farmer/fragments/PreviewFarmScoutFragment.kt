@@ -63,7 +63,7 @@ class PreviewFarmScoutFragment : FarmSantaBaseFragment() {
     private fun saveFarmScouting(fileName: String) {
         //get  file name after upload
         val img =
-            ScoutImage();
+            ScoutImage()
         img.image = fileName
 
         val images = mutableListOf(img)

@@ -22,8 +22,8 @@ import java.util.ArrayList;
 
 public class SellerProductAdapter extends RecyclerView.Adapter<SellerProductAdapter.SingleItemRowHolder> {
 
-    private ArrayList<Seller_Product_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Seller_Product_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public SellerProductAdapter(Context context, ArrayList<Seller_Product_Data> itemsList) {
@@ -82,14 +82,14 @@ public class SellerProductAdapter extends RecyclerView.Adapter<SellerProductAdap
         protected TextView productrating,productprice,ratinguser,quatity,variant,viewmore;
         public SingleItemRowHolder(View view) {
             super(view);
-            this.productname = (TextView) view.findViewById(R.id.productname);
-            this.productimage = (ImageView) view.findViewById(R.id.productimage);
-            this.productprice = (TextView) view.findViewById(R.id.productprice);
-            this.productrating = (TextView) view.findViewById(R.id.productrating);
-            this.ratinguser= (TextView) view.findViewById(R.id.ratinguser);
-            this.quatity= (TextView) view.findViewById(R.id.quatity);
-            this.variant= (TextView) view.findViewById(R.id.variant);
-            this.viewmore=(TextView) view.findViewById(R.id.viewmore);
+            this.productname = view.findViewById(R.id.productname);
+            this.productimage = view.findViewById(R.id.productimage);
+            this.productprice = view.findViewById(R.id.productprice);
+            this.productrating = view.findViewById(R.id.productrating);
+            this.ratinguser= view.findViewById(R.id.ratinguser);
+            this.quatity= view.findViewById(R.id.quatity);
+            this.variant= view.findViewById(R.id.variant);
+            this.viewmore= view.findViewById(R.id.viewmore);
             this.addproduct=view.findViewById(R.id.addproduct);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -106,7 +106,7 @@ public class SellerProductAdapter extends RecyclerView.Adapter<SellerProductAdap
 
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(mContext);
         bottomSheetDialog.setContentView(R.layout.add_to_cart);
-        NumberPicker numberPicker = (NumberPicker)bottomSheetDialog.findViewById(R.id.number_picker);
+        NumberPicker numberPicker = bottomSheetDialog.findViewById(R.id.number_picker);
         numberPicker.setMax(15);
         numberPicker.setMin(1);
         numberPicker.setUnit(1);

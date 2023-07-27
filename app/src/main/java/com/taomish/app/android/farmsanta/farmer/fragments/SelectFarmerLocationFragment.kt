@@ -145,11 +145,6 @@ class SelectFarmerLocationFragment : FarmSantaBaseFragment(), LocationListener {
         }
     }
 
-    override fun onLocationAvailable(locationData: LocationRequestResult.LocationData) {
-
-        super.onLocationAvailable(locationData)
-    }
-
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onLocationPermissionDeny() {
         if (shouldShowRequestPermissionRationale(Manifest.permission.ACCESS_FINE_LOCATION)) {

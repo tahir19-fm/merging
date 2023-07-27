@@ -3,6 +3,7 @@ package com.taomish.app.android.farmsanta.farmer.compose_ui.fragment_profile
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia.Companion.isPhotoPickerAvailable
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.TweenSpec
 import androidx.compose.foundation.background
@@ -313,7 +314,7 @@ fun ProfileFragmentScreen(
                 showDialog = false
             },
             onSelectGallery = {
-                if (ActivityResultContracts.PickVisualMedia.isPhotoPickerAvailable()) {
+                if (isPhotoPickerAvailable(context)) {
                     photoPicker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
                 } else onSelectGallery()
                 showDialog = false

@@ -26,29 +26,29 @@ import com.taomish.app.android.farmsanta.farmer.nutrisource.BookSoilTesting;
 import java.util.List;
 
 public class LabInfoAdapter extends RecyclerView.Adapter<LabInfoAdapter.ViewHolder> {
-    private LabClickListener listener;
+    private final LabClickListener listener;
     private FirebaseAuth mAuth;
     private FirebaseUser CurrentUser;
     private String UserId;
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-            private LinearLayout PrContainer;
-            private ImageView ProductImage;
-            private TextView ProductName;
-            private TextView ProductPrice;
-            private TextView ProductExpiryDate;
-            private ImageView PrFavoriteImage;
+            private final LinearLayout PrContainer;
+            private final ImageView ProductImage;
+            private final TextView ProductName;
+            private final TextView ProductPrice;
+            private final TextView ProductExpiryDate;
+            private final ImageView PrFavoriteImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
 
-            PrContainer = (LinearLayout)itemView.findViewById(R.id.PrContainer);
-            ProductImage = (ImageView)itemView.findViewById(R.id.PrImage);
-            ProductName = (TextView)itemView.findViewById(R.id.PrName);
-            ProductPrice = (TextView)itemView.findViewById(R.id.PrPrice);
-            ProductExpiryDate = (TextView)itemView.findViewById(R.id.PrExpiryDate);
-            PrFavoriteImage = (ImageView)itemView.findViewById(R.id.PrFavoriteImage);
+            PrContainer = itemView.findViewById(R.id.PrContainer);
+            ProductImage = itemView.findViewById(R.id.PrImage);
+            ProductName = itemView.findViewById(R.id.PrName);
+            ProductPrice = itemView.findViewById(R.id.PrPrice);
+            ProductExpiryDate = itemView.findViewById(R.id.PrExpiryDate);
+            PrFavoriteImage = itemView.findViewById(R.id.PrFavoriteImage);
 
         }
 
@@ -56,8 +56,8 @@ public class LabInfoAdapter extends RecyclerView.Adapter<LabInfoAdapter.ViewHold
     }
 
 
-    private Context context;
-    private List<Labdata> ProductList;
+    private final Context context;
+    private final List<Labdata> ProductList;
 
     public LabInfoAdapter(Context context, List<Labdata> ProductList, LabClickListener listener){
         this.context = context;

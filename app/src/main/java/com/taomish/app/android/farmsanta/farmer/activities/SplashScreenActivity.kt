@@ -77,7 +77,6 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
 
-<<<<<<< HEAD
     private fun checkForUpdate() {
         // Returns an intent object that you use to check for an update.
         val appUpdateInfoTask = appUpdateManager.appUpdateInfo
@@ -98,7 +97,6 @@ class SplashScreenActivity : AppCompatActivity() {
             }
         }
     }
-=======
 //    private fun checkForUpdate() {
 //        // Returns an intent object that you use to check for an update.
 //        val appUpdateInfoTask = appUpdateManager.appUpdateInfo
@@ -119,7 +117,6 @@ class SplashScreenActivity : AppCompatActivity() {
 //            }
 //        }
 //    }
->>>>>>> origin/hello1
 
 
     private val listener: InstallStateUpdatedListener =

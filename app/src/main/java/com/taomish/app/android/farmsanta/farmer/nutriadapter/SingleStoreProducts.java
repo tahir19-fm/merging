@@ -21,8 +21,8 @@ import java.util.ArrayList;
 
 public class SingleStoreProducts extends RecyclerView.Adapter<SingleStoreProducts.SingleItemRowHolder> {
 
-    private ArrayList<ProductbyShop_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<ProductbyShop_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public SingleStoreProducts(Context context, ArrayList<ProductbyShop_Data> itemsList) {

@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.SingleItemRowHolder> {
 
-    private ArrayList<FilterData> itemsList;
-    private Context mContext;
+    private final ArrayList<FilterData> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public FilterAdapter(Context context, ArrayList<FilterData> itemsList) {
@@ -77,8 +77,8 @@ public class FilterAdapter extends RecyclerView.Adapter<FilterAdapter.SingleItem
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.itemCardTxtTitle = (TextView) view.findViewById(R.id.item_card_txt_title);
-            this.itemCardImg = (ImageView) view.findViewById(R.id.item_card_img);
+            this.itemCardTxtTitle = view.findViewById(R.id.item_card_txt_title);
+            this.itemCardImg = view.findViewById(R.id.item_card_img);
 
 
             view.setOnClickListener(new View.OnClickListener() {

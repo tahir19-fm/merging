@@ -45,10 +45,10 @@ fun ViewAdvisoryFragmentScreen(advisory: CropAdvisory?) {
     val spacing = LocalSpacing.current
     val pagerState = rememberPagerState()
     val context = LocalContext.current
-    var plantname = NamesAndFormatsUtil.getCropName(advisory.crop);
-    var grothStage = advisory.growthStage?.let { NamesAndFormatsUtil.getUUIDName(it)};
-    Log.d("Crop Condition","Crop Name:"+advisory.cropName.toString());
-    Log.d("Crop Condition","Growth Stage:"+advisory.growthStageName.toString());
+    var plantname = NamesAndFormatsUtil.getCropName(advisory.crop)
+    var grothStage = advisory.growthStage?.let { NamesAndFormatsUtil.getUUIDName(it)}
+    Log.d("Crop Condition","Crop Name:"+advisory.cropName.toString())
+    Log.d("Crop Condition","Growth Stage:"+advisory.growthStageName.toString())
     if(plantname == "N/A" && !advisory.growthStageName.isNullOrEmpty())
     {
         plantname = advisory.growthStageName
@@ -57,8 +57,8 @@ fun ViewAdvisoryFragmentScreen(advisory: CropAdvisory?) {
     {
         grothStage = advisory.growthStageName
     }
-    Log.d("Crop Condition","Crop Name:"+plantname);
-    Log.d("Crop Condition","Growth Stage:"+grothStage);
+    Log.d("Crop Condition","Crop Name:"+plantname)
+    Log.d("Crop Condition","Growth Stage:"+grothStage)
 
     Column {
         CommonTopBar(

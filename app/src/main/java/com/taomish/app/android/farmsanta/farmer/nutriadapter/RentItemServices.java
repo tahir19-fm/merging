@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class RentItemServices extends RecyclerView.Adapter<RentItemServices.SingleItemRowHolder> {
 
-    private ArrayList<Rent_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Rent_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public RentItemServices(Context context, ArrayList<Rent_Data> itemsList) {
@@ -72,7 +72,7 @@ public class RentItemServices extends RecyclerView.Adapter<RentItemServices.Sing
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.itemCardTxtTitle = (TextView) view.findViewById(R.id.item_card_txt_title);
+            this.itemCardTxtTitle = view.findViewById(R.id.item_card_txt_title);
             this.itemCardImg =  view.findViewById(R.id.item_card_img);
 
 

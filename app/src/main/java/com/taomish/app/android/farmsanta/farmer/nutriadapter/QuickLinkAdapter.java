@@ -43,8 +43,8 @@ public class QuickLinkAdapter extends RecyclerView.Adapter<QuickLinkAdapter.View
             super(v);
 
             v.setOnClickListener(this);
-            textView = (TextView) v.findViewById(R.id.textView);
-            imageView = (ImageView) v.findViewById(R.id.imageView);
+            textView = v.findViewById(R.id.textView);
+            imageView = v.findViewById(R.id.imageView);
             // relativeLayout = (RelativeLayout) v.findViewById(R.id.relativeLayout);
 
         }

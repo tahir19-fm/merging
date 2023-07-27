@@ -25,8 +25,8 @@ import java.util.ArrayList;
 
 public class SoilServicesAdapter extends RecyclerView.Adapter<SoilServicesAdapter.SingleItemRowHolder> {
 
-    private ArrayList<Soil_Lab_data> itemsList;
-    private Context mContext;
+    private final ArrayList<Soil_Lab_data> itemsList;
+    private final Context mContext;
 
     public SoilServicesAdapter(Context context, ArrayList<Soil_Lab_data> itemsList) {
         this.itemsList = itemsList;
@@ -78,12 +78,12 @@ public class SoilServicesAdapter extends RecyclerView.Adapter<SoilServicesAdapte
         Button viewdetails;
         public SingleItemRowHolder(View view) {
             super(view);
-            this.productname = (TextView) view.findViewById(R.id.productname);
-            this.productimage = (ImageView) view.findViewById(R.id.productimage);
+            this.productname = view.findViewById(R.id.productname);
+            this.productimage = view.findViewById(R.id.productimage);
             this.productprice=view.findViewById(R.id.productprice);
             this.PrContainer = view.findViewById(R.id.PrContainer);
-            this.testservices = (TextView) view.findViewById(R.id.testservices);
-            this.reportday= (TextView) view.findViewById(R.id.reportday);
+            this.testservices = view.findViewById(R.id.testservices);
+            this.reportday= view.findViewById(R.id.reportday);
             this.viewdetails=  view.findViewById(R.id.viewdetails);
            
 
@@ -94,7 +94,7 @@ public class SoilServicesAdapter extends RecyclerView.Adapter<SoilServicesAdapte
     private void showBottomSheetDialog() {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(mContext);
         bottomSheetDialog.setContentView(R.layout.add_to_cart);
-        NumberPicker numberPicker = (NumberPicker)bottomSheetDialog.findViewById(R.id.number_picker);
+        NumberPicker numberPicker = bottomSheetDialog.findViewById(R.id.number_picker);
         numberPicker.setMax(15);
         numberPicker.setMin(1);
         numberPicker.setUnit(1);

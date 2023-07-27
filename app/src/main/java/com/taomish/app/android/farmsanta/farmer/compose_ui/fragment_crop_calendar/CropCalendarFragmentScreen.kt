@@ -153,7 +153,7 @@ fun CropCalendarFragmentScreen(
                 }
 
                 itemsIndexed(viewModel.cropStages.value) { index, stage ->
-                    HorizontalSlideAnimation() {
+                    HorizontalSlideAnimation {
                         CroppingStage(
                             stage = stage,
                             getStageName = { viewModel.stagesMap[stage.stageName]?.name ?: "-" },

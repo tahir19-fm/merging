@@ -22,8 +22,8 @@ import java.util.ArrayList;
 
 public class SoilBookingAdapter extends RecyclerView.Adapter<SoilBookingAdapter.SingleItemRowHolder> implements ValueChangedListener, LimitExceededListener {
 
-    private ArrayList<Soil_Cart_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Soil_Cart_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public SoilBookingAdapter(Context context, ArrayList<Soil_Cart_Data> itemsList) {
@@ -105,14 +105,14 @@ public class SoilBookingAdapter extends RecyclerView.Adapter<SoilBookingAdapter.
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.PrName = (TextView) view.findViewById(R.id.PrName);
-            this.PrImage = (ImageView) view.findViewById(R.id.PrImage);
-            this.price = (TextView) view.findViewById(R.id.price);
-            this.visitdate = (TextView) view.findViewById(R.id.visitdate);
-            this.reportdate = (TextView) view.findViewById(R.id.reportdate);
-            this.sampleno = (TextView) view.findViewById(R.id.price);
-            this.contentno = (TextView) view.findViewById(R.id.contentno);
-            this.PrDelete = (ImageView) view.findViewById(R.id.PrDelete);
+            this.PrName = view.findViewById(R.id.PrName);
+            this.PrImage = view.findViewById(R.id.PrImage);
+            this.price = view.findViewById(R.id.price);
+            this.visitdate = view.findViewById(R.id.visitdate);
+            this.reportdate = view.findViewById(R.id.reportdate);
+            this.sampleno = view.findViewById(R.id.price);
+            this.contentno = view.findViewById(R.id.contentno);
+            this.PrDelete = view.findViewById(R.id.PrDelete);
             this.numberPicker=view.findViewById(R.id.number_picker);
 
             view.setOnClickListener(new View.OnClickListener() {

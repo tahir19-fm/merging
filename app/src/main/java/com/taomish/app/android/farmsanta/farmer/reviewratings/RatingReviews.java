@@ -50,7 +50,7 @@ public class RatingReviews extends FrameLayout {
 
     private OnBarClickListener onBarClickListener;
 
-    private List<Bar> mBars = new ArrayList<>();
+    private final List<Bar> mBars = new ArrayList<>();
 
     /**
      * constructor
@@ -124,7 +124,7 @@ public class RatingReviews extends FrameLayout {
      * @param colorsArr   expects an array of the color-int (parseColor).
      * @param raters      expects an array of the raters for each stars given.
      */
-    public void createRatingBars(int maxBarValue, String labels[], int colorsArr[], int raters[],int users[]) {
+    public void createRatingBars(int maxBarValue, String[] labels, int[] colorsArr, int[] raters, int[] users) {
 
         setMaxBarValue(maxBarValue);
 
@@ -146,7 +146,7 @@ public class RatingReviews extends FrameLayout {
      * @param colors      expects an array of Pairs composed of the start and end color for the gradient.
      * @param raters      expects an array of the raters for each stars given.
      */
-    public void createRatingBars(int maxBarValue, String labels[], Pair colors[], int raters[]) {
+    public void createRatingBars(int maxBarValue, String[] labels, Pair[] colors, int[] raters) {
 
         setMaxBarValue(maxBarValue);
 
@@ -169,7 +169,7 @@ public class RatingReviews extends FrameLayout {
      * @param color       expects a color-int (parseColor) that is applied to every rating bar.
      * @param raters      expects an array of the raters for each stars given.
      */
-    public void createRatingBars(int maxBarValue, String labels[], int color, int raters[]) {
+    public void createRatingBars(int maxBarValue, String[] labels, int color, int[] raters) {
 
         setMaxBarValue(maxBarValue);
 
@@ -323,8 +323,7 @@ public class RatingReviews extends FrameLayout {
         isBarAdded = true;
     }
     private void setMargins (View view, int left, int top, int right, int bottom) {
-        if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
-            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+        if (view.getLayoutParams() instanceof MarginLayoutParams p) {
             p.setMargins(left, top, right, bottom);
             view.requestLayout();
         }

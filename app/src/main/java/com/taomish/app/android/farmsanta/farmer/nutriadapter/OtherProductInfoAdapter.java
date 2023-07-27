@@ -30,30 +30,30 @@ import com.taomish.app.android.farmsanta.farmer.nutrisource.ProductInfoActivity;
 import java.util.List;
 
 public class OtherProductInfoAdapter extends RecyclerView.Adapter<OtherProductInfoAdapter.ViewHolder> {
-    private OtherProductClickListener listener;
+    private final OtherProductClickListener listener;
     private FirebaseAuth mAuth;
     private FirebaseUser CurrentUser;
     private String UserId;
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private LinearLayout PrContainer;
-        private ImageView ProductImage;
-        private TextView ProductName;
-        private TextView ProductPrice;
-        private TextView ProductExpiryDate;
-        private ImageView PrFavoriteImage;
+        private final LinearLayout PrContainer;
+        private final ImageView ProductImage;
+        private final TextView ProductName;
+        private final TextView ProductPrice;
+        private final TextView ProductExpiryDate;
+        private final ImageView PrFavoriteImage;
         public Button AddToCart,DeleteCart;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            PrContainer = (LinearLayout)itemView.findViewById(R.id.PrContainer);
-            ProductImage = (ImageView)itemView.findViewById(R.id.PrImage);
-            ProductName = (TextView)itemView.findViewById(R.id.PrName);
-            ProductPrice = (TextView)itemView.findViewById(R.id.PrPrice);
-            ProductExpiryDate = (TextView)itemView.findViewById(R.id.PrExpiryDate);
-            PrFavoriteImage = (ImageView)itemView.findViewById(R.id.PrFavoriteImage);
-            AddToCart = (Button) itemView.findViewById(R.id.AddToCart);
-            DeleteCart= (Button) itemView.findViewById(R.id.DeleteCart);
+            PrContainer = itemView.findViewById(R.id.PrContainer);
+            ProductImage = itemView.findViewById(R.id.PrImage);
+            ProductName = itemView.findViewById(R.id.PrName);
+            ProductPrice = itemView.findViewById(R.id.PrPrice);
+            ProductExpiryDate = itemView.findViewById(R.id.PrExpiryDate);
+            PrFavoriteImage = itemView.findViewById(R.id.PrFavoriteImage);
+            AddToCart = itemView.findViewById(R.id.AddToCart);
+            DeleteCart= itemView.findViewById(R.id.DeleteCart);
             itemView.setOnClickListener(this);
         }
 
@@ -64,8 +64,8 @@ public class OtherProductInfoAdapter extends RecyclerView.Adapter<OtherProductIn
     }
 
 
-    private Context context;
-    private List<CategoryProductInfo> ProductList;
+    private final Context context;
+    private final List<CategoryProductInfo> ProductList;
 
     public OtherProductInfoAdapter(Context context, List<CategoryProductInfo> ProductList, OtherProductClickListener listener){
         this.context = context;

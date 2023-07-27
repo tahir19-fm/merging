@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class StoreByProductAdapter extends RecyclerView.Adapter<StoreByProductAdapter.ViewHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     private ArrayList<ProductbyShop_Data> modelList;
 
     private OnItemClickListener mItemClickListener;
@@ -116,14 +116,14 @@ public class StoreByProductAdapter extends RecyclerView.Adapter<StoreByProductAd
 
         protected RecyclerView recyclerViewHorizontalList;
         protected TextView ratingno,ratinguser;
-        private TextView storename;
+        private final TextView storename;
 
         public ViewHolder(final View itemView) {
             super(itemView);
-            this.ratingno = (TextView) itemView.findViewById(R.id.ratingno);
-            this.ratinguser = (TextView) itemView.findViewById(R.id.ratinguser);
-            this.storename = (TextView) itemView.findViewById(R.id.storename);
-            this.recyclerViewHorizontalList = (RecyclerView) itemView.findViewById(R.id.services_horizontal_list);
+            this.ratingno = itemView.findViewById(R.id.ratingno);
+            this.ratinguser = itemView.findViewById(R.id.ratinguser);
+            this.storename = itemView.findViewById(R.id.storename);
+            this.recyclerViewHorizontalList = itemView.findViewById(R.id.services_horizontal_list);
         }
     }
 

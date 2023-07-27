@@ -568,7 +568,7 @@ class CompleteProfileFragment : FarmSantaBaseFragment() {
                     textInputLayoutDob!!.error = "Age less than 15!"
                 }
             }
-        newFragment!!.show(parentFragmentManager, "DatePicker")
+        newFragment.show(parentFragmentManager, "DatePicker")
         Handler(Looper.getMainLooper()).postDelayed({
             val dpd = newFragment.dateDialog
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {

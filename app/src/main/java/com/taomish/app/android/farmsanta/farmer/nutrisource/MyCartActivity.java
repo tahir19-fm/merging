@@ -31,8 +31,8 @@ public class MyCartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_cart);
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        mViewPager = (ViewPager) findViewById(R.id.view_pager);
+        tabLayout = findViewById(R.id.tabLayout);
+        mViewPager = findViewById(R.id.view_pager);
         backbtn=findViewById(R.id.backbtn);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override

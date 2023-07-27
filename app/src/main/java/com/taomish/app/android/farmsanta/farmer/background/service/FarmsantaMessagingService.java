@@ -212,5 +212,8 @@ public class FarmsantaMessagingService extends FirebaseMessagingService {
         args.putString(ApiConstants.Notification.LANGUAGE_ID, languageId);
         return args;
     }
+    public static String getToken(Context context) {
+        return context.getSharedPreferences("_", MODE_PRIVATE).getString("fcm_token", "empty");
+    }
 
 }

@@ -8,8 +8,8 @@ import java.util.List;
 
 public class CameraAnimationManager implements GoogleMap.CancelableCallback {
 
-    private GoogleMap mGoogleMap;
-    private List<CameraAnimation> mAnimations = new ArrayList<>();   // list of "animations"
+    private final GoogleMap mGoogleMap;
+    private final List<CameraAnimation> mAnimations = new ArrayList<>();   // list of "animations"
     private int mCurrentAnimationIndex = -1;                         // index of current animation
 
 

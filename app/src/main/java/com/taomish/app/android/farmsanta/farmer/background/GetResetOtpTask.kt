@@ -16,7 +16,7 @@ class GetResetOtpTask: FarmSantaBaseAsyncTask() {
         }
     }
 
-    override fun doInBackground(vararg strings: String?): Boolean? {
+    override fun doInBackground(vararg strings: String?): Boolean {
         val controller = ServiceController(context)
         return controller.getResetOTP(strings[0])
     }

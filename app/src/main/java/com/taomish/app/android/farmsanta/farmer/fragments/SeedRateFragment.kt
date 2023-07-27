@@ -229,9 +229,9 @@ class SeedRateFragment : FarmSantaBaseFragment() {
     private val cropListFromAssets: Unit
         private get() {
             if (crops != null) {
-                cropStrings = arrayOfNulls(crops!!.size)
-                for (i in crops!!.indices) {
-                    cropStrings[i] = crops!![i].crop
+                cropStrings = arrayOfNulls(crops.size)
+                for (i in crops.indices) {
+                    cropStrings[i] = crops[i].crop
                 }
                 setAdapterForCrop()
             }
@@ -247,7 +247,7 @@ class SeedRateFragment : FarmSantaBaseFragment() {
     }
 
     private fun loadCropVariety(cropName: String) {
-        for (userCrop in crops!!) {
+        for (userCrop in crops) {
             if (userCrop.crop == cropName) {
                 if (userCrop.varieties != null) {
                     cropVarieties = arrayOfNulls(userCrop.varieties.size)

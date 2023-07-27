@@ -77,7 +77,7 @@ public class CartCheckActivity extends AppCompatActivity implements NavigationVi
         appPrefs=new AppPrefs(this);
         UserId=appPrefs.getPhoneNumber();
 
-        mToolbar = (Toolbar)findViewById(R.id.cartCheckToolbar);
+        mToolbar = findViewById(R.id.cartCheckToolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -132,7 +132,7 @@ public class CartCheckActivity extends AppCompatActivity implements NavigationVi
                     String Phone = snapshot.child("Phone").getValue().toString();
                   //  name.setText(Name);
                     contactno.setText(Phone);
-                    email.setText(CurrentUsr.getEmail().toString());
+                    email.setText(CurrentUsr.getEmail());
 
                 }
             }
@@ -184,7 +184,7 @@ public class CartCheckActivity extends AppCompatActivity implements NavigationVi
                 root.child("order").child(CurrentUser).child(key).child("orderproducts").setValue(snapshot.getValue());
                 root.child("order").child(CurrentUser).child(key).child("totalPrice").setValue(snapshot.child("totalPrice").getValue());
                 root.child("order").child(CurrentUser).child(key).child("orderproducts").child("totalPrice").removeValue();
-                root.child("order").child(CurrentUser).child(key).child("Date").setValue(String.valueOf(new SimpleDateFormat("dd MMM yyyy hh:mm a").format(Calendar.getInstance().getTime())));
+                root.child("order").child(CurrentUser).child(key).child("Date").setValue(new SimpleDateFormat("dd MMM yyyy hh:mm a").format(Calendar.getInstance().getTime()));
                 root.child("order").child(CurrentUser).child(key).child("IsChecked").setValue(status);
                 root.child("order").child(CurrentUser).child(key).child("Paymentid").setValue(paymentid);
                 root.child("order").child(CurrentUser).child(key).child("Paymentmsg").setValue(paymentmsg);
@@ -209,8 +209,8 @@ public class CartCheckActivity extends AppCompatActivity implements NavigationVi
     @Override
     protected void onStart() {
         super.onStart();
-        drawerLayout = (DrawerLayout) findViewById(R.id.cartCheckDrawer);
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = findViewById(R.id.cartCheckDrawer);
+        navigationView = findViewById(R.id.nav_view);
 
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
@@ -346,9 +346,9 @@ public class CartCheckActivity extends AppCompatActivity implements NavigationVi
         actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
-        CustomCartNumber = (TextView)findViewById(R.id.CustomCartNumber);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
+        CustomCartNumber = findViewById(R.id.CustomCartNumber);
 
         PageTitle.setText("Check Order");
         setNumberOfItemsInCartIcon();

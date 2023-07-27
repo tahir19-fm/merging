@@ -137,7 +137,7 @@ class MapSelectCurrentPlaceFragment : FarmSantaBaseFragment() {
                     if (location != null) {
                         mLastKnownLocation = location
                         if (mFusedLocationProviderClient != null) {
-                            mFusedLocationProviderClient!!.removeLocationUpdates(locationCallback!!)
+                            mFusedLocationProviderClient!!.removeLocationUpdates(locationCallback)
                         }
                         Log.d(AppConstants.TAG, "Got location ping update ==> $mLastKnownLocation")
                         updateLocation()

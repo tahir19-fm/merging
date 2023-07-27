@@ -55,7 +55,7 @@ public class TestReport extends AppCompatActivity implements NavigationView.OnNa
         getSupportFragmentManager().beginTransaction().replace(R.id.Testframe,new ReportFregmant()).commit();
         appPrefs=new AppPrefs(this);
         UserId=appPrefs.getPhoneNumber();
-        mToolbar = (Toolbar)findViewById(R.id.ReportToolbar);
+        mToolbar = findViewById(R.id.ReportToolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -63,8 +63,8 @@ public class TestReport extends AppCompatActivity implements NavigationView.OnNa
     @Override
     protected void onStart() {
         super.onStart();
-        drawerLayout = (DrawerLayout) findViewById(R.id.OrderDrawer);
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = findViewById(R.id.OrderDrawer);
+        navigationView = findViewById(R.id.nav_view);
 
         //navigation header
         navigationView.setItemIconTintList(null);
@@ -176,9 +176,9 @@ public class TestReport extends AppCompatActivity implements NavigationView.OnNa
         actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
-        CustomCartNumber = (TextView)findViewById(R.id.CustomCartNumber);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
+        CustomCartNumber = findViewById(R.id.CustomCartNumber);
 
         PageTitle.setText("My Booking");
         setNumberOfItemsInCartIcon();

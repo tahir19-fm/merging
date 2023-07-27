@@ -94,7 +94,7 @@ public class SoilTestingDetails extends AppCompatActivity implements OnMapReadyC
         window.setStatusBarColor(ContextCompat.getColor(this,R.color.soilcolor));
         reviewlist=findViewById(R.id.reviewlist);
         addtocart=findViewById(R.id.addtocart);
-        numberPicker = (NumberPicker) findViewById(R.id.number_picker);
+        numberPicker = findViewById(R.id.number_picker);
         numberPicker.setMax(15);
         numberPicker.setMin(1);
         numberPicker.setUnit(1);
@@ -121,22 +121,22 @@ public class SoilTestingDetails extends AppCompatActivity implements OnMapReadyC
         productdetails=findViewById(R.id.productdetails);
         readMoreOption.addReadMoreTo(productdetails, getString(R.string.about_us_description));
 
-        ratingReviews = (RatingReviews) findViewById(R.id.rating_reviews);
-        int colors[] = new int[]{
+        ratingReviews = findViewById(R.id.rating_reviews);
+        int[] colors = new int[]{
                 Color.parseColor("#0e9d58"),
                 Color.parseColor("#bfd047"),
                 Color.parseColor("#ffc105"),
                 Color.parseColor("#ef7e14"),
                 Color.parseColor("#d36259")};
 
-        int raters[] = new int[]{
+        int[] raters = new int[]{
                 100,
                 40,
                 50,
                 30,
                 15
         };
-        int users[] = new int[]{
+        int[] users = new int[]{
                 500,
                 80,
                 100,
@@ -165,7 +165,7 @@ public class SoilTestingDetails extends AppCompatActivity implements OnMapReadyC
         // sliderView.startAutoCycle();
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapViewFragment);
         mapFragment.getMapAsync(this);
-        ImageView transparent = (ImageView)findViewById(R.id.imagetrans);
+        ImageView transparent = findViewById(R.id.imagetrans);
         transparent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

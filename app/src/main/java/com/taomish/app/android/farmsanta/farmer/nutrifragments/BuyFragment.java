@@ -107,7 +107,7 @@ public class BuyFragment extends Fragment implements OnMapReadyCallback{
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
-        ImageView transparent = (ImageView)view.findViewById(R.id.imagetrans);
+        ImageView transparent = view.findViewById(R.id.imagetrans);
         transparent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

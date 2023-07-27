@@ -61,21 +61,17 @@ public class CustomHandlerThread extends HandlerThread {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            switch (msg.what) {
-                case 1:
-                    try {
-                        Thread.sleep(1000);
-                        if (!Thread.interrupted() && mUiThreadCallback != null && mUiThreadCallback.get() != null) {
-                            Message message = ThreadUtil.createMessage(ThreadUtil.MESSAGE_ID,
-                                    "Thread " + Thread.currentThread().getId() + " completed");
-                            mUiThreadCallback.get().publishToUiThread(message);
-                        }
-                    } catch (InterruptedException e) {
-                        Log.e(ThreadUtil.TAG, "HandlerThread interrupted");
+            if (msg.what == 1) {
+                try {
+                    Thread.sleep(1000);
+                    if (!Thread.interrupted() && mUiThreadCallback != null && mUiThreadCallback.get() != null) {
+                        Message message = ThreadUtil.createMessage(ThreadUtil.MESSAGE_ID,
+                                "Thread " + Thread.currentThread().getId() + " completed");
+                        mUiThreadCallback.get().publishToUiThread(message);
                     }
-                    break;
-                default:
-                    break;
+                } catch (InterruptedException e) {
+                    Log.e(ThreadUtil.TAG, "HandlerThread interrupted");
+                }
             }
         }
     }

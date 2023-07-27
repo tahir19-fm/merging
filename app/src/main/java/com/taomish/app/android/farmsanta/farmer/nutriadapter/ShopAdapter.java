@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.SingleItemRowHolder> {
 
-    private ArrayList<Shop_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Shop_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public ShopAdapter(Context context, ArrayList<Shop_Data> itemsList) {
@@ -77,14 +77,14 @@ public class ShopAdapter extends RecyclerView.Adapter<ShopAdapter.SingleItemRowH
         protected TextView rating,storeaddress,nearest,productno,productlist,nearme;
         public SingleItemRowHolder(View view) {
             super(view);
-            this.StoreName = (TextView) view.findViewById(R.id.StoreName);
+            this.StoreName = view.findViewById(R.id.StoreName);
             this.StoreImage = view.findViewById(R.id.StoreImage);
-            this.rating = (TextView) view.findViewById(R.id.rating);
-            this.storeaddress = (TextView) view.findViewById(R.id.storeaddress);
-            this.nearest= (TextView) view.findViewById(R.id.nearest);
-            this.productno= (TextView) view.findViewById(R.id.productno);
-            this.productlist= (TextView) view.findViewById(R.id.productlist);
-            this.nearme=(TextView) view.findViewById(R.id.nearme);
+            this.rating = view.findViewById(R.id.rating);
+            this.storeaddress = view.findViewById(R.id.storeaddress);
+            this.nearest= view.findViewById(R.id.nearest);
+            this.productno= view.findViewById(R.id.productno);
+            this.productlist= view.findViewById(R.id.productlist);
+            this.nearme= view.findViewById(R.id.nearme);
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

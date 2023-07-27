@@ -96,7 +96,7 @@ public class SoilCartActivity extends AppCompatActivity implements OnMapReadyCal
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
-        ImageView transparent = (ImageView)findViewById(R.id.imagetrans);
+        ImageView transparent = findViewById(R.id.imagetrans);
         transparent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

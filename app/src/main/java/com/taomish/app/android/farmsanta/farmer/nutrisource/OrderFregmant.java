@@ -99,7 +99,7 @@ public class OrderFregmant extends Fragment {
                             products+= "    #"+data.getKey() + "\n        Price: " + data.child("productPrice").getValue().toString() + " INR\n        Quantity: " + data.child("quantity").getValue().toString()+"\n";
                         }
 
-                        orderItemList.add( new MyorderModel(dataSnapshot.getKey(),"   Date :  " + Date ,"   Products Number :  "+String.valueOf(nums),"   Total Price :  "+ totalPrice+" INR" , "   "+products,OrderCheck,name,contact,address));
+                        orderItemList.add( new MyorderModel(dataSnapshot.getKey(),"   Date :  " + Date ,"   Products Number :  "+ nums,"   Total Price :  "+ totalPrice+" INR" , "   "+products,OrderCheck,name,contact,address));
                     }
                 }
                 else{

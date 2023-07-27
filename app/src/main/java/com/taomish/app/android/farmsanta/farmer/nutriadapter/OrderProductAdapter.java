@@ -22,8 +22,8 @@ import java.util.ArrayList;
 
 public class OrderProductAdapter extends RecyclerView.Adapter<OrderProductAdapter.SingleItemRowHolder> implements ValueChangedListener, LimitExceededListener {
 
-    private ArrayList<Cart_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Cart_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public OrderProductAdapter(Context context, ArrayList<Cart_Data> itemsList) {
@@ -100,10 +100,10 @@ public class OrderProductAdapter extends RecyclerView.Adapter<OrderProductAdapte
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.PrName = (TextView) view.findViewById(R.id.PrName);
-            this.PrImage = (ImageView) view.findViewById(R.id.PrImage);
-            this.price = (TextView) view.findViewById(R.id.price);
-            this.PrDelete = (ImageView) view.findViewById(R.id.PrDelete);
+            this.PrName = view.findViewById(R.id.PrName);
+            this.PrImage = view.findViewById(R.id.PrImage);
+            this.price = view.findViewById(R.id.price);
+            this.PrDelete = view.findViewById(R.id.PrDelete);
             this.numberPicker=view.findViewById(R.id.number_picker);
 
             view.setOnClickListener(new View.OnClickListener() {

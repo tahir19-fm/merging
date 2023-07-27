@@ -7,7 +7,7 @@ import com.taomish.app.android.farmsanta.farmer.models.api.calculator.Properties
 
 public class CalculateSeedRateTask extends FarmSantaBaseAsyncTask {
 
-    private Calculate calculate;
+    private final Calculate calculate;
 
     public CalculateSeedRateTask(Calculate calculate) {
         this.calculate = calculate;

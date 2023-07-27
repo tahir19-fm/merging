@@ -53,7 +53,7 @@ public class CartActivity extends AppCompatActivity implements NavigationView.On
         fa=this;
         appPrefs=new AppPrefs(this);
         UserId=appPrefs.getPhoneNumber();
-        mToolbar = (Toolbar)findViewById(R.id.cartToolbar);
+        mToolbar = findViewById(R.id.cartToolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("My Cart");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -67,7 +67,7 @@ public class CartActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onStart() {
         super.onStart();
-        drawerLayout = (DrawerLayout) findViewById(R.id.cartDrawer);
+        drawerLayout = findViewById(R.id.cartDrawer);
    /*   navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         navigationView.setItemIconTintList(null);
@@ -195,8 +195,8 @@ public class CartActivity extends AppCompatActivity implements NavigationView.On
         //actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
         PageTitle.setVisibility(View.GONE);
         CustomCartContainer.setVisibility(View.GONE);
 

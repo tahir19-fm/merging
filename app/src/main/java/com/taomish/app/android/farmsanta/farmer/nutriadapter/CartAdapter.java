@@ -24,7 +24,7 @@ import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter  {
     AppPrefs appPrefs;
-    private  List<CartItemModel> cartItemModelList;
+    private final List<CartItemModel> cartItemModelList;
     private OnItemClickListener mListener;
 
 
@@ -43,13 +43,10 @@ public class CartAdapter extends RecyclerView.Adapter  {
 
     @Override
     public int getItemViewType(int position) {
-        switch (cartItemModelList.get(position).getType())
-        {
-            case 0:
-                return  CartItemModel.cart_item;
-            default:
-                return  -1;
+        if (cartItemModelList.get(position).getType() == 0) {
+            return CartItemModel.cart_item;
         }
+        return -1;
     }
 
     @NonNull
@@ -84,18 +81,18 @@ public class CartAdapter extends RecyclerView.Adapter  {
 
 
     class cartItemViewHolder extends RecyclerView.ViewHolder  {
-        private ImageView productimage;
-        private TextView producttitle;
-        private TextView freecoupon;
-        private TextView productprice;
-        private TextView cuttedprice;
-        private TextView offerApplied;
-        private TextView couponApplied;
-        private TextView productQuantity;
-        private ImageView couponIcon;
-        private ImageView PlusIcon;
-        private ImageView MinusIcon;
-        private ImageView CartItemDelete;
+        private final ImageView productimage;
+        private final TextView producttitle;
+        private final TextView freecoupon;
+        private final TextView productprice;
+        private final TextView cuttedprice;
+        private final TextView offerApplied;
+        private final TextView couponApplied;
+        private final TextView productQuantity;
+        private final ImageView couponIcon;
+        private final ImageView PlusIcon;
+        private final ImageView MinusIcon;
+        private final ImageView CartItemDelete;
         public boolean deletedItem = false ;
         //-----------
 
@@ -160,7 +157,7 @@ public class CartAdapter extends RecyclerView.Adapter  {
                 freecoupon.setVisibility(View.INVISIBLE);
                 couponApplied.setVisibility(View.INVISIBLE);
             }
-            productprice.setText("Price: "+String.valueOf(productPriceText * quantity )+" INR");
+            productprice.setText("Price: "+ productPriceText * quantity +" INR");
             if ( Integer.parseInt(cutprice) >0) {
                 cuttedprice.setText(cutprice);
                 cuttedprice.setVisibility(View.VISIBLE);
@@ -171,7 +168,7 @@ public class CartAdapter extends RecyclerView.Adapter  {
                 @Override
                 public void onClick(View v) {
                     productQuantity.setText(String.valueOf( Integer.parseInt( productQuantity.getText().toString() )+1  )  );
-                    productprice.setText("Price: "+String.valueOf(productPriceText *Integer.parseInt( productQuantity.getText().toString()) )+" INR")  ;
+                    productprice.setText("Price: "+ productPriceText * Integer.parseInt(productQuantity.getText().toString()) +" INR")  ;
                     root.child("cart").child(CurrentUser).child(title).child("quantity").setValue(productQuantity.getText().toString());
                     countTotalPrice(CurrentUser);
                 }
@@ -182,7 +179,7 @@ public class CartAdapter extends RecyclerView.Adapter  {
                 public void onClick(View v) {
                     if(Integer.valueOf( productQuantity.getText().toString() ) >1) {
                         productQuantity.setText(String.valueOf(Integer.parseInt(productQuantity.getText().toString()) - 1));
-                        productprice.setText("Price: "+String.valueOf(productPriceText * Integer.parseInt(productQuantity.getText().toString()))+" INR");
+                        productprice.setText("Price: "+ productPriceText * Integer.parseInt(productQuantity.getText().toString()) +" INR");
                         root.child("cart").child(CurrentUser).child(title).child("quantity").setValue(productQuantity.getText().toString());
                         countTotalPrice(CurrentUser);
                     }
@@ -234,7 +231,7 @@ public class CartAdapter extends RecyclerView.Adapter  {
     }
     */
     public void countTotalPrice(String CurrentUser){
-        final DatabaseReference root = FirebaseDatabase.getInstance().getReference(); ;
+        final DatabaseReference root = FirebaseDatabase.getInstance().getReference();
 
         DatabaseReference m = root.child("cart");
 
@@ -248,14 +245,14 @@ public class CartAdapter extends RecyclerView.Adapter  {
                     for (DataSnapshot dataSnapshot : snapshot.child(CurrentUser).getChildren()) {
                         if (!dataSnapshot.getKey().equals("totalPrice")) {
 
-                            String cartItemPrice = dataSnapshot.child("productPrice").getValue(String.class).toString();
-                            String quantity = dataSnapshot.child("quantity").getValue(String.class).toString();
+                            String cartItemPrice = dataSnapshot.child("productPrice").getValue(String.class);
+                            String quantity = dataSnapshot.child("quantity").getValue(String.class);
                             totalpriceVal += Integer.parseInt(  cartItemPrice) * Integer.parseInt( quantity );
                         }
 
                     }
                     root.child("cart").child(CurrentUser).child("totalPrice").setValue(String.valueOf(totalpriceVal));
-                    mListener.UpdateTotalPrice(String.valueOf(totalpriceVal)+" INR");
+                    mListener.UpdateTotalPrice(totalpriceVal +" INR");
                 }
             }
 

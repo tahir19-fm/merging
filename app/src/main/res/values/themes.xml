@@ -124,4 +124,34 @@
         <item name="android:textSize">11sp</item>
     </style>
 
+<!--    hdvjsabkvdsnl;vdfbjksvbdjksndfvbjhdbk;bjhvdnkfbdlvnk;jblvdfnksvf-->
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+
+    </style>
+    <style name="ProductSpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/product_spinner</item>
+
+    </style>
+    <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:spinnerItemStyle">@style/TextViewSpinnerItem</item>
+    </style>
+    <style name="TextViewSpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+    <style name="WhiteCheck">
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+    <style name="spinnerTheme">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/spinner_bg</item>
+    </style>
 </resources>

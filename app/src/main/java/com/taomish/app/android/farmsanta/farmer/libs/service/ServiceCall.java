@@ -47,9 +47,9 @@ public class ServiceCall {
     private String uRL;
     private String paramToPass;
 
-    private Map<String, String> headers;
-    private Map<String, String> body;
-    private Map<String, File> multipartBody;
+    private final Map<String, String> headers;
+    private final Map<String, String> body;
+    private final Map<String, File> multipartBody;
 
     private boolean isHttps = false;
     private int responseCode = -1;

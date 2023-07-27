@@ -64,6 +64,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -109,7 +110,7 @@ public class SoilBookingDetails extends AppCompatActivity implements OnMapReadyC
         paynowbtn=findViewById(R.id.paynowbtn);
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapViewFragment1);
         mapFragment.getMapAsync(this);
-        ImageView transparent = (ImageView)findViewById(R.id.imagetrans);
+        ImageView transparent = findViewById(R.id.imagetrans);
         transparent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -188,7 +189,7 @@ public class SoilBookingDetails extends AppCompatActivity implements OnMapReadyC
         //Toast.makeText(TeacherDetails.this, mobile, Toast.LENGTH_SHORT).show();
         try {
             Intent sendMsg = new Intent(Intent.ACTION_VIEW);
-            String url = "https://api.whatsapp.com/send?phone=" +mobile+ "&text=" + URLEncoder.encode("Hello!", "UTF-8");
+            String url = "https://api.whatsapp.com/send?phone=" +mobile+ "&text=" + URLEncoder.encode("Hello!", StandardCharsets.UTF_8);
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(browserIntent);
            /*
@@ -214,7 +215,7 @@ public class SoilBookingDetails extends AppCompatActivity implements OnMapReadyC
             }*/
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(SoilBookingDetails.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(SoilBookingDetails.this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }

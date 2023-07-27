@@ -4,6 +4,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.result.contract.ActivityResultContracts.PickVisualMedia.Companion.isPhotoPickerAvailable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -189,7 +190,7 @@ fun AddScoutingImageDetailsFragmentScreen(
                 showDialog = false
             },
             onSelectGallery = {
-                if (ActivityResultContracts.PickVisualMedia.isPhotoPickerAvailable()) {
+                if (isPhotoPickerAvailable(context)) {
                     photoPicker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
                 } else onGallery()
                 showDialog = false

@@ -51,7 +51,7 @@ public class BookSoilTesting extends AppCompatActivity implements Spinner.OnItem
     private TextView subcategory;
     ArrayAdapter businesscatadapter,businesstypeadapter;
     ArrayAdapter countryadapter,regionadapter,districtadapter,subdistrictadapter;
-    private String[] countrylist = {"Cameroon","India","Kenya","Malawi","Mozambique","Tanzania","Togo","Zambia","Uganda"};
+    private final String[] countrylist = {"Cameroon","India","Kenya","Malawi","Mozambique","Tanzania","Togo","Zambia","Uganda"};
     private String[] statelist = {"Region"};
     private String[] districtlist = {"District"};
     private String[] subdistrictlist = {"Sub District"};
@@ -115,8 +115,7 @@ public class BookSoilTesting extends AppCompatActivity implements Spinner.OnItem
         mAwesomeValidation.addValidation(this, R.id.farm_size, "^(?=\\s*\\S).*$", R.string.err_msg);
         mAwesomeValidation.addValidation(this, R.id.target_yield, "^(?=\\s*\\S).*$", R.string.err_msg);
         mAwesomeValidation.addValidation(this, R.id.farmer_address, "^(?=\\s*\\S).*$", R.string.err_msg);
-        mAwesomeValidation.addValidation(this, R.id.pincodeno, "^(?=\\s*\\S).*$", R.string.err_msg);
-        submitbtn.setOnClickListener(new View.OnClickListener() {
+        mAwesomeValidation.addValidation(this, R.id.pincodeno, "^(?=\\s*\\S).*$", R.string.err_msg);        submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (mAwesomeValidation.validate()) {
@@ -127,10 +126,10 @@ public class BookSoilTesting extends AppCompatActivity implements Spinner.OnItem
                         //Toast.makeText(BookSoilTesting.this, "Hello", Toast.LENGTH_SHORT).show();
                         cropname=crop_name.getText().toString();
                         previouscrop=previous_crop.getText().toString();
-                        fieldsize=farm_size.getText().toString();;
-                        targetyield=target_yield.getText().toString();;
+                        fieldsize=farm_size.getText().toString();
+                        targetyield=target_yield.getText().toString();
                         address=farmer_address.getText().toString();
-                        villagename=village.getText().toString();;
+                        villagename=village.getText().toString();
                         pincode=pincodeno.getText().toString();
                         farmername=farmer_name.getText().toString();
                         mDatabase= FirebaseDatabase.getInstance("https://farmsanta-partners-default-rtdb.asia-southeast1.firebasedatabase.app").getReference().child("soiltestbook");

@@ -36,7 +36,7 @@ public class ProductByStore extends AppCompatActivity {
     private FilterAdapter filterAdapter;
     private RecyclerView filters,storeandproduct;
     StoreByProductAdapter storeByProductAdapter;
-    private ArrayList<ProductbyShop_Data> productList = new ArrayList<>();
+    private final ArrayList<ProductbyShop_Data> productList = new ArrayList<>();
     ImageView backbtn,cart;
     ImageView searchicon;
     Dialog dialog;
@@ -98,15 +98,15 @@ public class ProductByStore extends AppCompatActivity {
 
     private void findDialogViews(final Dialog dialog) {
         // TODO Auto-generated method stub
-        ImageView iv = (ImageView)dialog.findViewById(R.id.calc_clear_txt_Prise);
-        lvSuggestions = (ListView) dialog.findViewById(R.id.listView1);
+        ImageView iv = dialog.findViewById(R.id.calc_clear_txt_Prise);
+        lvSuggestions = dialog.findViewById(R.id.listView1);
         lvSuggestions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(ProductByStore.this, adapterView.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
         });
-        final EditText etSearch = (EditText)dialog.findViewById(R.id.calc_txt_Prise);
+        final EditText etSearch = dialog.findViewById(R.id.calc_txt_Prise);
         iv.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -142,11 +142,11 @@ public class ProductByStore extends AppCompatActivity {
 for(int i=1;i<5;i++) {
     ArrayList<ProductbyShop_Data> singleItemList = new ArrayList<>();
     //   singleItemList.add(new Service_Data("Seeds & Seedlings",R.drawable.seedbag));
-    singleItemList.add(new ProductbyShop_Data(String.valueOf(i)+"1","Farmer Store", "4.5", "12", "123", "store", "", "", "", "", "", "", R.drawable.farmstoreimg, R.drawable.farmstoreimg, true, false));
-    singleItemList.add(new ProductbyShop_Data(String.valueOf(i)+"2","Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, true, true));
-    singleItemList.add(new ProductbyShop_Data(String.valueOf(i)+"3","Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, false, false));
-    singleItemList.add(new ProductbyShop_Data(String.valueOf(i)+"4","Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, false, false));
-    singleItemList.add(new ProductbyShop_Data(String.valueOf(i)+"5","Farmer Store", "4.5", "12", "123", "viewall", "", "", "", "", "", "", R.drawable.ammonium, R.drawable.ammonium, false, false));
+    singleItemList.add(new ProductbyShop_Data(i +"1","Farmer Store", "4.5", "12", "123", "store", "", "", "", "", "", "", R.drawable.farmstoreimg, R.drawable.farmstoreimg, true, false));
+    singleItemList.add(new ProductbyShop_Data(i +"2","Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, true, true));
+    singleItemList.add(new ProductbyShop_Data(i +"3","Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, false, false));
+    singleItemList.add(new ProductbyShop_Data(i +"4","Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, false, false));
+    singleItemList.add(new ProductbyShop_Data(i +"5","Farmer Store", "4.5", "12", "123", "viewall", "", "", "", "", "", "", R.drawable.ammonium, R.drawable.ammonium, false, false));
    /*
     singleItemList.add(new ProductbyShop_Data("Farmer Store", "4.5", "12", "345", "store", "", "", "", "", "", "", R.drawable.farmstoreimg, R.drawable.farmstoreimg, false, false));
     singleItemList.add(new ProductbyShop_Data("Farmer Store", "4.5", "12", "123", "product", "Calcium Ammonium Nitrate", "50 Kg", "$ 30", "$ 20", "10% Off", "3", R.drawable.productimage, R.drawable.ammonium, true, true));

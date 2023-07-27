@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class RentAdapter extends RecyclerView.Adapter<RentAdapter.ViewHolder> {
 
-    private Context mContext;
+    private final Context mContext;
     private ArrayList<Rent_Data> modelList;
 
     private OnItemClickListener mItemClickListener;
@@ -118,7 +118,7 @@ public class RentAdapter extends RecyclerView.Adapter<RentAdapter.ViewHolder> {
 
         protected RecyclerView recyclerViewHorizontalList;
         protected TextView itemTxtMore;
-        private TextView itemTxtTitle;
+        private final TextView itemTxtTitle;
 
 
 
@@ -127,9 +127,9 @@ public class RentAdapter extends RecyclerView.Adapter<RentAdapter.ViewHolder> {
 
             // ButterKnife.bind(this, itemView);
 
-            this.itemTxtTitle = (TextView) itemView.findViewById(R.id.item_txt_title);
-            this.recyclerViewHorizontalList = (RecyclerView) itemView.findViewById(R.id.services_horizontal_list);
-            this.itemTxtMore = (TextView) itemView.findViewById(R.id.item_txt_more);
+            this.itemTxtTitle = itemView.findViewById(R.id.item_txt_title);
+            this.recyclerViewHorizontalList = itemView.findViewById(R.id.services_horizontal_list);
+            this.itemTxtMore = itemView.findViewById(R.id.item_txt_more);
 
         }
     }

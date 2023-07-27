@@ -1,9 +1,9 @@
 package com.taomish.app.android.farmsanta.farmer.compose_ui.fragment_zoom_image
 
+import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.calculatePan
 import androidx.compose.foundation.gestures.calculateZoom
-import androidx.compose.foundation.gestures.forEachGesture
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -36,8 +36,8 @@ fun ZoomImageFragmentScreen(url: String) {
         modifier = Modifier
             .fillMaxSize()
             .pointerInput(Unit) {
-                forEachGesture {
-                    awaitPointerEventScope {
+                awaitEachGesture {
+//                    awaitPointerEventScope {
                         awaitFirstDown()
                         do {
                             val event = awaitPointerEvent()
@@ -45,8 +45,14 @@ fun ZoomImageFragmentScreen(url: String) {
                             val offset = event.calculatePan()
                             offsetX = (offsetX + offset.x)
                                 .coerceIn(
-                                    -((scale - 1F).coerceIn(0F, 1F) * (size.width.toFloat() * .33F) * scale),
-                                    ((scale - 1F).coerceIn(0F, 1F) * (size.width.toFloat() * .33F) * scale)
+                                    -((scale - 1F).coerceIn(
+                                        0F,
+                                        1F
+                                    ) * (size.width.toFloat() * .33F) * scale),
+                                    ((scale - 1F).coerceIn(
+                                        0F,
+                                        1F
+                                    ) * (size.width.toFloat() * .33F) * scale)
                                 )
                             offsetY = (offsetY + offset.y)
                                 .coerceIn(
@@ -54,7 +60,7 @@ fun ZoomImageFragmentScreen(url: String) {
                                     ((scale - 1F).coerceIn(0F, 1F) * (height * .33F) * scale)
                                 )
                         } while (event.changes.any { it.pressed })
-                    }
+//                    }
                 }
             }
     ) {

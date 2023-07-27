@@ -21,8 +21,8 @@ import java.util.ArrayList;
 
 public class SingleItemSoil extends RecyclerView.Adapter<SingleItemSoil.SingleItemRowHolder> {
 
-    private ArrayList<Product_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Product_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
 
@@ -85,7 +85,7 @@ public class SingleItemSoil extends RecyclerView.Adapter<SingleItemSoil.SingleIt
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.itemCardTxtTitle = (TextView) view.findViewById(R.id.item_card_txt_title);
+            this.itemCardTxtTitle = view.findViewById(R.id.item_card_txt_title);
             this.itemCardImg = view.findViewById(R.id.item_card_img);
             this.booksoiltest=view.findViewById(R.id.booksoiltest);
 

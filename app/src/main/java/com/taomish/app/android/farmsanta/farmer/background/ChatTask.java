@@ -7,7 +7,7 @@ import com.taomish.app.android.farmsanta.farmer.models.api.chat.Query;
 
 public class ChatTask extends FarmSantaBaseAsyncTask {
 
-    private Query query;
+    private final Query query;
 
     public ChatTask(Query query) {
         this.query = query;

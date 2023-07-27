@@ -91,5 +91,5 @@ fun MarketNavigation(
 @Preview
 @Composable
 fun Previewfun(){
-    MarketNavigation();
+    MarketNavigation()
 }

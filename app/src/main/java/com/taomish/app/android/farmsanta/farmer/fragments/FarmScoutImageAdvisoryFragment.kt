@@ -51,7 +51,7 @@ class FarmScoutImageAdvisoryFragment(var advisory: Advisory?) : FarmSantaBaseFra
         culturalTextView = initThisView(R.id.farmScoutAdvisory_text_culturalControl)
         noAdvisoryTextView = initThisView(R.id.farmScoutAdvisory_text_noAdvisory)
 
-        allDataContainerLinear = initThisView(R.id.farmScoutAdvisory_linear_allContainer);
+        allDataContainerLinear = initThisView(R.id.farmScoutAdvisory_linear_allContainer)
     }
 
     override fun initListeners() {
@@ -138,7 +138,7 @@ class FarmScoutImageAdvisoryFragment(var advisory: Advisory?) : FarmSantaBaseFra
                 )
                 setTextColor(ContextCompat.getColor(requireContext(), R.color.light_black))
                 setPadding(4)
-                setTypeface(fixedView.typeface, Typeface.BOLD);
+                setTypeface(fixedView.typeface, Typeface.BOLD)
                 textSize = 14F
                 background =
                     ContextCompat.getDrawable(requireContext(), R.drawable.fixed_column_border)

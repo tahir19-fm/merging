@@ -20,9 +20,9 @@ import coil.ImageLoader;
 
 public class SearchAdapter extends BaseAdapter {
 
-    private Context mContext;
-    private List<Seller_Product_Data> list;
-    private RequestQueue mRequestQueue;
+    private final Context mContext;
+    private final List<Seller_Product_Data> list;
+    private final RequestQueue mRequestQueue;
     private ImageLoader mImageLoader;
 
     public SearchAdapter(Context mContext, List<Seller_Product_Data> list) {
@@ -57,8 +57,8 @@ public class SearchAdapter extends BaseAdapter {
         if(convertView==null){
             convertView = LayoutInflater.from(mContext).inflate(R.layout.list_item_search   , parent, false);
         }
-        ImageView image = (ImageView)convertView.findViewById(R.id.productimage);
-        TextView tvName = (TextView)convertView.findViewById(R.id.productname);
+        ImageView image = convertView.findViewById(R.id.productimage);
+        TextView tvName = convertView.findViewById(R.id.productname);
 
         Seller_Product_Data model = list.get(position);
         image.setImageResource(model.getProductimg());

@@ -26,27 +26,27 @@ import com.taomish.app.android.farmsanta.farmer.nutrisource.ProductList;
 import java.util.List;
 
 public class SuppilerAdapter extends RecyclerView.Adapter<SuppilerAdapter.ViewHolder> {
-    private RecyclerViewClickListener listener;
+    private final RecyclerViewClickListener listener;
     private FirebaseAuth mAuth;
     private FirebaseUser CurrentUser;
     private String UserId;
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private LinearLayout PrContainer;
-        private ImageView ProductImage;
-        private TextView ProductName;
-        private TextView ProductPrice;
-        private TextView ProductExpiryDate;
-        private ImageView PrFavoriteImage;
+        private final LinearLayout PrContainer;
+        private final ImageView ProductImage;
+        private final TextView ProductName;
+        private final TextView ProductPrice;
+        private final TextView ProductExpiryDate;
+        private final ImageView PrFavoriteImage;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            PrContainer = (LinearLayout)itemView.findViewById(R.id.PrContainer);
-            ProductImage = (ImageView)itemView.findViewById(R.id.PrImage);
-            ProductName = (TextView)itemView.findViewById(R.id.PrName);
-            ProductPrice = (TextView)itemView.findViewById(R.id.PrPrice);
-            ProductExpiryDate = (TextView)itemView.findViewById(R.id.PrExpiryDate);
-            PrFavoriteImage = (ImageView)itemView.findViewById(R.id.PrFavoriteImage);
+            PrContainer = itemView.findViewById(R.id.PrContainer);
+            ProductImage = itemView.findViewById(R.id.PrImage);
+            ProductName = itemView.findViewById(R.id.PrName);
+            ProductPrice = itemView.findViewById(R.id.PrPrice);
+            ProductExpiryDate = itemView.findViewById(R.id.PrExpiryDate);
+            PrFavoriteImage = itemView.findViewById(R.id.PrFavoriteImage);
 
         }
 
@@ -54,8 +54,8 @@ public class SuppilerAdapter extends RecyclerView.Adapter<SuppilerAdapter.ViewHo
     }
 
 
-    private Context context;
-    private List<SupplierDataModel> SupplierList;
+    private final Context context;
+    private final List<SupplierDataModel> SupplierList;
 
     public SuppilerAdapter(Context context, List<SupplierDataModel> SupplierList, RecyclerViewClickListener listener){
         this.context = context;

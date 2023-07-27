@@ -16,7 +16,7 @@ import com.taomish.app.android.farmsanta.farmer.datamodel.favouritesClass;
 import java.util.List;
 
 public class MyAdapter_Recycler_View extends RecyclerView.Adapter<MyAdapter_Recycler_View.ViewHolder> {
-    private List<favouritesClass> horizontalProductModelList;
+    private final List<favouritesClass> horizontalProductModelList;
 
     public MyAdapter_Recycler_View(List<favouritesClass> horizontalProductModelList) {
         this.horizontalProductModelList = horizontalProductModelList;

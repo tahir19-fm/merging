@@ -18,12 +18,19 @@ import com.taomish.app.android.farmsanta.farmer.datamodel.MyorderModel;
 import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
-    private List<MyorderModel> orderItemList;
-    private Context context;
+    private final List<MyorderModel> orderItemList;
+    private final Context context;
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView orderDate, orderNums, orderPrice, orderProducts, OrderCheck,Name,Contact,Address;
-        private Button ScanQrCode;
+        private final TextView orderDate;
+        private final TextView orderNums;
+        private final TextView orderPrice;
+        private final TextView orderProducts;
+        private final TextView OrderCheck;
+        private final TextView Name;
+        private final TextView Contact;
+        private final TextView Address;
+        private final Button ScanQrCode;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             orderDate = itemView.findViewById(R.id.orderDate);

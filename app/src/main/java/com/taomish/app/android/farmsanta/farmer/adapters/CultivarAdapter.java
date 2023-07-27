@@ -15,10 +15,10 @@ import java.util.ArrayList;
 
 public class CultivarAdapter extends ArrayAdapter<Cultivar> {
     private final String MY_DEBUG_TAG = "CustomerAdapter";
-    private ArrayList<Cultivar> items;
-    private ArrayList<Cultivar> itemsAll;
-    private ArrayList<Cultivar> suggestions;
-    private int viewResourceId;
+    private final ArrayList<Cultivar> items;
+    private final ArrayList<Cultivar> itemsAll;
+    private final ArrayList<Cultivar> suggestions;
+    private final int viewResourceId;
 
 
     public CultivarAdapter(Context context, int viewResourceId, ArrayList<Cultivar> items) {

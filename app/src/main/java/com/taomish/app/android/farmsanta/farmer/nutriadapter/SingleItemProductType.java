@@ -18,8 +18,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SingleItemProductType extends RecyclerView.Adapter<SingleItemProductType.SingleItemRowHolder> {
 
-    private ArrayList<Service_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Service_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public SingleItemProductType(Context context, ArrayList<Service_Data> itemsList) {

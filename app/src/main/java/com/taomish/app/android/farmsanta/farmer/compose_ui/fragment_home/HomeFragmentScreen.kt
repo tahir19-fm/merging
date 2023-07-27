@@ -130,7 +130,7 @@ fun HomeFragmentScreen(
                 )
             }
         }
-        Column() {
+        Column {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()

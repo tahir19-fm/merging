@@ -4,7 +4,7 @@ import com.taomish.app.android.farmsanta.farmer.baseclass.FarmSantaBaseAsyncTask
 import com.taomish.app.android.farmsanta.farmer.controller.ServiceController
 import com.taomish.app.android.farmsanta.farmer.models.api.fertilizer.FertilizerSourceDetails
 
-class GetFertilizerSourceDetailsTask(): FarmSantaBaseAsyncTask() {
+class GetFertilizerSourceDetailsTask : FarmSantaBaseAsyncTask() {
 
     override fun onTaskSuccess(vararg obj: Any?) {
         onTaskCompletion?.onTaskSuccess(data)

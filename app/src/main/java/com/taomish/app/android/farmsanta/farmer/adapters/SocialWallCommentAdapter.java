@@ -28,7 +28,7 @@ public class SocialWallCommentAdapter
     private final static long MILLIS_PER_HOUR = 60 * 60 * 1000L;
     private final static long MILLIS_PER_MINUTE = 60 * 1000L;
 
-    private List<Comment> commentList;
+    private final List<Comment> commentList;
 
     SocialWallCommentAdapter(List<Comment> childItemList) {
         this.commentList = childItemList;

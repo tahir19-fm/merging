@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MarketViewAdapter extends XMarqueeViewAdapter<String> {
 
-    private Context mContext;
+    private final Context mContext;
     public MarketViewAdapter(List<String> datas, Context context) {
         super(datas);
         mContext = context;
@@ -29,7 +29,7 @@ public class MarketViewAdapter extends XMarqueeViewAdapter<String> {
     @Override
     public void onBindView(View parent, View view, final int position) {
         //布局内容填充
-        TextView tvOne = (TextView) view.findViewById(R.id.marquee_tv_one);
+        TextView tvOne = view.findViewById(R.id.marquee_tv_one);
         tvOne.setText(mDatas.get(position));
         view.setOnClickListener(new View.OnClickListener() {
             @Override

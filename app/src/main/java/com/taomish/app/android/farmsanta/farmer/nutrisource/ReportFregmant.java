@@ -79,7 +79,7 @@ public class ReportFregmant  extends Fragment {
 
         CurrentUser=appPrefs.getPhoneNumber();
         DatabaseReference roott= FirebaseDatabase.getInstance("https://farmsanta-partners-default-rtdb.asia-southeast1.firebasedatabase.app").getReference();
-        DatabaseReference x = roott.child("soiltestbook").orderByChild("mobile_no").equalTo(CurrentUser).getRef();;
+        DatabaseReference x = roott.child("soiltestbook").orderByChild("mobile_no").equalTo(CurrentUser).getRef();
         ValueEventListener valueEventListener1 =new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -97,8 +97,8 @@ public class ProductList  extends AppCompatActivity  implements NavigationView.O
     @Override
     protected void onStart() {
         super.onStart();
-        drawerLayout = (DrawerLayout) findViewById(R.id.cartDrawer);
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = findViewById(R.id.cartDrawer);
+        navigationView = findViewById(R.id.nav_view);
 
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
@@ -171,14 +171,14 @@ public class ProductList  extends AppCompatActivity  implements NavigationView.O
     }
     private void setCategoryData(){
         //toolbar
-        mToolBar =(Toolbar)findViewById(R.id.CategoryTooBar);
+        mToolBar = findViewById(R.id.CategoryTooBar);
         setSupportActionBar(mToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView = (RecyclerView)findViewById(R.id.CategoryRecycler);
+        recyclerView = findViewById(R.id.CategoryRecycler);
         CategoryProducts = new ArrayList<>();
         OtherCategoryProducts= new ArrayList<>();
-        CategoryRecycler1= (RecyclerView)findViewById(R.id.CategoryRecycler1);
+        CategoryRecycler1= findViewById(R.id.CategoryRecycler1);
         adapter = new CategoryProductInfoAdapter(ProductList.this,CategoryProducts,listener);
         recyclerView.setLayoutManager(new LinearLayoutManager(ProductList.this));
         recyclerView.setAdapter(adapter);
@@ -198,7 +198,7 @@ public class ProductList  extends AppCompatActivity  implements NavigationView.O
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot1 : snapshot.getChildren()){
-                        final String ProductcatName = dataSnapshot1.getKey().toString();
+                        final String ProductcatName = dataSnapshot1.getKey();
 
                         DatabaseReference ss = root.child("product").child(ProductcatName).orderByChild("sellerid").equalTo(supplierid).getRef();
                         ValueEventListener valueEventListener1 = new ValueEventListener() {
@@ -207,7 +207,7 @@ public class ProductList  extends AppCompatActivity  implements NavigationView.O
                                 if (snapshot.exists()) {
                                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
 
-                                        final String ProductName = dataSnapshot.getKey().toString();
+                                        final String ProductName = dataSnapshot.getKey();
                                         final String ProductDetails = dataSnapshot.child("details").getValue().toString();
                                         final String sellerid = dataSnapshot.child("selletid").getValue().toString();
                                         final String ProductPrice = dataSnapshot.child("price").getValue().toString();
@@ -257,7 +257,7 @@ public class ProductList  extends AppCompatActivity  implements NavigationView.O
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        final String ProductName = dataSnapshot.getKey().toString();
+                        final String ProductName = dataSnapshot.getKey();
                         final String ProductDetails = dataSnapshot.child("details").getValue().toString();
                         final String sellerid = dataSnapshot.child("selletid").getValue().toString();
                         final String ProductPrice = dataSnapshot.child("price").getValue().toString();
@@ -423,9 +423,9 @@ public class ProductList  extends AppCompatActivity  implements NavigationView.O
         actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
-        CustomCartNumber = (TextView)findViewById(R.id.CustomCartNumber);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
+        CustomCartNumber = findViewById(R.id.CustomCartNumber);
 
         PageTitle.setText(CategoryName);
         setNumberOfItemsInCartIcon();

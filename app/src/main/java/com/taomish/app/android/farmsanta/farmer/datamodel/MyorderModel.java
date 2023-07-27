@@ -1,7 +1,15 @@
 package com.taomish.app.android.farmsanta.farmer.datamodel;
 
 public class MyorderModel {
-  private String OrderID, Date, orderNums, orderPrice, orderProducts, OrderCheck,Name,Contact,Address;
+  private String OrderID;
+    private String Date;
+    private String orderNums;
+    private String orderPrice;
+    private String orderProducts;
+    private String OrderCheck;
+    private final String Name;
+    private final String Contact;
+    private final String Address;
 
     public MyorderModel(String OrderId, String date, String orderNums, String orderPrice, String orderProducts, String OrderCheck, String name, String contact, String address) {
         this.OrderID = OrderId;

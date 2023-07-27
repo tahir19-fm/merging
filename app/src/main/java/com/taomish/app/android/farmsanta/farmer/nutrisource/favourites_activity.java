@@ -146,7 +146,7 @@ public class favourites_activity extends AppCompatActivity implements Navigation
     public void Retrieve_fav() {
         AppPrefs appPrefs = new AppPrefs(this);
         UserId=appPrefs.getPhoneNumber();
-        LinearLayout mylayout = (LinearLayout) findViewById(R.id.recyclerViewlayout);
+        LinearLayout mylayout = findViewById(R.id.recyclerViewlayout);
         LayoutInflater inflater = getLayoutInflater();
         inflater.inflate(R.layout.favourite_recycler_view, mylayout, false);
         final RecyclerView rc = mylayout.findViewById(R.id.recyclerView);
@@ -214,9 +214,9 @@ public class favourites_activity extends AppCompatActivity implements Navigation
         actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
-        CustomCartNumber = (TextView)findViewById(R.id.CustomCartNumber);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
+        CustomCartNumber = findViewById(R.id.CustomCartNumber);
 
         PageTitle.setText("Favourites");
         setNumberOfItemsInCartIcon();

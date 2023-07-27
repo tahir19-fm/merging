@@ -88,7 +88,7 @@ public class SoilTesting extends AppCompatActivity implements NavigationView.OnN
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        final String Productid = dataSnapshot.getKey().toString();
+                        final String Productid = dataSnapshot.getKey();
                         final String ProductName = dataSnapshot.child("labname").getValue().toString();
                         final String ProductImage = dataSnapshot.child("labimage").getValue().toString();
                         final String ProductDetails = dataSnapshot.child("labdetails").getValue().toString();

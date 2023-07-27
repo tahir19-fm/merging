@@ -10,7 +10,7 @@ import com.taomish.app.android.farmsanta.farmer.models.api.farmer.Farmer;
 
 public class UserProfileViewModel extends ViewModel {
 
-    private MutableLiveData<Farmer> mProfile;
+    private final MutableLiveData<Farmer> mProfile;
 
     public UserProfileViewModel() {
         mProfile = new MutableLiveData<>();

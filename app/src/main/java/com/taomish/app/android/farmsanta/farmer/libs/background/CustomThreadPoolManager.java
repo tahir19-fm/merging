@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class CustomThreadPoolManager {
 
-    private static CustomThreadPoolManager sInstance;
+    private static final CustomThreadPoolManager sInstance;
     private static final int DEFAULT_THREAD_POOL_SIZE = 4;
     private static final int NUMBER_OF_CORES = Runtime.getRuntime().availableProcessors();
     private static final int KEEP_ALIVE_TIME = 1;
@@ -102,7 +102,7 @@ public class CustomThreadPoolManager {
        The threads created is set to background priority, so it does not compete with the UI thread.
      */
     private static class BackgroundThreadFactory implements ThreadFactory {
-        private static int sTag = 1;
+        private static final int sTag = 1;
 
         @Override
         public Thread newThread(Runnable runnable) {

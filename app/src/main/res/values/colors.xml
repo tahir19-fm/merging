@@ -17,7 +17,6 @@
     <color name="light_black">#202020</color>
     <color name="black_font">#001900</color>
 
-    <color name="bluish_white">#E6F0FA</color>
 
     <color name="text_color">#727272</color>
     <color name="bluish_white">#E6F0FA</color>
@@ -29,10 +28,6 @@
     <color name="grey_translucent">#80FDFDFD</color>
     <color name="grey_1">#585151</color>
     <color name="grey_text">#676A67</color>
-
-    <color name="green_bg">#05854D</color>
-    <color name="green_bg_dark">#04673B</color>
-    <color name="green_dark_menu">#001900</color>
 
     <color name="grey_solid">#696969</color>
     <color name="green_bg">#05854D</color>

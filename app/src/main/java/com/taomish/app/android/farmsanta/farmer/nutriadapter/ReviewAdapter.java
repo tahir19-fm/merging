@@ -17,8 +17,8 @@ import java.util.ArrayList;
 
 public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.SingleItemRowHolder> {
 
-    private ArrayList<Rating_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Rating_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public ReviewAdapter(Context context, ArrayList<Rating_Data> itemsList) {
@@ -117,12 +117,12 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.SingleItem
         protected TextView rating,message,liketext,disliketext;
         public SingleItemRowHolder(View view) {
             super(view);
-            this.Name = (TextView) view.findViewById(R.id.Name);
-            this.ProfileImage = (ImageView) view.findViewById(R.id.ProfileImage);
-            this.rating = (TextView) view.findViewById(R.id.rating);
-            this.message = (TextView) view.findViewById(R.id.message);
-            this.liketext= (TextView) view.findViewById(R.id.liketext);
-            this.disliketext= (TextView) view.findViewById(R.id.disliketext);
+            this.Name = view.findViewById(R.id.Name);
+            this.ProfileImage = view.findViewById(R.id.ProfileImage);
+            this.rating = view.findViewById(R.id.rating);
+            this.message = view.findViewById(R.id.message);
+            this.liketext= view.findViewById(R.id.liketext);
+            this.disliketext= view.findViewById(R.id.disliketext);
             this.like= view.findViewById(R.id.like);
             this.dislike=view.findViewById(R.id.dislike);
            /* view.setOnClickListener(new View.OnClickListener() {

@@ -13,7 +13,7 @@ class SliderAdapter(private val sliderList: List<Int>) :
     SliderViewAdapter<SliderAdapter.SliderViewHolder>() {
 
     // creating  a class for slider view holder
-    class SliderViewHolder(ItemView: View) : SliderViewAdapter.ViewHolder(ItemView) {
+    class SliderViewHolder(ItemView: View) : ViewHolder(ItemView) {
         // on below line creating and initializing variable for slider image view with unique id.
         val sliderIV: ImageZoom = itemView.findViewById(R.id.idIVSliderItem)
     }
@@ -24,7 +24,7 @@ class SliderAdapter(private val sliderList: List<Int>) :
         return sliderList.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?): SliderAdapter.SliderViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup?): SliderViewHolder {
         // on below line we are creating a variable to inflate the layout file which we have created.
         val itemView: View =
             LayoutInflater.from(parent!!.context).inflate(R.layout.slider_item, null)
@@ -32,7 +32,7 @@ class SliderAdapter(private val sliderList: List<Int>) :
         return SliderViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(viewHolder: SliderAdapter.SliderViewHolder?, position: Int) {
+    override fun onBindViewHolder(viewHolder: SliderViewHolder?, position: Int) {
         // on below line we are loading an image from image url using Glide library and displaying that image in
         // our slider image view
         Glide.with(viewHolder!!.itemView).load(sliderList.get(position)).fitCenter()

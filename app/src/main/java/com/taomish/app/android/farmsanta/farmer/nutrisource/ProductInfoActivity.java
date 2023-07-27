@@ -73,7 +73,7 @@ public class ProductInfoActivity extends AppCompatActivity  implements Navigatio
         UserId=appPrefs.getPhoneNumber();
 
         //toolbar
-        mToolbar =(Toolbar)findViewById(R.id.ProductToolBar);
+        mToolbar = findViewById(R.id.ProductToolBar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -104,21 +104,21 @@ public class ProductInfoActivity extends AppCompatActivity  implements Navigatio
 
 
     private void DefineXmlViews() {
-        PImage = (ImageView) findViewById(R.id.ProductImage);
-        PIsFav = (ImageView) findViewById(R.id.ProductFav);
-        PName = (TextView) findViewById(R.id.ProductName);
-        PCategory = (TextView) findViewById(R.id.ProductCategory);
-        PAmount = (TextView) findViewById(R.id.ProductAvailableAmount);
-        PPrice = (TextView) findViewById(R.id.CurrentProductPrice);
-        OldPrice = (TextView) findViewById(R.id.OldProductPrice);
-        OfferRate = (TextView) findViewById(R.id.OfferRate);
-        OfferContainer = (LinearLayout) findViewById(R.id.OfferContainer);
-        PExpiryDate = (TextView) findViewById(R.id.ProductExpiryDate);
-        AddToCartContainer = (LinearLayout) findViewById(R.id.AddToCart);
-        DeleteFromCartContainer = (LinearLayout) findViewById(R.id.DeleteFromCart);
-        CheckCartContainer = (RelativeLayout) findViewById(R.id.CheckCartContainer);
-        Back = (Button) findViewById(R.id.BackBtn);
-        Confirm = (Button) findViewById(R.id.ConformBtn);
+        PImage = findViewById(R.id.ProductImage);
+        PIsFav = findViewById(R.id.ProductFav);
+        PName = findViewById(R.id.ProductName);
+        PCategory = findViewById(R.id.ProductCategory);
+        PAmount = findViewById(R.id.ProductAvailableAmount);
+        PPrice = findViewById(R.id.CurrentProductPrice);
+        OldPrice = findViewById(R.id.OldProductPrice);
+        OfferRate = findViewById(R.id.OfferRate);
+        OfferContainer = findViewById(R.id.OfferContainer);
+        PExpiryDate = findViewById(R.id.ProductExpiryDate);
+        AddToCartContainer = findViewById(R.id.AddToCart);
+        DeleteFromCartContainer = findViewById(R.id.DeleteFromCart);
+        CheckCartContainer = findViewById(R.id.CheckCartContainer);
+        Back = findViewById(R.id.BackBtn);
+        Confirm = findViewById(R.id.ConformBtn);
 
         RefreshContainers();
     }
@@ -198,7 +198,7 @@ public class ProductInfoActivity extends AppCompatActivity  implements Navigatio
                 hashMap.put("quantity","1");
                 int PriceAfterOffer;
                 if(IsOffered.equalsIgnoreCase("yes"))PriceAfterOffer = (int) ((Integer.valueOf(ProductPrice)) - (Integer.valueOf(ProductPrice)*0.3));
-                else PriceAfterOffer =(int)(Integer.valueOf(ProductPrice));
+                else PriceAfterOffer = Integer.valueOf(ProductPrice);
 
                 hashMap.put("productPrice",String.valueOf(PriceAfterOffer));
 
@@ -316,8 +316,8 @@ public class ProductInfoActivity extends AppCompatActivity  implements Navigatio
 
 
     private void DefineNavigation(){
-        drawerLayout = (DrawerLayout) findViewById(R.id.ProductDrawer);
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = findViewById(R.id.ProductDrawer);
+        navigationView = findViewById(R.id.nav_view);
 
         //navigation header
         navigationView.setItemIconTintList(null);
@@ -444,9 +444,9 @@ public class ProductInfoActivity extends AppCompatActivity  implements Navigatio
         actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
-        CustomCartNumber = (TextView)findViewById(R.id.CustomCartNumber);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
+        CustomCartNumber = findViewById(R.id.CustomCartNumber);
 
         PageTitle.setText("Product Info");
         setNumberOfItemsInCartIcon();

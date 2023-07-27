@@ -105,9 +105,9 @@ public class MyCartFragment extends Fragment {
                         if (!dataSnapshot.getKey().equals("totalPrice")) {
                             Log.d("kk", dataSnapshot.getKey());
                             String cartItemTitle = dataSnapshot.getKey();
-                            String cartItemImage = dataSnapshot.child("productImage").getValue(String.class).toString();
-                            String cartItemPrice = dataSnapshot.child("productPrice").getValue(String.class).toString();
-                            String quantity = dataSnapshot.child("quantity").getValue(String.class).toString();
+                            String cartItemImage = dataSnapshot.child("productImage").getValue(String.class);
+                            String cartItemPrice = dataSnapshot.child("productPrice").getValue(String.class);
+                            String quantity = dataSnapshot.child("quantity").getValue(String.class);
                             cartItemModelList.add(new CartItemModel(0, cartItemImage, cartItemTitle, 0, Integer.parseInt(cartItemPrice), 0, Integer.parseInt(quantity), 0, 0));
                         }
 
@@ -199,14 +199,14 @@ public class MyCartFragment extends Fragment {
 
                         if (!dataSnapshot.getKey().equals("totalPrice")) {
 
-                            String cartItemPrice = dataSnapshot.child("productPrice").getValue(String.class).toString();
-                            String quantity = dataSnapshot.child("quantity").getValue(String.class).toString();
+                            String cartItemPrice = dataSnapshot.child("productPrice").getValue(String.class);
+                            String quantity = dataSnapshot.child("quantity").getValue(String.class);
                             totalpriceVal += Integer.parseInt(  cartItemPrice) * Integer.parseInt( quantity );
                         }
 
                     }
                     root.child("cart").child(CurrentUser).child("totalPrice").setValue(String.valueOf(totalpriceVal));
-                    totalprice.setText(String.valueOf(totalpriceVal)+" INR");
+                    totalprice.setText(totalpriceVal +" INR");
                     cartAdapter.notifyDataSetChanged();
                 }
             }

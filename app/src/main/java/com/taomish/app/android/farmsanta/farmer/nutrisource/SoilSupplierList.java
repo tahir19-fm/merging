@@ -86,14 +86,16 @@ public class SoilSupplierList extends AppCompatActivity implements Spinner.OnIte
     //Custom Xml Views (cart Icon)
     private RelativeLayout CustomCartContainer;
     private TextView PageTitle, CustomCartNumber;
-    private ArrayList<Service_Data> producttypeList = new ArrayList<>(),offerlistdata = new ArrayList<>();
-    private ArrayList<Product_Data> productList = new ArrayList<>(), rentproductList = new ArrayList<>();
+    private final ArrayList<Service_Data> producttypeList = new ArrayList<>();
+    private final ArrayList<Service_Data> offerlistdata = new ArrayList<>();
+    private final ArrayList<Product_Data> productList = new ArrayList<>();
+    private final ArrayList<Product_Data> rentproductList = new ArrayList<>();
     private SoilLabAdapter soilLabAdapter;
     private ProductTypeAdapter productTypeAdapter;
     private FilterAdapter filterAdapter;
     private OfferItemServices offerItemServices;
     AppPrefs appPrefs;
-    private String[] pickupdistance = {"1-5Km","1-10Km","1-15km","1-20Km","1-30Km","1-40Km","1-50Km","1-100Km","Any Location"};
+    private final String[] pickupdistance = {"1-5Km","1-10Km","1-15km","1-20Km","1-30Km","1-40Km","1-50Km","1-100Km","Any Location"};
     ArrayAdapter distanceadapter;
     Spinner distancespinner;
     BottomNavigationView bottomNavigationView;
@@ -114,9 +116,9 @@ public class SoilSupplierList extends AppCompatActivity implements Spinner.OnIte
 // finally change the color
         window.setStatusBarColor(ContextCompat.getColor(SoilSupplierList.this,R.color.soilcolor));
         appPrefs=new AppPrefs(this);
-        OrderTypeGroup = (RadioGroup) findViewById(R.id.OrderTypeGroup);
-        self = (RadioButton) findViewById(R.id.self);
-        labexpert = (RadioButton) findViewById(R.id.labexpert);
+        OrderTypeGroup = findViewById(R.id.OrderTypeGroup);
+        self = findViewById(R.id.self);
+        labexpert = findViewById(R.id.labexpert);
         bottomNavigationView=findViewById(R.id.bottom_nav_view);
         bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
@@ -408,8 +410,8 @@ public class SoilSupplierList extends AppCompatActivity implements Spinner.OnIte
         //actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
         PageTitle.setVisibility(View.GONE);
         CustomCartContainer.setVisibility(View.GONE);
 
@@ -455,11 +457,11 @@ public class SoilSupplierList extends AppCompatActivity implements Spinner.OnIte
 
     private void setCategoryData(){
         //toolbar
-        mToolBar =(Toolbar)findViewById(R.id.CategoryTooBar);
+        mToolBar = findViewById(R.id.CategoryTooBar);
         setSupportActionBar(mToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView = (RecyclerView)findViewById(R.id.CategoryRecycler);
+        recyclerView = findViewById(R.id.CategoryRecycler);
         CategoryProducts = new ArrayList<>();
 
         adapter = new SuppilerAdapter(SoilSupplierList.this,CategoryProducts,listener);
@@ -480,7 +482,7 @@ public class SoilSupplierList extends AppCompatActivity implements Spinner.OnIte
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        final String supplierid = dataSnapshot.getKey().toString();
+                        final String supplierid = dataSnapshot.getKey();
                         final String supplierName = dataSnapshot.child("businessname").getValue().toString();
                         final String supplierImage = dataSnapshot.child("logo").getValue().toString();
                         final String supplierLocation = dataSnapshot.child("businessdistrict").getValue().toString();

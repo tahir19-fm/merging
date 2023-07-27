@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class ProductbyShop_Data {
     String shopname,shopid,productname,quatity,mrp,price,discount,veriants,type;
     int shopimage,productimage;
-    private String noofuser;
-    private String rating;
+    private final String noofuser;
+    private final String rating;
     boolean bookmark,bestseller;
     private ArrayList<ProductbyShop_Data> singleItemModelArrayList;
     String id;

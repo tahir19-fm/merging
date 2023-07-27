@@ -260,8 +260,7 @@ public class  NavigationController {
     }
 
     public void onFragmentData(Object... data) {
-        if (data[0] instanceof String) {
-            String tag = (String) data[0];
+        if (data[0] instanceof String tag) {
             switch (tag) {
                 case AppConstants.FragmentConstants.FRAGMENT_SELECT_LANGUAGE_TO_LOGIN:
                     goToLoginFromSelectLanguageFragment((int) data[1]);
@@ -418,8 +417,7 @@ public class  NavigationController {
 
         @Override
         public void onFragmentData(Object... data) {
-            if (data[0] instanceof String) {
-                String tag = (String) data[0];
+            if (data[0] instanceof String tag) {
                 if (AppConstants.FragmentConstants.FARMER_OTP_FRAGMENT.equals(tag)) {
                     DataHolder.getInstance().setDataObject(new Object[]{data[1], data[2], data[3]});
                 }

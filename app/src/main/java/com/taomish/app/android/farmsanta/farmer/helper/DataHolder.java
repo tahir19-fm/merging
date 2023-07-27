@@ -47,18 +47,18 @@ public class DataHolder {
     private ArrayList<GlobalIndicatorDTO> cultivarTypeList;
     private ArrayList<GlobalIndicatorDTO> cultivarDurationList;
     private List<DB_GlobalIndicator> allGlobalIndicators;
-    private List<Region> allRegions = new ArrayList<>();
-    private List<Territory> allTerritories = new ArrayList<>();
+    private final List<Region> allRegions = new ArrayList<>();
+    private final List<Territory> allTerritories = new ArrayList<>();
     private Map<String, Territory> territoryMap = MapsKt.emptyMap();
     private Map<String, Region> regionsMap = MapsKt.emptyMap();
-    private List<Language> languages = new ArrayList<>();
-    private List<CropMaster> myCrops = new ArrayList<>();
+    private final List<Language> languages = new ArrayList<>();
+    private final List<CropMaster> myCrops = new ArrayList<>();
     private Map<String, CropMaster> cropMasterMap = MapsKt.emptyMap();
     private Map<String, AdvisoryTag> advisoryTagMap;
     private Map<String, GlobalIndicatorDTO> growthStageMap = MapsKt.emptyMap();
-    private List<County> allCounties = new ArrayList<>();
-    private List<SubCounty> allSubCounties = new ArrayList<>();
-    private List<Village> allVillages = new ArrayList<>();
+    private final List<County> allCounties = new ArrayList<>();
+    private final List<SubCounty> allSubCounties = new ArrayList<>();
+    private final List<Village> allVillages = new ArrayList<>();
 
     private List<String> cropTrendingTagArrayList;
     private Location mLastKnownLocation;

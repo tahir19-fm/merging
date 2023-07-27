@@ -1,12 +1,12 @@
 package com.taomish.app.android.farmsanta.farmer.datamodel;
 
 public class SupplierDataModel {
-    private String supplierid;
-    private String supplierImage;
-    private String supplierName;
-    private String supplierLocation;
-    private String supplierDetails;
-    private String Category;
+    private final String supplierid;
+    private final String supplierImage;
+    private final String supplierName;
+    private final String supplierLocation;
+    private final String supplierDetails;
+    private final String Category;
     private boolean IsFavorite;
 
     public SupplierDataModel(String Category,String supplierid, String supplierImage, String supplierName, String supplierLocation, String supplierDetails, boolean IsFavorite){

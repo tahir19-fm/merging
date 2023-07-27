@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class SingleItemProducts extends RecyclerView.Adapter<SingleItemProducts.SingleItemRowHolder> {
 
-    private ArrayList<Product_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Product_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public SingleItemProducts(Context context, ArrayList<Product_Data> itemsList) {
@@ -71,7 +71,7 @@ public class SingleItemProducts extends RecyclerView.Adapter<SingleItemProducts.
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.itemCardTxtTitle = (TextView) view.findViewById(R.id.item_card_txt_title);
+            this.itemCardTxtTitle = view.findViewById(R.id.item_card_txt_title);
             this.itemCardImg = view.findViewById(R.id.item_card_img);
 
 

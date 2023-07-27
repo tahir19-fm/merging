@@ -19,8 +19,8 @@ import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities;
 
 public class FarmerStoreAdapter extends RecyclerView.Adapter<FarmerStoreAdapter.SingleItemRowHolder> {
 
-    private ArrayList<Store_Data> itemsList;
-    private Context mContext;
+    private final ArrayList<Store_Data> itemsList;
+    private final Context mContext;
     private OnItemClickListener mItemClickListener;
 
     public FarmerStoreAdapter(Context context, ArrayList<Store_Data> itemsList) {
@@ -74,10 +74,10 @@ public class FarmerStoreAdapter extends RecyclerView.Adapter<FarmerStoreAdapter.
         public SingleItemRowHolder(View view) {
             super(view);
 
-            this.itemCardTxtTitle = (TextView) view.findViewById(R.id.item_card_txt_title);
+            this.itemCardTxtTitle = view.findViewById(R.id.item_card_txt_title);
             this.itemCardImg =  view.findViewById(R.id.item_card_img);
-            this.ratingno = (TextView) view.findViewById(R.id.ratingno);
-            this.ratinguser = (TextView) view.findViewById(R.id.ratinguser);
+            this.ratingno = view.findViewById(R.id.ratingno);
+            this.ratinguser = view.findViewById(R.id.ratinguser);
 
 
             view.setOnClickListener(new View.OnClickListener() {

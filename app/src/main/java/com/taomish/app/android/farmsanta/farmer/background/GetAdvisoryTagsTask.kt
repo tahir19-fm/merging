@@ -4,7 +4,7 @@ import com.taomish.app.android.farmsanta.farmer.baseclass.FarmSantaBaseAsyncTask
 import com.taomish.app.android.farmsanta.farmer.controller.ServiceController
 import com.taomish.app.android.farmsanta.farmer.models.api.notification.AdvisoryTag
 
-class GetAdvisoryTagsTask() : FarmSantaBaseAsyncTask() {
+class GetAdvisoryTagsTask : FarmSantaBaseAsyncTask() {
 
     override fun onTaskSuccess(vararg obj: Any) {
         if (onTaskCompletion != null) {

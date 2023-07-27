@@ -7,7 +7,7 @@ import java.io.File;
 
 public class UploadProfilePicTask extends FarmSantaBaseAsyncTask {
 
-    private File file;
+    private final File file;
 
     public UploadProfilePicTask(File file) {
         this.file = file;

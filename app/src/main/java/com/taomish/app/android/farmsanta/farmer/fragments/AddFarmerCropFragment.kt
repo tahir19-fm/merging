@@ -178,13 +178,13 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
                 }
             }
         autoCompleteTextViewCultivarType!!.setOnClickListener { v: View? -> autoCompleteTextViewCultivarType!!.showDropDown() }
-        editTextSowingDateInterCrop!!.onFocusChangeListener =
+        editTextSowingDateInterCrop.onFocusChangeListener =
             OnFocusChangeListener { view: View?, b: Boolean ->
                 if (b) {
                     openDatePicker(editTextSowingDateInterCrop)
                 }
             }
-        editTextSowingDateInterCrop!!.setOnClickListener { view: View? ->
+        editTextSowingDateInterCrop.setOnClickListener { view: View? ->
             openDatePicker(
                 editTextSowingDateInterCrop
             )
@@ -220,24 +220,24 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
     private fun loadEditCropDetails() {
         if (currentCropSelected != null) {
             autoCompleteTextViewCurrentCrop!!.setText(currentCropSelected!!.cropName)
-            editTextSowingDate!!.setText(DateUtil().getMobileFormat(currentCropSelected!!.sowingDate))
+            editTextSowingDate.setText(DateUtil().getMobileFormat(currentCropSelected!!.sowingDate))
             autoCompleteTextViewCultivarType!!.setText(currentCropSelected!!.cultivationType)
             autoCompleteTextViewCultivar!!.setText(currentCropSelected!!.cultivar)
             autoCompleteTextViewCultivarDuration!!.setText(currentCropSelected!!.stage)
             editTextArea.setText(if (currentCropSelected!!.area != null) currentCropSelected!!.area.unit.toString() else 0.toString())
-            editTextPlantSpacing!!.setText(currentCropSelected!!.plantSpacing.toString())
-            editTextRowSpacing!!.setText(currentCropSelected!!.rowSpacing.toString())
-            if (currentCropSelected!!.expectedYield != null) editTextExpectedYield!!.setText(
+            editTextPlantSpacing.setText(currentCropSelected!!.plantSpacing.toString())
+            editTextRowSpacing.setText(currentCropSelected!!.rowSpacing.toString())
+            if (currentCropSelected!!.expectedYield != null) editTextExpectedYield.setText(
                 currentCropSelected!!.expectedYield.toString()
             )
             fetchCultivarById(currentCropSelected!!.cultivar)
         }
         if (lastCropSelected != null) {
             autoCompleteTextViewLastCrop!!.setText(lastCropSelected!!.cropName)
-            editTextLastYield!!.setText(lastCropSelected!!.previousYield.toString())
+            editTextLastYield.setText(lastCropSelected!!.previousYield.toString())
         }
         if (interCropSelected != null) {
-            editTextSowingDateInterCrop!!.setText(DateUtil().getMobileFormat(interCropSelected!!.sowingDate))
+            editTextSowingDateInterCrop.setText(DateUtil().getMobileFormat(interCropSelected!!.sowingDate))
             editTextInterCrop!!.setText(interCropSelected!!.cropName)
             autoCompleteTextViewInterCropDuration!!.setText(interCropSelected!!.stage)
             onAddInterCropClick(false)
@@ -253,7 +253,7 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
             textViewAddInterCrop!!.text = "Hide inter crop"
             linearInterCrop!!.visibility = View.VISIBLE
             if (scroll) {
-                editTextSowingDateInterCrop!!.parent.requestChildFocus(
+                editTextSowingDateInterCrop.parent.requestChildFocus(
                     editTextSowingDateInterCrop,
                     editTextSowingDateInterCrop
                 )
@@ -265,14 +265,14 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
         clearAllError()
         if (TextUtils.isEmpty(autoCompleteTextViewCurrentCrop!!.text)) {
             textInputLayoutCurrentCrop!!.error = "Current crop needed"
-        } else if (TextUtils.isEmpty(editTextSowingDate!!.text)) {
+        } else if (TextUtils.isEmpty(editTextSowingDate.text)) {
             textInputLayoutSowingDate!!.error = "Date missing"
-        } else if (TextUtils.isEmpty(editTextArea!!.text)) {
+        } else if (TextUtils.isEmpty(editTextArea.text)) {
             textInputLayoutArea!!.error = "Area is needed"
         } else if (linearInterCrop!!.visibility == View.VISIBLE) {
             if (TextUtils.isEmpty(editTextInterCrop!!.text)) {
                 textInputLayoutInterCrop!!.error = "Inter crop missing"
-            } else if (TextUtils.isEmpty(editTextSowingDateInterCrop!!.text)) {
+            } else if (TextUtils.isEmpty(editTextSowingDateInterCrop.text)) {
                 textInputLayoutSowingDateInterCrop!!.error = "Inter crop date is needed"
             } else if (isEditCrop) {
                 saveEditCropDetails()
@@ -287,7 +287,7 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
     }
 
     private fun openDatePicker(editText: EditText?) {
-        val newFragment: DialogFragment? =
+        val newFragment: DialogFragment =
             FarmSantaDatePickerDialog().setOnDateSelectListener { year: Int, month: Int, date: Int ->
                 val mm = if (month < 10) "0$month" else month.toString()
                 val dd = if (date < 10) "0$date" else date.toString()
@@ -317,32 +317,32 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
         //crop.setCropName(autoCompleteTextViewCurrentCrop.getText().toString());
         currentCropSelected!!.cultivationType = autoCompleteTextViewCultivarType!!.text.toString()
         currentCropSelected!!.comment = ""
-        if (!TextUtils.isEmpty(editTextExpectedYield!!.text)) currentCropSelected!!.expectedYield =
+        if (!TextUtils.isEmpty(editTextExpectedYield.text)) currentCropSelected!!.expectedYield =
             java.lang.Double.valueOf(
-                editTextExpectedYield!!.text.toString()
+                editTextExpectedYield.text.toString()
             )
         currentCropSelected!!.sowingDate =
-            formatDateToApiAccepted(editTextSowingDate!!.text.toString())
+            formatDateToApiAccepted(editTextSowingDate.text.toString())
         currentCropSelected!!.stage = autoCompleteTextViewCultivarDuration!!.text.toString()
         currentCropSelected!!.cultivar =
             if (selectedCultivar != null) selectedCultivar!!.uuid else autoCompleteTextViewCultivar!!.text.toString()
-        if (!TextUtils.isEmpty(editTextPlantSpacing!!.text.toString())) {
-            currentCropSelected!!.plantSpacing = editTextPlantSpacing!!.text.toString().toDouble()
+        if (!TextUtils.isEmpty(editTextPlantSpacing.text.toString())) {
+            currentCropSelected!!.plantSpacing = editTextPlantSpacing.text.toString().toDouble()
         } else {
             currentCropSelected!!.plantSpacing = 0.0
         }
-        if (!TextUtils.isEmpty(editTextRowSpacing!!.text.toString())) {
-            currentCropSelected!!.rowSpacing = editTextRowSpacing!!.text.toString().toDouble()
+        if (!TextUtils.isEmpty(editTextRowSpacing.text.toString())) {
+            currentCropSelected!!.rowSpacing = editTextRowSpacing.text.toString().toDouble()
         } else {
             currentCropSelected!!.rowSpacing = 0.0
         }
         val area = Area()
-        area.unit = editTextArea!!.text.toString().toDouble()
+        area.unit = editTextArea.text.toString().toDouble()
         area.uom = "ha"
         currentCropSelected!!.area = area
-        if (!TextUtils.isEmpty(editTextLastYield!!.text)) currentCropSelected!!.previousYield =
+        if (!TextUtils.isEmpty(editTextLastYield.text)) currentCropSelected!!.previousYield =
             java.lang.Double.valueOf(
-                editTextLastYield!!.text.toString()
+                editTextLastYield.text.toString()
             )
         currentCropSelected!!.cropType = CropConstants.CURRENT_CROP
         val cropList: MutableList<Crop> = ArrayList()
@@ -351,7 +351,7 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
             lastCropSelected!!.cropId = lastCropSelected!!.cropId
             lastCropSelected!!.cropName = lastCropSelected!!.cropName
             lastCropSelected!!.previousYield =
-                java.lang.Double.valueOf("0" + editTextLastYield!!.text.toString())
+                java.lang.Double.valueOf("0" + editTextLastYield.text.toString())
             lastCropSelected!!.cropType = CropConstants.LAST_CROP
             cropList.add(lastCropSelected!!)
         }
@@ -359,7 +359,7 @@ class AddFarmerCropFragment : FarmSantaBaseFragment() {
             if (interCropSelected == null) interCropSelected = Crop()
             interCropSelected!!.cropName = editTextInterCrop!!.text.toString()
             interCropSelected!!.sowingDate =
-                formatDateToApiAccepted(editTextSowingDateInterCrop!!.text.toString())
+                formatDateToApiAccepted(editTextSowingDateInterCrop.text.toString())
             interCropSelected!!.stage = autoCompleteTextViewInterCropDuration!!.text.toString()
             interCropSelected!!.cropType = CropConstants.INTER_CROP
             cropList.add(interCropSelected!!)

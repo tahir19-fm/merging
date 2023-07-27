@@ -33,7 +33,7 @@ public class LocationNameArrayAdapter extends ArrayAdapter<LocationNameArrayAdap
 
     private static final String TAG             = "skt";
     private final PlacesClient placesClient;
-    private RectangularBounds mBounds;
+    private final RectangularBounds mBounds;
     private ArrayList<LocationAutocomplete> mResultList = new ArrayList<>();
     private final Context context;
 

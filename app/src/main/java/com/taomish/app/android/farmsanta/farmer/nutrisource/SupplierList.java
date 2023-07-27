@@ -87,14 +87,16 @@ public class SupplierList extends AppCompatActivity implements Spinner.OnItemSel
     //Custom Xml Views (cart Icon)
     private RelativeLayout CustomCartContainer;
     private TextView PageTitle, CustomCartNumber;
-    private ArrayList<Service_Data> producttypeList = new ArrayList<>(),offerlistdata = new ArrayList<>();
-    private ArrayList<Product_Data> productList = new ArrayList<>(), rentproductList = new ArrayList<>();
+    private final ArrayList<Service_Data> producttypeList = new ArrayList<>();
+    private final ArrayList<Service_Data> offerlistdata = new ArrayList<>();
+    private final ArrayList<Product_Data> productList = new ArrayList<>();
+    private final ArrayList<Product_Data> rentproductList = new ArrayList<>();
     private ProductAdapter productAdapter;
     private ProductTypeAdapter productTypeAdapter;
     private FilterAdapter filterAdapter;
     private OfferItemServices offerItemServices;
     AppPrefs appPrefs;
-    private String[] pickupdistance = {"1-5Km","1-10Km","1-15km","1-20Km","1-30Km","1-40Km","1-50Km","1-100Km","Any Location"};
+    private final String[] pickupdistance = {"1-5Km","1-10Km","1-15km","1-20Km","1-30Km","1-40Km","1-50Km","1-100Km","Any Location"};
     ArrayAdapter distanceadapter;
     Spinner distancespinner;
     BottomNavigationView bottomNavigationView;
@@ -106,9 +108,9 @@ public class SupplierList extends AppCompatActivity implements Spinner.OnItemSel
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_supplier_list);
         appPrefs=new AppPrefs(this);
-        OrderTypeGroup = (RadioGroup) findViewById(R.id.OrderTypeGroup);
-        pickup = (RadioButton) findViewById(R.id.pickup);
-        delivery = (RadioButton) findViewById(R.id.delivery);
+        OrderTypeGroup = findViewById(R.id.OrderTypeGroup);
+        pickup = findViewById(R.id.pickup);
+        delivery = findViewById(R.id.delivery);
         bottomNavigationView=findViewById(R.id.bottom_nav_view);
         bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
@@ -421,8 +423,8 @@ public class SupplierList extends AppCompatActivity implements Spinner.OnItemSel
         //actionBar.setCustomView(view);
 
         //************custom action items xml**********************
-        CustomCartContainer = (RelativeLayout)findViewById(R.id.CustomCartIconContainer);
-        PageTitle =(TextView)findViewById(R.id.PageTitle);
+        CustomCartContainer = findViewById(R.id.CustomCartIconContainer);
+        PageTitle = findViewById(R.id.PageTitle);
         PageTitle.setVisibility(View.GONE);
         CustomCartContainer.setVisibility(View.GONE);
 
@@ -468,11 +470,11 @@ public class SupplierList extends AppCompatActivity implements Spinner.OnItemSel
 
     private void setCategoryData(){
         //toolbar
-        mToolBar =(Toolbar)findViewById(R.id.CategoryTooBar);
+        mToolBar = findViewById(R.id.CategoryTooBar);
         setSupportActionBar(mToolBar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        recyclerView = (RecyclerView)findViewById(R.id.CategoryRecycler);
+        recyclerView = findViewById(R.id.CategoryRecycler);
         CategoryProducts = new ArrayList<>();
 
         adapter = new SuppilerAdapter(SupplierList.this,CategoryProducts,listener);
@@ -493,7 +495,7 @@ public class SupplierList extends AppCompatActivity implements Spinner.OnItemSel
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     for(DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        final String supplierid = dataSnapshot.getKey().toString();
+                        final String supplierid = dataSnapshot.getKey();
                         final String supplierName = dataSnapshot.child("businessname").getValue().toString();
                         final String supplierImage = dataSnapshot.child("logo").getValue().toString();
                         final String supplierLocation = dataSnapshot.child("businessdistrict").getValue().toString();

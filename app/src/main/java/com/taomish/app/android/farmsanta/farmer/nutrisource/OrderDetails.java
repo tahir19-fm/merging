@@ -52,6 +52,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -90,7 +91,7 @@ public class OrderDetails extends AppCompatActivity implements OnMapReadyCallbac
 
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapViewFragment1);
         mapFragment.getMapAsync(this);
-        ImageView transparent = (ImageView)findViewById(R.id.imagetrans);
+        ImageView transparent = findViewById(R.id.imagetrans);
         transparent.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -147,7 +148,7 @@ public class OrderDetails extends AppCompatActivity implements OnMapReadyCallbac
         //Toast.makeText(TeacherDetails.this, mobile, Toast.LENGTH_SHORT).show();
         try {
             Intent sendMsg = new Intent(Intent.ACTION_VIEW);
-            String url = "https://api.whatsapp.com/send?phone=" +mobile+ "&text=" + URLEncoder.encode("Hello!", "UTF-8");
+            String url = "https://api.whatsapp.com/send?phone=" +mobile+ "&text=" + URLEncoder.encode("Hello!", StandardCharsets.UTF_8);
             Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(browserIntent);
            /*
@@ -173,7 +174,7 @@ public class OrderDetails extends AppCompatActivity implements OnMapReadyCallbac
             }*/
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(OrderDetails.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(OrderDetails.this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }

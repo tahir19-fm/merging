@@ -82,15 +82,17 @@ public class MarketPlaceHome extends AppCompatActivity  implements QuickLinkAdap
     DrawerLayout drawer;
     private RecyclerView services,quicklinks,nearestproduct,rentservices,nearestrent;
     ArrayList quicklinksarray;
-    private ArrayList<Service_Data> modelList = new ArrayList<>();
-    private ArrayList<Rent_Data> rentList = new ArrayList<>();
-    private ArrayList<Product_Data> productList = new ArrayList<>(), rentproductList = new ArrayList<>();
+    private final ArrayList<Service_Data> modelList = new ArrayList<>();
+    private final ArrayList<Rent_Data> rentList = new ArrayList<>();
+    private final ArrayList<Product_Data> productList = new ArrayList<>();
+    private final ArrayList<Product_Data> rentproductList = new ArrayList<>();
     private ServiceAdapter serviceAdapter;
     private ProductAdapter productAdapter,rentproductAdapter;
     private RentAdapter rentAdapter;
     List<String> marketdata = new ArrayList<>();
     XMarqueeView marketprice;
-    private int notificationCount = 0,friendsCount=0;
+    private int notificationCount = 0;
+    private final int friendsCount=0;
 
     private final int count = 12;
     String UserId;
@@ -110,7 +112,7 @@ BottomNavigationView bottomNavigationView;
         UserId=appPrefs.getPhoneNumber();
         check.setText(UserId);
       //  Toast.makeText(this, UserId, Toast.LENGTH_SHORT).show();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         buy_product=findViewById(R.id.buy_product);
         soil_testing=findViewById(R.id.soil_testing);
@@ -199,13 +201,13 @@ BottomNavigationView bottomNavigationView;
                 Animatoo.animateSlideLeft(MarketPlaceHome.this);
             }
         });
-        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
         View headerView = navigationView.getHeaderView(0);

@@ -3,9 +3,9 @@ package com.taomish.app.android.farmsanta.farmer.datamodel;
 import java.util.ArrayList;
 
 public class Rating_Data {
-    private String name;
-    private String id;
-    private String message;
+    private final String name;
+    private final String id;
+    private final String message;
     public int image;
 
     public double ratingnumber;
