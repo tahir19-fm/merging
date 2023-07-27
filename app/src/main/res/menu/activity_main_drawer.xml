@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/editprofile"
+            android:icon="@drawable/edit"
+            android:title="Top Seller" />
+        <item
+            android:id="@+id/editphoto"
+            android:icon="@drawable/edit"
+            android:title="Sell Your Product" />
+        <item
+            android:visible="false"
+            android:id="@+id/change_location"
+            android:icon="@drawable/location1"
+            android:title="Change Location" />
+        <item
+            android:visible="false"
+            android:id="@+id/appointment"
+            android:icon="@drawable/appointments"
+            android:title="Appointment List" />
+        <item
+            android:visible="false"
+            android:id="@+id/appointments"
+            android:icon="@drawable/date"
+            android:title="Appointments" />
+
+        <item
+            android:visible="false"
+            android:id="@+id/querylist"
+            android:icon="@drawable/conversation"
+            android:title="Chat" />
+        <item
+            android:id="@+id/offerlist"
+            android:icon="@drawable/offerlist"
+            android:title="Offers" />
+        <item
+            android:visible="false"
+            android:id="@+id/docat"
+            android:icon="@drawable/medicalteam"
+            android:title="Doctor By Category" />
+        <item
+
+            android:id="@+id/payments"
+            android:icon="@drawable/wallet1"
+            android:title="Payments" />
+        <item
+            android:id="@+id/shareearn"
+            android:icon="@drawable/share"
+            android:title="Share" />
+        <item
+            android:id="@+id/reffals"
+            android:icon="@drawable/network"
+            android:title="Referral List" />
+        <item
+            android:visible="false"
+            android:id="@+id/Offer"
+            android:icon="@drawable/offer"
+            android:title="Add Your Offer" />
+        <item
+            android:visible="false"
+            android:id="@+id/bmical"
+            android:icon="@drawable/bmi"
+            android:title="BMI Calculator" />
+        <item
+            android:visible="false"
+            android:id="@+id/bmrcal"
+            android:icon="@drawable/bmr"
+            android:title="BMR Calculator" />
+        <item
+            android:visible="false"
+            android:id="@+id/pedometer"
+            android:icon="@drawable/step"
+            android:title="Pedometer" />
+        <item
+            android:visible="false"
+            android:id="@+id/Ads"
+            android:icon="@drawable/ads"
+            android:title="Add Advertisement" />
+        <item
+            android:id="@+id/savelist"
+            android:icon="@drawable/heartred"
+            android:title="Wishlist" />
+        <item
+
+            android:id="@+id/noti"
+            android:icon="@drawable/notification"
+            android:title="Notification" />
+    </group>
+    <item android:title="Dashboard"
+        android:visible="false">
+        <menu>
+            <item
+                android:visible="false"
+                android:id="@+id/doctorzone"
+                android:icon="@drawable/teacher22"
+                android:title="Doctor Dashboard" />
+            <item
+                android:visible="false"
+                android:id="@+id/cliniczone"
+                android:icon="@drawable/healthclinic"
+                android:title="Clinic Dashboard" />
+            <item
+                android:visible="false"
+                android:id="@+id/pathologistzone"
+                android:icon="@drawable/pathology2"
+                android:title="Pathologist" />
+            <item
+                android:visible="false"
+                android:id="@+id/physiotherapistzone"
+                android:icon="@drawable/physiotherapist1"
+                android:title="Physiotherapist" />
+         <!--   <item
+                android:id="@+id/nursezone"
+                android:icon="@drawable/nurse1"
+                android:title="Nurse" />-->
+            <item
+                android:visible="false"
+                android:id="@+id/ayazone"
+                android:icon="@drawable/aya1"
+                android:title="Aya" />
+           <!-- <item
+                android:id="@+id/ambulancezone"
+                android:icon="@drawable/ambulance1"
+                android:title="Ambulance" />
+            <item
+                android:visible="false"
+                android:id="@+id/Patienttzone"
+                android:icon="@drawable/patient"
+                android:title="Patient" />-->
+
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/privacypolicy"
+                android:icon="@drawable/privacypolicy"
+                android:title="Privacy Policy" />
+            <item
+                android:id="@+id/terms"
+                android:icon="@drawable/terms"
+                android:title="Terms &amp; Conditions" />
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/share"
+                android:title="Share" />
+            <item
+                android:id="@+id/like"
+                android:icon="@drawable/thumbsup"
+                android:title="Rate Us" />
+            <item
+                android:id="@+id/whatsapp"
+                android:icon="@drawable/whatsapp"
+                android:title="WhatsApp Support" />
+            <item
+                android:id="@+id/send"
+                android:icon="@drawable/paperplane"
+                android:title="Contact Us" />
+        </menu>
+    </item>
+
+</menu>

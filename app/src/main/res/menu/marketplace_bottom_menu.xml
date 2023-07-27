@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/marketplace_home"
+        android:icon="@drawable/ic_home_selector"
+        android:title="@string/bottom_nav_home" />
+    <item
+        android:id="@+id/nmarketplace_order"
+        android:icon="@drawable/box"
+        android:title="@string/marketplace_order" />
+    <item
+        android:id="@+id/nmarketplace_wishlist"
+        android:icon="@drawable/bookmark"
+        android:title="@string/marketplace_wishlist" />
+
+    <item
+        android:id="@+id/nmarketplace_offer"
+        android:icon="@drawable/percentage"
+        android:title="@string/marketplace_offers" />
+    <item
+        android:id="@+id/nmarketplace_cart"
+        android:icon="@drawable/order"
+        android:title="@string/marketplace_cart" />
+</menu>

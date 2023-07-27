@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/soilcolor"
+    tools:context=".nutrisource.SoilBookingRequest">
+  <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="100dp"
+      >
+    <ImageView
+        android:id="@+id/imgFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/soilbookingrequestbg"/>
+
+    <ImageView
+        android:id="@+id/imgSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/soilbookingtimer"/>
+  </FrameLayout>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/white"
+      android:text="ORDER REQUEST SENT"
+      android:textStyle="bold"
+      android:textSize="28dp"
+      android:layout_gravity="center"
+      android:layout_marginTop="@dimen/margin_20"
+      android:textAllCaps="true"
+      />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="Your Request for booking is successfully send to the Lab . Booking Approval will be Notified"
+      android:gravity="center"
+      android:layout_margin="20dp"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      android:lineSpacingExtra="5dp"
+
+      />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      android:text="Pay once Booking Is Confirmed"
+      android:textSize="20dp"
+      android:layout_gravity="center"
+      android:layout_marginBottom="20dp"
+      />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_margin="20dp"
+      >
+    <Button
+        android:id="@+id/backtohome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/button_bg"
+        android:text="BACK HOME"
+        android:textColor="@color/text_color"
+        android:layout_marginRight="5dp"
+        android:textAllCaps="true"
+        />
+    <Button
+        android:id="@+id/vieworder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/button_bg"
+        android:text="VIEW BOOKING"
+        android:textColor="@color/soilcolor"
+        android:layout_marginLeft="5dp"
+        android:textAllCaps="true"
+        />
+  </LinearLayout>
+</LinearLayout>

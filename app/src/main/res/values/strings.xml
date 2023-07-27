@@ -41,7 +41,10 @@
     <string name="address">Address</string>
     <string name="q_h_no">Quarter no./House no./Strt name/SubVillage</string>
     <string name="country">Country</string>
+<<<<<<< HEAD
     <string name="country_new">Country/Territory</string>
+=======
+>>>>>>> origin/hello1
     <string name="state">State</string>
     <string name="pin">P O Box</string>
     <string name="gender">Gender</string>
@@ -511,7 +514,11 @@ On mature fruits, the fungus remains as pinpoint infections until the fruit ripe
     <string name="formulation">Formulation</string>
     <string name="product_type">Product Type</string>
     <string name="product_name">Product Name</string>
+<<<<<<< HEAD
     <string name="dosage_per_kg_of_seed">Dosage/kg of Seed</string>
+=======
+    <string name="dosage_per_kg_of_seed">Dosage/KG of Seed</string>
+>>>>>>> origin/hello1
     <string name="application_method">Application Method</string>
     <string name="mode_of_action">Mode of Action</string>
     <string name="toxicity_level">Toxicity Level</string>
@@ -616,7 +623,11 @@ On mature fruits, the fungus remains as pinpoint infections until the fruit ripe
     <string name="disease">Disease</string>
     <string name="most_liked_posts">Most Liked Posts</string>
     <string name="most_commented_posts">Most Commented Posts</string>
+<<<<<<< HEAD
     <string name="harvesting_methods">Harvesting Methods</string>
+=======
+    <string name="harvesting_methods">Harvesting methods</string>
+>>>>>>> origin/hello1
     <string name="post_harvesting_technologies">Post Harvesting Technologies</string>
     <string name="threshing">Threshing</string>
     <string name="you_and_other">You and other</string>

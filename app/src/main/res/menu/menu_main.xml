@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/walletpayment"
+        android:icon="@drawable/wallet"
+        app:showAsAction="ifRoom"
+        android:title="Wallet">
+    </item>
+    <item
+        android:id="@+id/walletbalance"
+        app:showAsAction="ifRoom|withText"
+        android:title="Rs.0">
+    </item>
+</menu>

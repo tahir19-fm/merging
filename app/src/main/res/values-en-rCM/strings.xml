@@ -511,7 +511,11 @@ On mature fruits, the fungus remains as pinpoint infections until the fruit ripe
     <string name="formulation">Formulation</string>
     <string name="product_type">Product Type</string>
     <string name="product_name">Product Name</string>
+<<<<<<< HEAD
     <string name="dosage_per_kg_of_seed">Dosage/kg of Seed</string>
+=======
+    <string name="dosage_per_kg_of_seed">Dosage/KG of Seed</string>
+>>>>>>> origin/hello1
     <string name="application_method">Application Method</string>
     <string name="mode_of_action">Mode of Action</string>
     <string name="toxicity_level">Toxicity Level</string>
@@ -616,7 +620,11 @@ On mature fruits, the fungus remains as pinpoint infections until the fruit ripe
     <string name="disease">Disease</string>
     <string name="most_liked_posts">Most Liked Posts</string>
     <string name="most_commented_posts">Most Commented Posts</string>
+<<<<<<< HEAD
     <string name="harvesting_methods">Harvesting Methods</string>
+=======
+    <string name="harvesting_methods">Harvesting methods</string>
+>>>>>>> origin/hello1
     <string name="post_harvesting_technologies">Post Harvesting Technologies</string>
     <string name="threshing">Threshing</string>
     <string name="you_and_other">You and other</string>
@@ -670,4 +678,12 @@ On mature fruits, the fungus remains as pinpoint infections until the fruit ripe
     <string name="state_new">State/Region</string>
     <string name="district_new">District/Prefecture/County/Division</string>
     <string name="sub_district_new">Block/Canton/Sub-County/Sub-division</string>
+    <string name="err_msg">This field is required</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="marketplace_order">Order</string>
+    <string name="marketplace_wishlist">Wishlist</string>
+    <string name="marketplace_offers">Offers</string>
+    <string name="marketplace_cart">Cart</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

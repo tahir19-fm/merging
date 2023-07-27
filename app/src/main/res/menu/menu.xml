@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_samplebadge1"
+        app:actionLayout="@layout/menu_action_item_badge"
+        app:showAsAction="always"
+        android:title="@string/app_name" />
+    <item
+        android:id="@+id/item_samplebadge"
+        app:actionLayout="@layout/menu_action_item_badge"
+        app:showAsAction="always"
+        android:title="@string/app_name" />
+
+    <item
+        android:visible="false"
+        android:id="@+id/about_us"
+        android:title="About us" />
+    <item
+        android:visible="false"
+        android:id="@+id/share"
+        android:title="Share the app" />
+    <item
+
+        android:id="@+id/writetous"
+        android:title="Rate Us" />
+    <item
+
+        android:id="@+id/more_app"
+        android:title="FarmSanta App" />
+    <item
+
+        android:id="@+id/logout"
+        android:title="Logout" />
+    <item
+        android:id="@+id/exit"
+        android:title="Exit" />
+</menu>

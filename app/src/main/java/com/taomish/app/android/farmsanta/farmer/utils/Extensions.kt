@@ -87,11 +87,11 @@ fun <T> MutableState<List<T>>.add(item: T) {
 }
 
 
-
 @OptIn(ExperimentalMaterialApi::class)
-fun ModalBottomSheetState.expand(state: ModalBottomSheetValue = ModalBottomSheetValue.Expanded) {
-
+suspend fun ModalBottomSheetState.expand() {
+//    animateTo(ModalBottomSheetValue.Expanded)
 }
+
 
 fun Context.showToast(message: String) {
     MainScope().launch {

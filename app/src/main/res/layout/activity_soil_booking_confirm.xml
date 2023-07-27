@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".nutrisource.SoilBookingConfirm">
+
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:id="@+id/root_view">
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:background="@drawable/soilconfirmbg"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="500dp"
+
+          android:orientation="vertical"
+          android:gravity="center"
+          >
+    <ImageView
+        android:id="@+id/imgFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/soilorderconfirm"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:text="ORDER CONFIRMED"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        />
+      </LinearLayout>
+    </FrameLayout>
+
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:text="Your Booking Request Is Accepted"
+      android:gravity="center"
+      android:layout_marginTop="20dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:textColor="@color/text_color"
+      android:textSize="20dp"
+      android:lineSpacingExtra="5dp"
+
+      />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textStyle="bold"
+      android:textColor="@color/soilcolor"
+      android:text="Thanks for Selecting our soil Test Service"
+      android:textSize="20dp"
+      android:layout_gravity="center"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="20dp"
+      android:layout_marginRight="20dp"
+      android:gravity="center"
+      />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="20dp"
+      >
+    <Button
+        android:id="@+id/backtohome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/addsoilbackbtn"
+        android:text="BACK HOME"
+        android:textColor="@color/soilcolor"
+        android:layout_marginRight="5dp"
+        android:textAllCaps="true"
+        />
+    <Button
+        android:id="@+id/vieworder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/viewsoilbookingbtn"
+        android:text="VIEW BOOKING"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:textAllCaps="true"
+        />
+  </LinearLayout>
+</LinearLayout>

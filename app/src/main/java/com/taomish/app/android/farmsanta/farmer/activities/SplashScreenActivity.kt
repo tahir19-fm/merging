@@ -77,6 +77,7 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
 
+<<<<<<< HEAD
     private fun checkForUpdate() {
         // Returns an intent object that you use to check for an update.
         val appUpdateInfoTask = appUpdateManager.appUpdateInfo
@@ -97,6 +98,28 @@ class SplashScreenActivity : AppCompatActivity() {
             }
         }
     }
+=======
+//    private fun checkForUpdate() {
+//        // Returns an intent object that you use to check for an update.
+//        val appUpdateInfoTask = appUpdateManager.appUpdateInfo
+//
+//        // Checks that the platform will allow the specified type of update.
+//        appUpdateInfoTask.addOnSuccessListener { appUpdateInfo: AppUpdateInfo ->
+//            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+//                // This example applies an immediate update. To apply a flexible update
+//                // instead, pass in AppUpdateType.FLEXIBLE
+//                && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)
+//            ) {
+//                appUpdateManager.startUpdateFlowForResult(
+//                    appUpdateInfo,
+//                    AppUpdateType.FLEXIBLE,
+//                    this,
+//                    MY_REQUEST_CODE
+//                )
+//            }
+//        }
+//    }
+>>>>>>> origin/hello1
 
 
     private val listener: InstallStateUpdatedListener =
